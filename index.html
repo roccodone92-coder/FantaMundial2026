@@ -46,6 +46,7 @@
     h1{font-size:44px;margin:0 0 8px;letter-spacing:-1px}
     h2{margin:0 0 18px;font-size:25px}
     h3{margin:0 0 12px}
+    p{line-height:1.55}
     .sub{color:var(--muted);font-size:17px;line-height:1.45}
 
     .badge{
@@ -79,6 +80,47 @@
 
     .kpi b{display:block;font-size:30px;margin-bottom:6px}
     .kpi span,.muted{color:var(--muted)}
+
+    .prize-card{
+      margin:18px 0;
+      border-color:rgba(250,204,21,.28);
+      background:
+        linear-gradient(180deg,rgba(250,204,21,.10),rgba(13,27,46,.88)),
+        rgba(13,27,46,.88);
+    }
+
+    .prize-title{
+      display:flex;
+      justify-content:space-between;
+      gap:14px;
+      align-items:flex-start;
+      flex-wrap:wrap;
+    }
+
+    .prize-total{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:9px 13px;
+      border-radius:999px;
+      color:#fef3c7;
+      background:rgba(250,204,21,.10);
+      border:1px solid rgba(250,204,21,.35);
+      font-weight:900;
+    }
+
+    .prize-grid{
+      display:grid;
+      grid-template-columns:1.2fr 1fr .9fr;
+      gap:14px;
+      margin:16px 0 8px;
+    }
+
+    .prize-box{text-align:center}
+    .prize-box.first{border-color:rgba(250,204,21,.55)}
+    .prize-box.second{border-color:rgba(203,213,225,.45)}
+    .prize-box.third{border-color:rgba(251,146,60,.45)}
+    .prize-box .emoji{font-size:42px;line-height:1;margin-bottom:8px}
 
     .tabs{
       display:flex;
@@ -225,7 +267,7 @@
     @media(max-width:1000px){
       .hero{display:block}
       .badge{margin-top:14px}
-      .kpis,.grid,.mini-grid,.podium{grid-template-columns:1fr}
+      .kpis,.grid,.mini-grid,.podium,.prize-grid{grid-template-columns:1fr}
       h1{font-size:34px}
       .wrap{padding:24px 14px 60px}
       table{font-size:14px}
@@ -252,6 +294,22 @@
       <div class="kpi"><b id="kTeams">-</b><span>Squadre</span></div>
       <div class="kpi"><b id="kMatches">-</b><span>Partite caricate</span></div>
       <div class="kpi"><b id="kUpdated">-</b><span>Ultimo update</span></div>
+    </section>
+
+    <section class="card prize-card">
+      <div class="prize-title">
+        <div>
+          <h2>💰 Montepremi ufficiale</h2>
+          <p>Abbiamo raggiunto la cifra record di <b>12 squadre iscritte</b>. La quota di iscrizione è di <b>50 € per squadra</b>, da far pervenire su PayPal entro la mezzanotte di <b>mercoledì 10 giugno</b>.</p>
+        </div>
+        <div class="prize-total">Totale montepremi: 600 €</div>
+      </div>
+
+      <div class="prize-grid">
+        <div class="kpi prize-box first"><div class="emoji">🥇</div><b>400 €</b><span>1º posto</span></div>
+        <div class="kpi prize-box second"><div class="emoji">🥈</div><b>150 €</b><span>2º posto</span></div>
+        <div class="kpi prize-box third"><div class="emoji">🥉</div><b>50 €</b><span>3º posto</span></div>
+      </div>
     </section>
 
     <nav class="tabs">
@@ -596,20 +654,32 @@
       });
     }
 
+    async function refreshDashboard() {
+      await loadData();
+      renderKpis();
+      renderPodium();
+      renderRanking();
+      renderParticipants();
+      renderTeams();
+      renderTopTeams();
+      renderMatches();
+    }
+
     async function init() {
       try {
-        await loadData();
-        renderKpis();
-        renderPodium();
-        renderRanking();
-        renderParticipants();
-        renderTeams();
-        renderTopTeams();
-        renderMatches();
+        await refreshDashboard();
         setupTabs();
 
         $('participantSearch').addEventListener('input', renderParticipants);
         $('teamSearch').addEventListener('input', renderTeams);
+
+        setInterval(async () => {
+          try {
+            await refreshDashboard();
+          } catch (err) {
+            console.error('Errore aggiornamento automatico:', err);
+          }
+        }, 60000);
 
       } catch (err) {
         $('error').innerHTML = `
