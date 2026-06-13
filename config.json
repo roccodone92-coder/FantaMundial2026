@@ -1,0 +1,41 @@
+{
+  "title": "Fanta Mundial 2026",
+  "rules": {
+    "win": 3, "draw": 1, "loss": 0,
+    "groupQualificationBonus": 5,
+    "thirdPlaceBonus": 2,
+    "nextRoundBonus": 5,
+    "finalWinBonus": 10,
+    "tier1LastInGroupPenalty": -10,
+    "multipliers": {"1":1,"2":2,"3":3,"4":4}
+  },
+  "teams": [
+    {"name":"Messico","group":"A","tier":1,"credits":5,"rank":17},{"name":"Corea del Sud","group":"A","tier":2,"credits":3,"rank":23},{"name":"Repubblica Ceca","group":"A","tier":3,"credits":2,"rank":47},{"name":"Sudafrica","group":"A","tier":4,"credits":1,"rank":59},
+    {"name":"Svizzera","group":"B","tier":1,"credits":5,"rank":13},{"name":"Canada","group":"B","tier":2,"credits":3,"rank":40},{"name":"Qatar","group":"B","tier":3,"credits":2,"rank":61},{"name":"Bosnia ed Erzegovina","group":"B","tier":4,"credits":1,"rank":62},
+    {"name":"Brasile","group":"C","tier":1,"credits":5,"rank":5},{"name":"Marocco","group":"C","tier":2,"credits":3,"rank":13},{"name":"Scozia","group":"C","tier":3,"credits":2,"rank":34},{"name":"Haiti","group":"C","tier":4,"credits":1,"rank":87},
+    {"name":"USA","group":"D","tier":1,"credits":5,"rank":11},{"name":"Turchia","group":"D","tier":2,"credits":3,"rank":28},{"name":"Australia","group":"D","tier":3,"credits":2,"rank":53},{"name":"Paraguay","group":"D","tier":4,"credits":1,"rank":56},
+    {"name":"Germania","group":"E","tier":1,"credits":5,"rank":16},{"name":"Ecuador","group":"E","tier":2,"credits":3,"rank":32},{"name":"Costa d’Avorio","group":"E","tier":3,"credits":2,"rank":41},{"name":"Curaçao","group":"E","tier":4,"credits":1,"rank":90},
+    {"name":"Paesi Bassi","group":"F","tier":1,"credits":5,"rank":7},{"name":"Giappone","group":"F","tier":2,"credits":3,"rank":26},{"name":"Svezia","group":"F","tier":3,"credits":2,"rank":28},{"name":"Tunisia","group":"F","tier":4,"credits":1,"rank":41},
+    {"name":"Belgio","group":"G","tier":1,"credits":5,"rank":4},{"name":"Iran","group":"G","tier":2,"credits":3,"rank":20},{"name":"Egitto","group":"G","tier":3,"credits":2,"rank":36},{"name":"Nuova Zelanda","group":"G","tier":4,"credits":1,"rank":94},
+    {"name":"Spagna","group":"H","tier":1,"credits":5,"rank":8},{"name":"Uruguay","group":"H","tier":2,"credits":3,"rank":14},{"name":"Arabia Saudita","group":"H","tier":3,"credits":2,"rank":56},{"name":"Capo Verde","group":"H","tier":4,"credits":1,"rank":71},
+    {"name":"Francia","group":"I","tier":1,"credits":5,"rank":2},{"name":"Senegal","group":"I","tier":2,"credits":3,"rank":17},{"name":"Norvegia","group":"I","tier":3,"credits":2,"rank":43},{"name":"Iraq","group":"I","tier":4,"credits":1,"rank":68},
+    {"name":"Argentina","group":"J","tier":1,"credits":5,"rank":1},{"name":"Austria","group":"J","tier":2,"credits":3,"rank":25},{"name":"Algeria","group":"J","tier":3,"credits":2,"rank":30},{"name":"Giordania","group":"J","tier":4,"credits":1,"rank":84},
+    {"name":"Portogallo","group":"K","tier":1,"credits":5,"rank":6},{"name":"Colombia","group":"K","tier":2,"credits":3,"rank":14},{"name":"Uzbekistan","group":"K","tier":3,"credits":2,"rank":67},{"name":"RD Congo","group":"K","tier":4,"credits":1,"rank":71},
+    {"name":"Inghilterra","group":"L","tier":1,"credits":5,"rank":3},{"name":"Croazia","group":"L","tier":2,"credits":3,"rank":10},{"name":"Ghana","group":"L","tier":3,"credits":2,"rank":46},{"name":"Panama","group":"L","tier":4,"credits":1,"rank":57}
+  ],
+  "aliases": {"CDA":"Costa d’Avorio","N ZEL":"Nuova Zelanda","PORTO":"Portogallo","ENGLAND":"Inghilterra","REP CECA":"Repubblica Ceca","COREA":"Corea del Sud","SUD AFRICA":"Sudafrica","BOSNIA":"Bosnia ed Erzegovina","CONGO":"RD Congo"},
+  "participants": [
+    {"name":"Della","teams":["Spagna","Francia","Uruguay","Turchia","Marocco","Scozia","Norvegia","Costa d’Avorio","Paraguay","Tunisia","Nuova Zelanda","Bosnia ed Erzegovina"]},
+    {"name":"Rocco","teams":["Spagna","Inghilterra","Colombia","Marocco","Canada","Norvegia","Egitto","Costa d’Avorio","Paraguay","Bosnia ed Erzegovina","Tunisia","Sudafrica"]},
+    {"name":"Zanna","teams":["Francia","Inghilterra","Turchia","Marocco","Colombia","Norvegia","Egitto","Ghana","Bosnia ed Erzegovina","Paraguay","Tunisia","Sudafrica"]},
+    {"name":"Rambo","teams":["Portogallo","Germania","Turchia","Croazia","Marocco","Uzbekistan","Norvegia","Costa d’Avorio","Bosnia ed Erzegovina","Paraguay","Sudafrica","Nuova Zelanda"]},
+    {"name":"Beggio","teams":["Brasile","Argentina","Portogallo","Croazia","Turchia","Repubblica Ceca","Sudafrica","Bosnia ed Erzegovina","Paraguay","Tunisia","Nuova Zelanda","RD Congo"]},
+    {"name":"Tommy","teams":["Francia","Spagna","Colombia","Ecuador","Turchia","Norvegia","Repubblica Ceca","Egitto","Bosnia ed Erzegovina","RD Congo","Paraguay","Nuova Zelanda"]},
+    {"name":"Beppe","teams":["Inghilterra","Spagna","Canada","Croazia","Turchia","Norvegia","Egitto","Costa d’Avorio","Bosnia ed Erzegovina","Paraguay","Tunisia","RD Congo"]},
+    {"name":"Pippo","teams":["Spagna","Giappone","Canada","Colombia","Croazia","Norvegia","Costa d’Avorio","Egitto","Svezia","Algeria","Bosnia ed Erzegovina","Paraguay"]},
+    {"name":"Elia","teams":["Brasile","Francia","Uruguay","Croazia","Turchia","Norvegia","Repubblica Ceca","Algeria","Bosnia ed Erzegovina","Paraguay","Capo Verde","Sudafrica"]},
+    {"name":"Sim/Ric","teams":["Argentina","Portogallo","Spagna","Turchia","Corea del Sud","Norvegia","Bosnia ed Erzegovina","Paraguay","RD Congo","Sudafrica","Capo Verde","Panama"]},
+    {"name":"Mic/Lor","teams":["Argentina","Spagna","Marocco","Colombia","Svezia","Norvegia","Egitto","Ghana","Costa d’Avorio","Bosnia ed Erzegovina","Paraguay","RD Congo"]},
+    {"name":"Ste/Sven","teams":["Spagna","Francia","Argentina","Croazia","Marocco","Costa d’Avorio","Bosnia ed Erzegovina","Sudafrica","Paraguay","RD Congo","Nuova Zelanda","Tunisia"]}
+  ]
+}

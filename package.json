@@ -1,0 +1,1 @@
+{"name":"fanta-mundial-2026-live","version":"1.0.0","type":"module","scripts":{"update":"node scripts/update-results.mjs"},"dependencies":{}}
