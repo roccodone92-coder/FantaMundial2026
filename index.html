@@ -692,6 +692,23 @@
     }
 
     init();
-  </script>
-</body>
-</html>
+
+// Aggiornamento automatico ogni 60 secondi
+setInterval(async () => {
+  try {
+    await loadData();
+
+    renderKpis();
+    renderPodium();
+    renderRanking();
+    renderParticipants();
+    renderTeams();
+    renderTopTeams();
+    renderMatches();
+
+    console.log("Aggiornamento automatico eseguito:", new Date().toLocaleTimeString());
+
+  } catch (err) {
+    console.error("Errore aggiornamento automatico:", err);
+  }
+}, 60000);
