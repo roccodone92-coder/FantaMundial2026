@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-13T15:02:10.688Z",
+  "updatedAt": "2026-06-13T15:18:56.301Z",
   "source": "football-data.org",
   "matches": [
     {
@@ -8957,32 +8957,26 @@
   "teamStats": {
     "Messico": {
       "base": 3,
-      "bonus": 15,
-      "weighted": 18,
+      "bonus": 0,
+      "weighted": 3,
       "played": 1,
       "w": 1,
       "d": 0,
       "l": 0,
       "details": [
-        "Messico 2-0 Sudafrica: +3",
-        "Passaggio girone: +5",
-        "Passaggio girone: +5",
-        "Passaggio girone: +5"
+        "Messico 2-0 Sudafrica: +3"
       ]
     },
     "Corea del Sud": {
       "base": 3,
-      "bonus": 6,
-      "weighted": 18,
+      "bonus": 0,
+      "weighted": 6,
       "played": 1,
       "w": 1,
       "d": 0,
       "l": 0,
       "details": [
-        "Corea del Sud 2-1 Repubblica Ceca: +3",
-        "Terza classificata girone: +2",
-        "Terza classificata girone: +2",
-        "Terza classificata girone: +2"
+        "Corea del Sud 2-1 Repubblica Ceca: +3"
       ]
     },
     "Repubblica Ceca": {
@@ -9043,15 +9037,14 @@
     },
     "Bosnia ed Erzegovina": {
       "base": 1,
-      "bonus": 5,
-      "weighted": 24,
+      "bonus": 0,
+      "weighted": 4,
       "played": 1,
       "w": 0,
       "d": 1,
       "l": 0,
       "details": [
-        "Canada 1-1 Bosnia ed Erzegovina: +1",
-        "Passaggio girone: +5"
+        "Canada 1-1 Bosnia ed Erzegovina: +1"
       ]
     },
     "Brasile": {
@@ -9096,16 +9089,14 @@
     },
     "USA": {
       "base": 3,
-      "bonus": 10,
-      "weighted": 13,
+      "bonus": 0,
+      "weighted": 3,
       "played": 1,
       "w": 1,
       "d": 0,
       "l": 0,
       "details": [
-        "USA 4-1 Paraguay: +3",
-        "Passaggio girone: +5",
-        "Passaggio girone: +5"
+        "USA 4-1 Paraguay: +3"
       ]
     },
     "Turchia": {
@@ -9464,7 +9455,7 @@
   "computed": [
     {
       "name": "Sim/Ric",
-      "total": 42,
+      "total": 10,
       "credits": 29,
       "alive": 12,
       "teams": [
@@ -9527,15 +9518,12 @@
           "tier": 2,
           "credits": 3,
           "base": 3,
-          "bonus": 6,
+          "bonus": 0,
           "multiplier": 2,
-          "total": 18,
+          "total": 6,
           "record": "1-0-0",
           "details": [
-            "Corea del Sud 2-1 Repubblica Ceca: +3",
-            "Terza classificata girone: +2",
-            "Terza classificata girone: +2",
-            "Terza classificata girone: +2"
+            "Corea del Sud 2-1 Repubblica Ceca: +3"
           ]
         },
         {
@@ -9558,13 +9546,12 @@
           "tier": 4,
           "credits": 1,
           "base": 1,
-          "bonus": 5,
+          "bonus": 0,
           "multiplier": 4,
-          "total": 24,
+          "total": 4,
           "record": "0-1-0",
           "details": [
-            "Canada 1-1 Bosnia ed Erzegovina: +1",
-            "Passaggio girone: +5"
+            "Canada 1-1 Bosnia ed Erzegovina: +1"
           ]
         },
         {
@@ -9640,7 +9627,7 @@
     },
     {
       "name": "Rocco",
-      "total": 26,
+      "total": 6,
       "credits": 29,
       "alive": 12,
       "teams": [
@@ -9772,13 +9759,12 @@
           "tier": 4,
           "credits": 1,
           "base": 1,
-          "bonus": 5,
+          "bonus": 0,
           "multiplier": 4,
-          "total": 24,
+          "total": 4,
           "record": "0-1-0",
           "details": [
-            "Canada 1-1 Bosnia ed Erzegovina: +1",
-            "Passaggio girone: +5"
+            "Canada 1-1 Bosnia ed Erzegovina: +1"
           ]
         },
         {
@@ -9813,7 +9799,7 @@
     },
     {
       "name": "Beppe",
-      "total": 26,
+      "total": 6,
       "credits": 29,
       "alive": 12,
       "teams": [
@@ -9930,13 +9916,12 @@
           "tier": 4,
           "credits": 1,
           "base": 1,
-          "bonus": 5,
+          "bonus": 0,
           "multiplier": 4,
-          "total": 24,
+          "total": 4,
           "record": "0-1-0",
           "details": [
-            "Canada 1-1 Bosnia ed Erzegovina: +1",
-            "Passaggio girone: +5"
+            "Canada 1-1 Bosnia ed Erzegovina: +1"
           ]
         },
         {
@@ -9984,7 +9969,7 @@
     },
     {
       "name": "Pippo",
-      "total": 26,
+      "total": 6,
       "credits": 29,
       "alive": 12,
       "teams": [
@@ -10127,13 +10112,12 @@
           "tier": 4,
           "credits": 1,
           "base": 1,
-          "bonus": 5,
+          "bonus": 0,
           "multiplier": 4,
-          "total": 24,
+          "total": 4,
           "record": "0-1-0",
           "details": [
-            "Canada 1-1 Bosnia ed Erzegovina: +1",
-            "Passaggio girone: +5"
+            "Canada 1-1 Bosnia ed Erzegovina: +1"
           ]
         },
         {
@@ -10155,7 +10139,7 @@
     },
     {
       "name": "Della",
-      "total": 24,
+      "total": 4,
       "credits": 29,
       "alive": 12,
       "teams": [
@@ -10311,20 +10295,19 @@
           "tier": 4,
           "credits": 1,
           "base": 1,
-          "bonus": 5,
+          "bonus": 0,
           "multiplier": 4,
-          "total": 24,
+          "total": 4,
           "record": "0-1-0",
           "details": [
-            "Canada 1-1 Bosnia ed Erzegovina: +1",
-            "Passaggio girone: +5"
+            "Canada 1-1 Bosnia ed Erzegovina: +1"
           ]
         }
       ]
     },
     {
       "name": "Zanna",
-      "total": 24,
+      "total": 4,
       "credits": 29,
       "alive": 12,
       "teams": [
@@ -10439,13 +10422,12 @@
           "tier": 4,
           "credits": 1,
           "base": 1,
-          "bonus": 5,
+          "bonus": 0,
           "multiplier": 4,
-          "total": 24,
+          "total": 4,
           "record": "0-1-0",
           "details": [
-            "Canada 1-1 Bosnia ed Erzegovina: +1",
-            "Passaggio girone: +5"
+            "Canada 1-1 Bosnia ed Erzegovina: +1"
           ]
         },
         {
@@ -10495,7 +10477,7 @@
     },
     {
       "name": "Rambo",
-      "total": 24,
+      "total": 4,
       "credits": 29,
       "alive": 12,
       "teams": [
@@ -10610,13 +10592,12 @@
           "tier": 4,
           "credits": 1,
           "base": 1,
-          "bonus": 5,
+          "bonus": 0,
           "multiplier": 4,
-          "total": 24,
+          "total": 4,
           "record": "0-1-0",
           "details": [
-            "Canada 1-1 Bosnia ed Erzegovina: +1",
-            "Passaggio girone: +5"
+            "Canada 1-1 Bosnia ed Erzegovina: +1"
           ]
         },
         {
@@ -10666,7 +10647,7 @@
     },
     {
       "name": "Beggio",
-      "total": 24,
+      "total": 4,
       "credits": 29,
       "alive": 12,
       "teams": [
@@ -10772,13 +10753,12 @@
           "tier": 4,
           "credits": 1,
           "base": 1,
-          "bonus": 5,
+          "bonus": 0,
           "multiplier": 4,
-          "total": 24,
+          "total": 4,
           "record": "0-1-0",
           "details": [
-            "Canada 1-1 Bosnia ed Erzegovina: +1",
-            "Passaggio girone: +5"
+            "Canada 1-1 Bosnia ed Erzegovina: +1"
           ]
         },
         {
@@ -10839,7 +10819,7 @@
     },
     {
       "name": "Tommy",
-      "total": 24,
+      "total": 4,
       "credits": 29,
       "alive": 12,
       "teams": [
@@ -10956,13 +10936,12 @@
           "tier": 4,
           "credits": 1,
           "base": 1,
-          "bonus": 5,
+          "bonus": 0,
           "multiplier": 4,
-          "total": 24,
+          "total": 4,
           "record": "0-1-0",
           "details": [
-            "Canada 1-1 Bosnia ed Erzegovina: +1",
-            "Passaggio girone: +5"
+            "Canada 1-1 Bosnia ed Erzegovina: +1"
           ]
         },
         {
@@ -11010,7 +10989,7 @@
     },
     {
       "name": "Elia",
-      "total": 24,
+      "total": 4,
       "credits": 29,
       "alive": 12,
       "teams": [
@@ -11127,13 +11106,12 @@
           "tier": 4,
           "credits": 1,
           "base": 1,
-          "bonus": 5,
+          "bonus": 0,
           "multiplier": 4,
-          "total": 24,
+          "total": 4,
           "record": "0-1-0",
           "details": [
-            "Canada 1-1 Bosnia ed Erzegovina: +1",
-            "Passaggio girone: +5"
+            "Canada 1-1 Bosnia ed Erzegovina: +1"
           ]
         },
         {
@@ -11183,7 +11161,7 @@
     },
     {
       "name": "Mic/Lor",
-      "total": 24,
+      "total": 4,
       "credits": 29,
       "alive": 12,
       "teams": [
@@ -11311,13 +11289,12 @@
           "tier": 4,
           "credits": 1,
           "base": 1,
-          "bonus": 5,
+          "bonus": 0,
           "multiplier": 4,
-          "total": 24,
+          "total": 4,
           "record": "0-1-0",
           "details": [
-            "Canada 1-1 Bosnia ed Erzegovina: +1",
-            "Passaggio girone: +5"
+            "Canada 1-1 Bosnia ed Erzegovina: +1"
           ]
         },
         {
@@ -11352,7 +11329,7 @@
     },
     {
       "name": "Ste/Sven",
-      "total": 24,
+      "total": 4,
       "credits": 29,
       "alive": 12,
       "teams": [
@@ -11441,13 +11418,12 @@
           "tier": 4,
           "credits": 1,
           "base": 1,
-          "bonus": 5,
+          "bonus": 0,
           "multiplier": 4,
-          "total": 24,
+          "total": 4,
           "record": "0-1-0",
           "details": [
-            "Canada 1-1 Bosnia ed Erzegovina: +1",
-            "Passaggio girone: +5"
+            "Canada 1-1 Bosnia ed Erzegovina: +1"
           ]
         },
         {
