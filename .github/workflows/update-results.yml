@@ -1,1 +1,24 @@
 name: Aggiorna risultati Mondiale
+on:
+  schedule:
+    - cron: '7 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm run update
+        env:
+          FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
+          COMPETITION_CODE: WC
+          SEASON: '2026'
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'Aggiorna risultati e classifica'
+          file_pattern: data/results.json
