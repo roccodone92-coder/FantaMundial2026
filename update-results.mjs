@@ -72,4 +72,4 @@ try{
   const old = JSON.parse(await fs.readFile('data/results.json','utf8').catch(()=>'{"matches":[],"standings":[]}'));
   out = {...old, updatedAt:new Date().toISOString(), source:`fallback: ${err.message}`, computed: old.computed || []};
 }
-await fs.writeFile('data/results.json', JSON.stringify(out,null,2));
+await fs.writeFile('results.json', JSON.stringify(Fuori,null,2));
