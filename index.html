@@ -552,6 +552,285 @@
       }
     }
 
+
+    /* === SUPER PRO SKIN === */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 18% 10%, rgba(45, 212, 255, .18), transparent 28%),
+        radial-gradient(circle at 82% 6%, rgba(250, 204, 21, .15), transparent 25%),
+        radial-gradient(circle at 55% 100%, rgba(59, 130, 246, .14), transparent 32%);
+      z-index: -1;
+    }
+
+    .wrap {
+      position: relative;
+    }
+
+    .hero {
+      position: relative;
+      padding: 26px;
+      border: 1px solid rgba(45, 212, 255, .22);
+      border-radius: 28px;
+      background:
+        linear-gradient(135deg, rgba(45, 212, 255, .13), rgba(250, 204, 21, .06)),
+        rgba(5, 11, 22, .42);
+      box-shadow:
+        0 22px 55px rgba(0,0,0,.28),
+        inset 0 1px 0 rgba(255,255,255,.05);
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "⚽";
+      position: absolute;
+      right: 22px;
+      bottom: -20px;
+      font-size: 112px;
+      opacity: .045;
+      transform: rotate(-14deg);
+    }
+
+    h1 {
+      text-shadow: 0 0 26px rgba(45, 212, 255, .18);
+    }
+
+    .badge {
+      position: relative;
+      background: rgba(34, 197, 94, .12);
+      border-color: rgba(34, 197, 94, .40);
+      box-shadow: 0 0 25px rgba(34, 197, 94, .10);
+    }
+
+    .badge::before {
+      content: "";
+      width: 9px;
+      height: 9px;
+      border-radius: 99px;
+      background: #22c55e;
+      box-shadow: 0 0 0 0 rgba(34, 197, 94, .8);
+      animation: livePulse 1.5s infinite;
+    }
+
+    @keyframes livePulse {
+      0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, .75); }
+      70% { box-shadow: 0 0 0 9px rgba(34, 197, 94, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+    }
+
+    .kpi,
+    .card,
+    .podium-card {
+      border-color: rgba(45, 212, 255, .20);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.035), rgba(255,255,255,.012)),
+        rgba(13, 27, 46, .88);
+      box-shadow:
+        0 22px 55px rgba(0,0,0,.26),
+        inset 0 1px 0 rgba(255,255,255,.05);
+    }
+
+    .kpi {
+      transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+    }
+
+    .kpi:hover {
+      transform: translateY(-2px);
+      border-color: rgba(45, 212, 255, .38);
+      box-shadow:
+        0 24px 58px rgba(0,0,0,.30),
+        0 0 28px rgba(45, 212, 255, .08);
+    }
+
+    .kpi b {
+      letter-spacing: -1px;
+    }
+
+    .prize-card {
+      position: relative;
+      overflow: hidden;
+      border-color: rgba(250, 204, 21, .34);
+    }
+
+    .prize-card::before {
+      content: "";
+      position: absolute;
+      inset: -2px;
+      background: linear-gradient(120deg, transparent, rgba(250,204,21,.10), transparent);
+      transform: translateX(-100%);
+      animation: shimmer 5s infinite;
+      pointer-events: none;
+    }
+
+    @keyframes shimmer {
+      0% { transform: translateX(-100%); }
+      45%, 100% { transform: translateX(100%); }
+    }
+
+    .prize-total {
+      box-shadow: 0 0 22px rgba(250, 204, 21, .12);
+    }
+
+    .tabs {
+      gap: 12px;
+      border-bottom: 1px solid rgba(45, 212, 255, .10);
+    }
+
+    button {
+      transition: transform .15s ease, background .15s ease, border-color .15s ease;
+    }
+
+    button:hover {
+      transform: translateY(-1px);
+      border-color: rgba(45, 212, 255, .36);
+    }
+
+    button.active {
+      background:
+        linear-gradient(135deg, rgba(45,212,255,.18), rgba(59,130,246,.10));
+      box-shadow:
+        0 0 0 2px rgba(45,212,255,.20),
+        0 0 22px rgba(45,212,255,.12);
+    }
+
+    .podium-card.first {
+      box-shadow:
+        0 25px 70px rgba(0,0,0,.28),
+        0 0 35px rgba(250,204,21,.10);
+    }
+
+    .podium-card.second {
+      box-shadow:
+        0 20px 58px rgba(0,0,0,.24),
+        0 0 28px rgba(203,213,225,.08);
+    }
+
+    .podium-card.third {
+      box-shadow:
+        0 18px 52px rgba(0,0,0,.22),
+        0 0 25px rgba(251,146,60,.08);
+    }
+
+    .rank {
+      background: linear-gradient(135deg, rgba(45,212,255,.20), rgba(45,212,255,.06));
+    }
+
+    tr.click:hover {
+      background: rgba(45, 212, 255, .045);
+    }
+
+    .pill.hot {
+      color: #fff7b0;
+      background: rgba(250, 204, 21, .10);
+    }
+
+    .pill.good {
+      background: rgba(34, 197, 94, .08);
+    }
+
+    @media (max-width: 1000px) {
+      body {
+        background:
+          radial-gradient(circle at top left, rgba(45,212,255,.20), transparent 36%),
+          linear-gradient(180deg, #071426, #06101d 65%, #050b16);
+      }
+
+      .wrap {
+        padding: 18px 12px 70px;
+      }
+
+      .hero {
+        padding: 22px 18px;
+        border-radius: 26px;
+        margin-bottom: 16px;
+      }
+
+      .hero::after {
+        right: -8px;
+        bottom: -26px;
+        font-size: 118px;
+        opacity: .055;
+      }
+
+      h1 {
+        font-size: 38px;
+        line-height: 1.04;
+      }
+
+      .sub {
+        font-size: 16px;
+        max-width: 92%;
+      }
+
+      .badge {
+        margin-top: 18px;
+        padding: 10px 14px;
+      }
+
+      .kpis {
+        gap: 12px;
+      }
+
+      .kpi,
+      .card,
+      .podium-card {
+        border-radius: 24px;
+        padding: 18px;
+      }
+
+      .kpi b {
+        font-size: 36px;
+      }
+
+      .tabs {
+        position: sticky;
+        top: 0;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding: 12px 2px;
+        margin-left: -2px;
+        margin-right: -2px;
+        scrollbar-width: none;
+      }
+
+      .tabs::-webkit-scrollbar {
+        display: none;
+      }
+
+      .tabs button {
+        flex: 0 0 auto;
+        padding: 12px 16px;
+        border-radius: 18px;
+        white-space: nowrap;
+      }
+
+      .podium {
+        gap: 10px;
+      }
+
+      .podium-card.first,
+      .podium-card.second,
+      .podium-card.third {
+        min-height: unset;
+      }
+
+      .prize-grid {
+        gap: 10px;
+      }
+
+      th,
+      td {
+        white-space: nowrap;
+      }
+
+      .card {
+        overflow-x: auto;
+      }
+    }
+
   </style>
 </head>
 
@@ -562,7 +841,7 @@
         <h1>🏆 Fanta Mundial 2026</h1>
         <div class="sub">Dashboard live con risultati automatici, classifica, podio, migliori squadre, gironi e ultime partite.</div>
       </div>
-      <div class="badge">⚡ Live dashboard</div>
+      <div class="badge">LIVE · Aggiornamento automatico</div>
     </header>
 
     <div id="error"></div>
