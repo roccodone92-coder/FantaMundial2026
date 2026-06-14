@@ -1004,6 +1004,269 @@
       }
     }
 
+  
+    /* === FIX DEFINITIVO MOBILE PROPORZIONI === */
+    html,
+    body {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    body {
+      min-width: 0;
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: 1220px;
+      overflow-x: hidden;
+    }
+
+    img,
+    table,
+    section,
+    header,
+    nav,
+    div {
+      max-width: 100%;
+    }
+
+    @media (max-width: 760px) {
+      html,
+      body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+      }
+
+      body {
+        background:
+          radial-gradient(circle at 20% 0%, rgba(45, 212, 255, .18), transparent 34%),
+          linear-gradient(180deg, #071426, #06101d 64%, #050b16);
+      }
+
+      .wrap {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 14px 12px 80px;
+        overflow-x: hidden;
+      }
+
+      .hero {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 0 14px;
+        padding: 20px 16px;
+        border-radius: 24px;
+        display: block;
+      }
+
+      .hero::after {
+        right: -22px;
+        bottom: -26px;
+        font-size: 105px;
+        opacity: .05;
+      }
+
+      h1 {
+        font-size: 34px;
+        line-height: 1.06;
+        max-width: 82%;
+        margin-bottom: 10px;
+      }
+
+      .sub {
+        font-size: 15px;
+        line-height: 1.42;
+        max-width: 92%;
+      }
+
+      .badge {
+        margin-top: 16px;
+        width: fit-content;
+        max-width: 100%;
+        font-size: 13px;
+        padding: 9px 12px;
+      }
+
+      .kpis {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        width: 100%;
+        margin: 14px 0;
+      }
+
+      .kpi,
+      .card,
+      .podium-card {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 22px;
+        padding: 17px;
+      }
+
+      .kpi b {
+        font-size: 32px;
+        line-height: 1.05;
+      }
+
+      .prize-card {
+        width: 100%;
+        margin: 14px 0;
+      }
+
+      .prize-title {
+        display: block;
+      }
+
+      .prize-total {
+        margin-top: 12px;
+        font-size: 13px;
+        white-space: normal;
+      }
+
+      .prize-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .tabs {
+        width: calc(100% + 24px);
+        max-width: calc(100% + 24px);
+        margin-left: -12px;
+        margin-right: -12px;
+        padding: 10px 12px;
+        overflow-x: auto;
+        overflow-y: hidden;
+        flex-wrap: nowrap;
+        scrollbar-width: none;
+      }
+
+      .tabs::-webkit-scrollbar {
+        display: none;
+      }
+
+      .tabs button {
+        flex: 0 0 auto;
+        white-space: nowrap;
+        font-size: 14px;
+        padding: 11px 14px;
+        border-radius: 18px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 12px;
+        width: 100%;
+      }
+
+      .podium {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        width: 100%;
+      }
+
+      .podium-card {
+        text-align: left;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        gap: 12px;
+        min-height: auto !important;
+      }
+
+      .podium-card .medal {
+        margin: 0;
+        font-size: 30px;
+      }
+
+      .podium-card b {
+        font-size: 17px;
+      }
+
+      .podium-card .score {
+        margin: 0;
+        font-size: 24px;
+        text-align: right;
+      }
+
+      .desktop-table {
+        display: none !important;
+      }
+
+      .mobile-list,
+      .group-grid-mobile {
+        display: block !important;
+      }
+
+      .mobile-rank-card,
+      .mobile-team-card,
+      .mobile-group-card {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .mobile-rank-top,
+      .mobile-team-top,
+      .mobile-group-top {
+        align-items: flex-start;
+      }
+
+      .mobile-name {
+        font-size: 15px;
+      }
+
+      .mobile-points {
+        font-size: 20px;
+      }
+
+      .mobile-meta {
+        gap: 6px;
+      }
+
+      .mini-stat {
+        font-size: 11px;
+        padding: 5px 8px;
+      }
+
+      .match {
+        width: 100%;
+        max-width: 100%;
+        padding: 13px;
+        margin-bottom: 10px;
+        border: 1px solid rgba(45, 212, 255, .14);
+        border-radius: 18px;
+        background: rgba(8, 21, 39, .55);
+      }
+
+      .match b {
+        font-size: 14px;
+      }
+
+      .right {
+        min-width: auto;
+      }
+
+      table {
+        width: 100%;
+        max-width: 100%;
+        table-layout: auto;
+      }
+
+      th,
+      td {
+        white-space: normal;
+        word-break: normal;
+        overflow-wrap: anywhere;
+      }
+    }
+
   </style>
 </head>
 
