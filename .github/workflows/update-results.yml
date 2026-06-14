@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 jobs:
-  update:
+  aggiornamento:
     runs-on: ubuntu-latest
 
     steps:
