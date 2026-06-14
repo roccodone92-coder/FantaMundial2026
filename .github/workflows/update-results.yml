@@ -27,7 +27,7 @@ jobs:
         env:
           FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
           COMPETITION_CODE: WC
-          STAGIONE: '2026'
+          SEASON: '2026'
 
       - name: Commit risultati
         uses: stefanzweifel/git-auto-commit-action@v5
