@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-14T17:57:18.982Z",
+  "updatedAt": "2026-06-14T18:17:19.251Z",
   "source": "football-data.org + storico locale",
   "matches": [
     {
@@ -557,7 +557,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_E",
-      "lastUpdated": "2026-06-14T17:56:53Z",
+      "lastUpdated": "2026-06-14T18:16:29Z",
       "homeTeam": {
         "id": 759,
         "name": "Germany",
@@ -576,12 +576,12 @@
         "winner": "HOME_TEAM",
         "duration": "REGULAR",
         "fullTime": {
-          "home": 3,
+          "home": 4,
           "away": 1
         },
         "halfTime": {
-          "home": 0,
-          "away": 0
+          "home": 3,
+          "away": 1
         }
       },
       "odds": {
@@ -653,7 +653,14 @@
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": []
+      "referees": [
+        {
+          "id": 76608,
+          "name": "Ismail Elfath",
+          "type": "REFEREE",
+          "nationality": "United States"
+        }
+      ]
     },
     {
       "area": {
