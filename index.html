@@ -626,6 +626,17 @@
     }
 
 
+    function formatGroupName(value) {
+      const text = String(value || 'Girone');
+      const match = text.match(/GROUP[_\s-]?([A-Z])/i);
+
+      if (match) {
+        return `Girone ${match[1].toUpperCase()}`;
+      }
+
+      return text.replace(/_/g, ' ');
+    }
+
     function renderGroupStandings() {
       const standings = results.standings || [];
 
@@ -636,7 +647,7 @@
 
       $('groupStandings').innerHTML = standings.map(group => `
         <div class="card group-card">
-          <h3>${escapeHtml(group.group || group.stage || 'Girone')}</h3>
+          <h3>${escapeHtml(formatGroupName(group.group || group.stage || 'Girone'))}</h3>
 
           <table>
             <thead>
