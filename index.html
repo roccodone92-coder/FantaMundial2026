@@ -4,12 +4,10 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Fanta Mundial 2026</title>
-
   <style>
-    :root{
+    :root {
       --bg:#050b16;
       --panel:#0d1b2e;
-      --panel2:#102946;
       --text:#eef6ff;
       --muted:#9eb6d8;
       --line:#214468;
@@ -17,15 +15,13 @@
       --gold:#facc15;
       --silver:#cbd5e1;
       --bronze:#fb923c;
-      --ok:#22c55e;
-      --bad:#ef4444;
     }
 
-    *{box-sizing:border-box}
+    * { box-sizing:border-box; }
 
-    body{
+    body {
       margin:0;
-      font-family:Inter,system-ui,Segoe UI,Arial,sans-serif;
+      font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
       background:
         radial-gradient(circle at top left,rgba(45,212,255,.22),transparent 32%),
         radial-gradient(circle at top right,rgba(250,204,21,.12),transparent 30%),
@@ -33,9 +29,13 @@
       color:var(--text);
     }
 
-    .wrap{max-width:1220px;margin:0 auto;padding:34px 18px 70px}
+    .wrap {
+      max-width:1220px;
+      margin:0 auto;
+      padding:34px 18px 70px;
+    }
 
-    .hero{
+    .hero {
       display:flex;
       justify-content:space-between;
       gap:20px;
@@ -43,13 +43,23 @@
       margin-bottom:24px;
     }
 
-    h1{font-size:44px;margin:0 0 8px;letter-spacing:-1px}
-    h2{margin:0 0 18px;font-size:25px}
-    h3{margin:0 0 12px}
-    p{line-height:1.55}
-    .sub{color:var(--muted);font-size:17px;line-height:1.45}
+    h1 {
+      font-size:44px;
+      margin:0 0 8px;
+      letter-spacing:-1px;
+    }
 
-    .badge{
+    h2 { margin:0 0 18px; font-size:25px; }
+    h3 { margin:0 0 12px; }
+    p { line-height:1.55; }
+
+    .sub {
+      color:var(--muted);
+      font-size:17px;
+      line-height:1.45;
+    }
+
+    .badge {
       display:inline-flex;
       align-items:center;
       gap:8px;
@@ -62,14 +72,16 @@
       white-space:nowrap;
     }
 
-    .kpis{
+    .kpis {
       display:grid;
       grid-template-columns:repeat(4,1fr);
       gap:14px;
       margin:18px 0;
     }
 
-    .kpi,.card,.podium-card{
+    .kpi,
+    .card,
+    .podium-card {
       background:rgba(13,27,46,.88);
       border:1px solid var(--line);
       border-radius:20px;
@@ -78,10 +90,16 @@
       backdrop-filter:blur(8px);
     }
 
-    .kpi b{display:block;font-size:30px;margin-bottom:6px}
-    .kpi span,.muted{color:var(--muted)}
+    .kpi b {
+      display:block;
+      font-size:30px;
+      margin-bottom:6px;
+    }
 
-    .prize-card{
+    .kpi span,
+    .muted { color:var(--muted); }
+
+    .prize-card {
       margin:18px 0;
       border-color:rgba(250,204,21,.28);
       background:
@@ -89,7 +107,7 @@
         rgba(13,27,46,.88);
     }
 
-    .prize-title{
+    .prize-title {
       display:flex;
       justify-content:space-between;
       gap:14px;
@@ -97,7 +115,7 @@
       flex-wrap:wrap;
     }
 
-    .prize-total{
+    .prize-total {
       display:inline-flex;
       align-items:center;
       gap:8px;
@@ -107,22 +125,23 @@
       background:rgba(250,204,21,.10);
       border:1px solid rgba(250,204,21,.35);
       font-weight:900;
+      white-space:nowrap;
     }
 
-    .prize-grid{
+    .prize-grid {
       display:grid;
       grid-template-columns:1.2fr 1fr .9fr;
       gap:14px;
       margin:16px 0 8px;
     }
 
-    .prize-box{text-align:center}
-    .prize-box.first{border-color:rgba(250,204,21,.55)}
-    .prize-box.second{border-color:rgba(203,213,225,.45)}
-    .prize-box.third{border-color:rgba(251,146,60,.45)}
-    .prize-box .emoji{font-size:42px;line-height:1;margin-bottom:8px}
+    .prize-box { text-align:center; }
+    .prize-box.first { border-color:rgba(250,204,21,.55); }
+    .prize-box.second { border-color:rgba(203,213,225,.45); }
+    .prize-box.third { border-color:rgba(251,146,60,.45); }
+    .prize-box .emoji { font-size:42px; line-height:1; margin-bottom:8px; }
 
-    .tabs{
+    .tabs {
       display:flex;
       gap:10px;
       flex-wrap:wrap;
@@ -135,23 +154,25 @@
       backdrop-filter:blur(10px);
     }
 
-    button,input{
+    button,
+    input {
       border:1px solid var(--line);
       background:#081527;
       color:var(--text);
       border-radius:999px;
       padding:11px 16px;
       font-weight:800;
-      cursor:pointer;
     }
 
-    button.active{
+    button { cursor:pointer; }
+
+    button.active {
       border-color:var(--accent);
       box-shadow:0 0 0 2px rgba(45,212,255,.25);
       background:rgba(45,212,255,.10);
     }
 
-    input{
+    input {
       cursor:text;
       border-radius:14px;
       width:100%;
@@ -159,20 +180,13 @@
       font-weight:600;
     }
 
-    .grid{
+    .grid {
       display:grid;
       grid-template-columns:1.15fr .85fr;
       gap:16px;
     }
 
-    .mini-grid{
-      display:grid;
-      grid-template-columns:repeat(3,1fr);
-      gap:14px;
-      margin-bottom:16px;
-    }
-
-    .podium{
+    .podium {
       display:grid;
       grid-template-columns:1fr 1.15fr 1fr;
       gap:14px;
@@ -180,43 +194,70 @@
       margin-bottom:16px;
     }
 
-    .podium-card{
+    .podium-card {
       text-align:center;
       position:relative;
       overflow:hidden;
     }
 
-    .podium-card.first{
+    .podium-card.first {
       min-height:170px;
       border-color:rgba(250,204,21,.65);
       background:linear-gradient(180deg,rgba(250,204,21,.20),rgba(13,27,46,.88));
     }
 
-    .podium-card.second{
+    .podium-card.second {
       min-height:145px;
       border-color:rgba(203,213,225,.55);
       background:linear-gradient(180deg,rgba(203,213,225,.16),rgba(13,27,46,.88));
     }
 
-    .podium-card.third{
+    .podium-card.third {
       min-height:130px;
       border-color:rgba(251,146,60,.55);
       background:linear-gradient(180deg,rgba(251,146,60,.16),rgba(13,27,46,.88));
     }
 
-    .medal{font-size:36px;margin-bottom:8px}
-    .podium-card b{display:block;font-size:22px}
-    .score{font-size:30px;font-weight:900;margin-top:6px}
-    .score small{font-size:14px;color:var(--muted)}
+    .medal { font-size:36px; margin-bottom:8px; }
+    .podium-card b { display:block; font-size:22px; }
 
-    table{width:100%;border-collapse:collapse}
-    th,td{border-bottom:1px solid var(--line);padding:12px 10px;text-align:left;vertical-align:top}
-    th{color:var(--muted);font-size:13px;text-transform:uppercase;letter-spacing:.04em}
-    tr.click{cursor:pointer}
-    tr.click:hover{background:rgba(255,255,255,.045)}
+    .score {
+      font-size:30px;
+      font-weight:900;
+      margin-top:6px;
+    }
 
-    .rank{
-      width:34px;height:34px;
+    .score small {
+      font-size:14px;
+      color:var(--muted);
+    }
+
+    table {
+      width:100%;
+      border-collapse:collapse;
+    }
+
+    th,
+    td {
+      border-bottom:1px solid var(--line);
+      padding:12px 10px;
+      text-align:left;
+      vertical-align:top;
+    }
+
+    th {
+      color:var(--muted);
+      font-size:13px;
+      text-transform:uppercase;
+      letter-spacing:.04em;
+    }
+
+    tr.click { cursor:pointer; }
+    tr.click:hover { background:rgba(255,255,255,.045); }
+
+    .rank {
+      width:34px;
+      height:34px;
       display:inline-flex;
       align-items:center;
       justify-content:center;
@@ -226,7 +267,7 @@
       font-weight:900;
     }
 
-    .pill{
+    .pill {
       display:inline-block;
       border:1px solid var(--line);
       border-radius:999px;
@@ -237,11 +278,19 @@
       background:rgba(255,255,255,.025);
     }
 
-    .pill.good{color:#bbf7d0;border-color:rgba(34,197,94,.35)}
-    .pill.hot{color:#fde68a;border-color:rgba(250,204,21,.38)}
-    .hidden{display:none}
+    .pill.good {
+      color:#bbf7d0;
+      border-color:rgba(34,197,94,.35);
+    }
 
-    .err{
+    .pill.hot {
+      color:#fde68a;
+      border-color:rgba(250,204,21,.38);
+    }
+
+    .hidden { display:none; }
+
+    .err {
       color:#fecaca;
       background:rgba(239,68,68,.12);
       border:1px solid rgba(239,68,68,.35);
@@ -250,7 +299,7 @@
       margin-bottom:16px;
     }
 
-    .match{
+    .match {
       display:flex;
       justify-content:space-between;
       gap:12px;
@@ -258,22 +307,21 @@
       padding:12px 0;
     }
 
-    .match:last-child{border-bottom:0}
-    .match b{font-size:15px}
-    .match .date{font-size:12px;color:var(--muted);margin-top:4px}
-    .right{text-align:right}
-    .empty{padding:20px;color:var(--muted);text-align:center}
-    .group-card{margin-bottom:16px;overflow-x:auto}
+    .match:last-child { border-bottom:0; }
+    .match b { font-size:15px; }
+    .match .date { font-size:12px; color:var(--muted); margin-top:4px; }
+    .right { text-align:right; }
+    .empty { padding:20px; color:var(--muted); text-align:center; }
+    .group-card { margin-bottom:16px; overflow-x:auto; }
 
-    @media(max-width:1000px){
-      .hero{display:block}
-      .badge{margin-top:14px}
-      .kpis,.grid,.mini-grid,.podium,.prize-grid{grid-template-columns:1fr}
-      h1{font-size:34px}
-      .wrap{padding:24px 14px 60px}
-      table{font-size:14px}
-      th,td{padding:10px 7px}
-      .tabs{top:0}
+    @media (max-width:1000px) {
+      .hero { display:block; }
+      .badge { margin-top:14px; }
+      .kpis,.grid,.podium,.prize-grid { grid-template-columns:1fr; }
+      h1 { font-size:34px; }
+      .wrap { padding:24px 14px 60px; }
+      table { font-size:14px; }
+      th,td { padding:10px 7px; }
     }
   </style>
 </head>
@@ -283,7 +331,7 @@
     <header class="hero">
       <div>
         <h1>🏆 Fanta Mundial 2026</h1>
-        <div class="sub">Dashboard live con risultati automatici, classifica, podio, migliori squadre e ultime partite.</div>
+        <div class="sub">Dashboard live con risultati automatici, classifica, podio, migliori squadre, gironi e ultime partite.</div>
       </div>
       <div class="badge">⚡ Live dashboard</div>
     </header>
@@ -301,8 +349,13 @@
       <div class="prize-title">
         <div>
           <h2>💰 Montepremi ufficiale</h2>
-          <p>Abbiamo raggiunto la cifra record di <b>12 squadre iscritte</b>. La quota di iscrizione è di <b>50 € per squadra</b>, da far pervenire su PayPal entro la mezzanotte di <b>mercoledì 10 giugno</b>.</p>
+          <p>
+            Abbiamo raggiunto la cifra record di <b>12 squadre iscritte</b>.
+            La quota di iscrizione è di <b>50 € per squadra</b>, da far pervenire su PayPal entro la mezzanotte di
+            <b>mercoledì 10 giugno</b>.
+          </p>
         </div>
+
         <div class="prize-total">Totale montepremi: 600 €</div>
       </div>
 
@@ -328,13 +381,14 @@
       <div class="grid">
         <div class="card">
           <h2>Classifica generale</h2>
+
           <table>
             <thead>
               <tr>
                 <th>#</th>
                 <th>Partecipante</th>
                 <th>Punti</th>
-                <th>Crediti</th>
+                <th>PG</th>
                 <th>Squadre</th>
               </tr>
             </thead>
@@ -344,7 +398,7 @@
 
         <div class="card">
           <h2>Dettaglio selezionato</h2>
-          <div id="detail" class="muted">Clicca su un partecipante per vedere le 12 squadre.</div>
+          <div id="detail" class="muted">Clicca su un partecipante per vedere le squadre.</div>
         </div>
       </div>
     </section>
@@ -374,7 +428,7 @@
 
     <section id="gironi" class="view hidden">
       <div class="card">
-        <h2>📊 Classifiche gironi</h2>
+        <h2>📊 Classifiche gironi Mondiale</h2>
         <div id="groupStandings"></div>
       </div>
     </section>
@@ -409,41 +463,79 @@
     let config = null;
     let results = null;
     let computed = [];
+    let selectedPersonIndex = 0;
 
     const $ = id => document.getElementById(id);
 
+    function escapeHtml(value) {
+      return String(value ?? '').replace(/[&<>"']/g, character => ({
+        '&':'&amp;',
+        '<':'&lt;',
+        '>':'&gt;',
+        '"':'&quot;',
+        "'":'&#039;'
+      }[character]));
+    }
+
     function fmtDate(value) {
       if (!value) return '-';
+
       try {
         return new Date(value).toLocaleString('it-IT', {
-          day:'2-digit', month:'2-digit', year:'numeric',
-          hour:'2-digit', minute:'2-digit'
+          day:'2-digit',
+          month:'2-digit',
+          year:'numeric',
+          hour:'2-digit',
+          minute:'2-digit'
         });
       } catch {
         return value;
       }
     }
 
-    function escapeHtml(s) {
-      return String(s ?? '').replace(/[&<>"']/g, m => ({
-        '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#039;'
-      }[m]));
+    function normalizeGroup(group) {
+      const value = String(group || '?').toUpperCase();
+      return value.replace('GROUP_', '').replace('GRUPPO ', '').replace('GIRONE ', '').trim();
+    }
+
+    function normalizeTeamName(name) {
+      return String(name || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+    }
+
+    async function fetchJson(path, label) {
+      const response = await fetch(`${path}?v=${Date.now()}`, {
+        cache:'no-store'
+      });
+
+      if (!response.ok) {
+        throw new Error(`${label} non trovato`);
+      }
+
+      return response.json();
     }
 
     async function loadData() {
-      const ts = Date.now();
-
-      config = await fetch(`./config.json?${ts}`).then(r => {
-        if (!r.ok) throw new Error('config.json non trovato');
-        return r.json();
-      });
-
-      results = await fetch(`./results.json?${ts}`).then(r => {
-        if (!r.ok) throw new Error('results.json non trovato');
-        return r.json();
-      });
-
+      config = await fetchJson('./config.json', 'config.json');
+      results = await fetchJson('./results.json', 'results.json');
       computed = Array.isArray(results.computed) ? results.computed : [];
+    }
+
+    function getTeamStatsByName(teamName) {
+      const stats = results.teamStats || {};
+      const direct = stats[teamName];
+
+      if (direct) return direct;
+
+      const wanted = normalizeTeamName(teamName);
+      const foundKey = Object.keys(stats).find(key => normalizeTeamName(key) === wanted);
+
+      return foundKey ? stats[foundKey] : {};
+    }
+
+    function getParticipantPlayed(person) {
+      return (person.teams || []).reduce((sum, team) => {
+        return sum + Number(team.played || 0);
+      }, 0);
     }
 
     function renderKpis() {
@@ -454,63 +546,78 @@
     }
 
     function renderPodium() {
-      const p = computed.slice(0,3);
-      if (!p.length) {
+      const people = computed.slice(0, 3);
+
+      if (!people.length) {
         $('podium').innerHTML = '';
         return;
       }
 
-      const second = p[1];
-      const first = p[0];
-      const third = p[2];
+      const first = people[0];
+      const second = people[1];
+      const third = people[2];
 
-      const card = (person, cls, medal, label) => person ? `
-        <div class="podium-card ${cls}">
-          <div class="medal">${medal}</div>
-          <span class="muted">${label}</span>
-          <b>${escapeHtml(person.name)}</b>
-          <div class="score">${Number(person.total || 0).toFixed(0)} <small>pt</small></div>
-        </div>
-      ` : `<div></div>`;
+      const card = (person, cssClass, medal, label) => {
+        if (!person) return '<div></div>';
+
+        return `
+          <div class="podium-card ${cssClass}">
+            <div class="medal">${medal}</div>
+            <span class="muted">${label}</span>
+            <b>${escapeHtml(person.name)}</b>
+            <div class="score">${Number(person.total || 0).toFixed(0)} <small>pt</small></div>
+          </div>
+        `;
+      };
 
       $('podium').innerHTML =
-        card(second,'second','🥈','Secondo posto') +
-        card(first,'first','🥇','Primo posto') +
-        card(third,'third','🥉','Terzo posto');
+        card(second, 'second', '🥈', 'Secondo posto') +
+        card(first, 'first', '🥇', 'Primo posto') +
+        card(third, 'third', '🥉', 'Terzo posto');
     }
 
     function renderRanking() {
       const tbody = $('ranking');
 
       if (!computed.length) {
-        tbody.innerHTML = `<tr><td colspan="5" class="empty">Classifica non ancora disponibile.</td></tr>`;
+        tbody.innerHTML = '<tr><td colspan="5" class="empty">Classifica non ancora disponibile.</td></tr>';
+        $('detail').innerHTML = 'Classifica non ancora disponibile.';
         return;
       }
 
-      tbody.innerHTML = computed.map((p, i) => `
-        <tr class="click" onclick="showPerson(${i})">
-          <td><span class="rank">${i + 1}</span></td>
-          <td><b>${escapeHtml(p.name)}</b></td>
-          <td><b>${Number(p.total || 0).toFixed(0)}</b></td>
-          <td>${p.credits ?? '-'}/29</td>
-          <td>${p.alive ?? p.teams?.length ?? '-'}</td>
+      tbody.innerHTML = computed.map((person, index) => `
+        <tr class="click" onclick="showPerson(${index})">
+          <td><span class="rank">${index + 1}</span></td>
+          <td><b>${escapeHtml(person.name)}</b></td>
+          <td><b>${Number(person.total || 0).toFixed(0)}</b></td>
+          <td>${getParticipantPlayed(person)}</td>
+          <td>${person.alive ?? person.teams?.length ?? '-'}</td>
         </tr>
       `).join('');
 
-      if (computed[0]) showPerson(0);
+      if (selectedPersonIndex >= computed.length) {
+        selectedPersonIndex = 0;
+      }
+
+      showPerson(selectedPersonIndex);
     }
 
     function showPerson(index) {
-      const p = computed[index];
-      if (!p) return;
+      selectedPersonIndex = index;
+
+      const person = computed[index];
+
+      if (!person) return;
 
       $('detail').innerHTML = `
-        <h3>${escapeHtml(p.name)}</h3>
+        <h3>${escapeHtml(person.name)}</h3>
+
         <p>
-          <span class="pill hot"><b>${Number(p.total || 0).toFixed(0)}</b> punti</span>
-          <span class="pill">${p.credits ?? '-'}/29 crediti</span>
-          <span class="pill">${p.teams?.length ?? 0} squadre</span>
+          <span class="pill hot"><b>${Number(person.total || 0).toFixed(0)}</b> punti</span>
+          <span class="pill">${getParticipantPlayed(person)} partite giocate</span>
+          <span class="pill">${person.teams?.length ?? 0} squadre</span>
         </p>
+
         <table>
           <thead>
             <tr>
@@ -524,18 +631,15 @@
             </tr>
           </thead>
           <tbody>
-            ${(p.teams || []).map(t => `
+            ${(person.teams || []).map(team => `
               <tr>
-                <td>
-                  <b>${escapeHtml(t.team)}</b><br>
-                  <span class="muted">${t.groupBonusReady ? 'Bonus girone attivo' : 'Bonus girone non ancora attivo'}</span>
-                </td>
-                <td>${t.played ?? 0}</td>
-                <td>${t.tier}</td>
-                <td>${t.base}</td>
-                <td>${t.bonus}</td>
-                <td>x${t.multiplier}</td>
-                <td><b>${Number(t.total || 0).toFixed(0)}</b></td>
+                <td><b>${escapeHtml(team.team)}</b></td>
+                <td>${team.played ?? 0}</td>
+                <td>${team.tier}</td>
+                <td>${team.base}</td>
+                <td>${team.bonus}</td>
+                <td>x${team.multiplier}</td>
+                <td><b>${Number(team.total || 0).toFixed(0)}</b></td>
               </tr>
             `).join('')}
           </tbody>
@@ -544,39 +648,55 @@
     }
 
     function renderParticipants() {
-      const q = $('participantSearch').value.toLowerCase();
-      const list = config.participants || [];
+      const input = $('participantSearch');
+      const query = input ? input.value.toLowerCase() : '';
+      const participants = config.participants || [];
 
-      $('participantList').innerHTML = list
-        .filter(p => p.name.toLowerCase().includes(q) || p.teams.join(' ').toLowerCase().includes(q))
-        .map(p => `
-          <div class="kpi" style="margin-bottom:10px">
-            <b style="font-size:20px">${escapeHtml(p.name)}</b>
-            <div>${p.teams.map(t => `<span class="pill">${escapeHtml(t)}</span>`).join('')}</div>
+      const filtered = participants.filter(person => {
+        const name = person.name.toLowerCase();
+        const teams = (person.teams || []).join(' ').toLowerCase();
+        return name.includes(query) || teams.includes(query);
+      });
+
+      $('participantList').innerHTML = filtered.length ? filtered.map(person => `
+        <div class="kpi" style="margin-bottom:10px;">
+          <b style="font-size:20px;">${escapeHtml(person.name)}</b>
+          <div>
+            ${(person.teams || []).map(team => `<span class="pill">${escapeHtml(team)}</span>`).join('')}
           </div>
-        `).join('');
+        </div>
+      `).join('') : '<div class="empty">Nessun partecipante trovato.</div>';
     }
 
     function sortedTeams() {
-      const stats = results.teamStats || {};
       const teams = config.teams || [];
 
-      return teams.map(t => {
-        const s = stats[t.name] || {};
+      return teams.map(team => {
+        const stat = getTeamStatsByName(team.name);
+
         return {
-          ...t,
-          base: s.base ?? 0,
-          bonus: s.bonus ?? 0,
-          weighted: s.weighted ?? 0,
-          played: s.played ?? 0,
-          record: `${s.w || 0}-${s.d || 0}-${s.l || 0}`
+          ...team,
+          base: stat.base ?? 0,
+          bonus: stat.bonus ?? 0,
+          weighted: stat.weighted ?? 0,
+          played: stat.played ?? 0,
+          w: stat.w ?? 0,
+          d: stat.d ?? 0,
+          l: stat.l ?? 0,
+          record: `${stat.w || 0}-${stat.d || 0}-${stat.l || 0}`
         };
-      }).sort((a,b) => b.weighted - a.weighted || b.base - a.base);
+      }).sort((a, b) => b.weighted - a.weighted || b.base - a.base || a.name.localeCompare(b.name));
     }
 
     function renderTeams() {
-      const q = $('teamSearch').value.toLowerCase();
-      const teams = sortedTeams();
+      const input = $('teamSearch');
+      const query = input ? input.value.toLowerCase() : '';
+      const teams = sortedTeams().filter(team => team.name.toLowerCase().includes(query));
+
+      if (!teams.length) {
+        $('teamList').innerHTML = '<div class="empty">Nessuna squadra trovata.</div>';
+        return;
+      }
 
       $('teamList').innerHTML = `
         <table>
@@ -592,15 +712,15 @@
             </tr>
           </thead>
           <tbody>
-            ${teams.filter(t => t.name.toLowerCase().includes(q)).map(t => `
+            ${teams.map(team => `
               <tr>
-                <td><b>${escapeHtml(t.name)}</b><br><span class="muted">${t.record}</span></td>
-                <td>${t.group}</td>
-                <td>${t.played}</td>
-                <td>${t.tier}</td>
-                <td>${t.base}</td>
-                <td>${t.bonus}</td>
-                <td><b>${t.weighted}</b></td>
+                <td><b>${escapeHtml(team.name)}</b><br><span class="muted">${team.record}</span></td>
+                <td>${escapeHtml(normalizeGroup(team.group))}</td>
+                <td>${team.played}</td>
+                <td>${team.tier}</td>
+                <td>${team.base}</td>
+                <td>${team.bonus}</td>
+                <td><b>${team.weighted}</b></td>
               </tr>
             `).join('')}
           </tbody>
@@ -609,45 +729,101 @@
     }
 
     function renderTopTeams() {
-      const top = sortedTeams().slice(0,10);
+      const top = sortedTeams().slice(0, 10);
 
-      $('topTeams').innerHTML = top.map((t,i) => `
+      if (!top.length) {
+        $('topTeams').innerHTML = '<div class="empty">Nessuna squadra disponibile.</div>';
+        return;
+      }
+
+      $('topTeams').innerHTML = top.map((team, index) => `
         <div class="match">
           <div>
-            <b>${i+1}. ${escapeHtml(t.name)}</b>
-            <div class="date">Girone ${escapeHtml(t.group)} · PG ${t.played} · Fascia ${t.tier}</div>
+            <b>${index + 1}. ${escapeHtml(team.name)}</b>
+            <div class="date">Girone ${escapeHtml(normalizeGroup(team.group))} · PG ${team.played} · Fascia ${team.tier}</div>
           </div>
           <div class="right">
-            <b>${t.weighted} pt</b>
-            <div class="date">${t.record}</div>
+            <b>${team.weighted} pt</b>
+            <div class="date">${team.record}</div>
           </div>
         </div>
       `).join('');
     }
 
+    function calculateWorldCupGroups() {
+      const teams = (config.teams || []).map(team => {
+        const stat = getTeamStatsByName(team.name);
 
-    function formatGroupName(value) {
-      const text = String(value || 'Girone');
-      const match = text.match(/GROUP[_\s-]?([A-Z])/i);
+        return {
+          name: team.name,
+          group: normalizeGroup(team.group),
+          played: stat.played ?? 0,
+          won: stat.w ?? 0,
+          draw: stat.d ?? 0,
+          lost: stat.l ?? 0,
+          points: stat.base ?? 0,
+          goalsFor: 0,
+          goalsAgainst: 0,
+          goalDifference: 0
+        };
+      });
 
-      if (match) {
-        return `Girone ${match[1].toUpperCase()}`;
+      for (const match of results.matches || []) {
+        if (match.status !== 'FINISHED') continue;
+
+        const homeName = match.homeTeam?.name;
+        const awayName = match.awayTeam?.name;
+
+        const home = teams.find(t => normalizeTeamName(t.name) === normalizeTeamName(homeName));
+        const away = teams.find(t => normalizeTeamName(t.name) === normalizeTeamName(awayName));
+
+        if (!home || !away) continue;
+
+        const hs = match.score?.fullTime?.home ?? match.score?.regularTime?.home;
+        const as = match.score?.fullTime?.away ?? match.score?.regularTime?.away;
+
+        if (hs == null || as == null) continue;
+
+        home.goalsFor += hs;
+        home.goalsAgainst += as;
+        away.goalsFor += as;
+        away.goalsAgainst += hs;
+
+        home.goalDifference = home.goalsFor - home.goalsAgainst;
+        away.goalDifference = away.goalsFor - away.goalsAgainst;
       }
 
-      return text.replace(/_/g, ' ');
+      const groups = {};
+
+      for (const team of teams) {
+        if (!groups[team.group]) groups[team.group] = [];
+        groups[team.group].push(team);
+      }
+
+      return Object.entries(groups)
+        .sort(([a], [b]) => a.localeCompare(b, 'it', { numeric:true }))
+        .map(([group, rows]) => ({
+          group,
+          rows: rows.sort((a, b) =>
+            b.points - a.points ||
+            b.goalDifference - a.goalDifference ||
+            b.goalsFor - a.goalsFor ||
+            a.name.localeCompare(b.name)
+          )
+        }));
     }
 
     function renderGroupStandings() {
-      const standings = results.standings || [];
+      const groups = calculateWorldCupGroups();
 
-      if (!standings.length) {
+      if (!groups.length) {
         $('groupStandings').innerHTML = '<div class="empty">Classifiche gironi non ancora disponibili.</div>';
         return;
       }
 
-      $('groupStandings').innerHTML = standings.map(group => `
+      $('groupStandings').innerHTML = groups.map(group => `
         <div class="card group-card">
-          <h3>${escapeHtml(formatGroupName(group.group || group.stage || 'Girone'))}</h3>
+          <h3>Girone ${escapeHtml(group.group)}</h3>
 
           <table>
             <thead>
@@ -665,18 +841,18 @@
               </tr>
             </thead>
             <tbody>
-              ${(group.table || []).map(row => `
+              ${group.rows.map((row, index) => `
                 <tr>
-                  <td><b>${row.position ?? '-'}</b></td>
-                  <td><b>${escapeHtml(row.team?.name || '-')}</b></td>
-                  <td>${row.playedGames ?? 0}</td>
-                  <td>${row.won ?? 0}</td>
-                  <td>${row.draw ?? 0}</td>
-                  <td>${row.lost ?? 0}</td>
-                  <td>${row.goalsFor ?? 0}</td>
-                  <td>${row.goalsAgainst ?? 0}</td>
-                  <td>${row.goalDifference ?? 0}</td>
-                  <td><b>${row.points ?? 0}</b></td>
+                  <td><b>${index + 1}</b></td>
+                  <td><b>${escapeHtml(row.name)}</b></td>
+                  <td>${row.played}</td>
+                  <td>${row.won}</td>
+                  <td>${row.draw}</td>
+                  <td>${row.lost}</td>
+                  <td>${row.goalsFor}</td>
+                  <td>${row.goalsAgainst}</td>
+                  <td>${row.goalDifference}</td>
+                  <td><b>${row.points}</b></td>
                 </tr>
               `).join('')}
             </tbody>
@@ -689,50 +865,55 @@
       const matches = results.matches || [];
 
       const finished = matches
-        .filter(m => m.status === 'FINISHED')
-        .sort((a,b) => new Date(b.utcDate) - new Date(a.utcDate))
-        .slice(0,8);
+        .filter(match => match.status === 'FINISHED')
+        .sort((a, b) => new Date(b.utcDate) - new Date(a.utcDate))
+        .slice(0, 8);
 
       const next = matches
-        .filter(m => m.status !== 'FINISHED')
-        .sort((a,b) => new Date(a.utcDate) - new Date(b.utcDate))
-        .slice(0,8);
+        .filter(match => match.status !== 'FINISHED')
+        .sort((a, b) => new Date(a.utcDate) - new Date(b.utcDate))
+        .slice(0, 8);
 
-      $('latestMatches').innerHTML = finished.length ? finished.map(m => `
+      $('latestMatches').innerHTML = finished.length ? finished.map(match => `
         <div class="match">
           <div>
-            <b>${escapeHtml(m.homeTeam?.name)} ${m.score?.fullTime?.home ?? '-'}-${m.score?.fullTime?.away ?? '-'} ${escapeHtml(m.awayTeam?.name)}</b>
-            <div class="date">${fmtDate(m.utcDate)} · ${escapeHtml(m.group || '')}</div>
+            <b>
+              ${escapeHtml(match.homeTeam?.name)}
+              ${match.score?.fullTime?.home ?? '-'}-${match.score?.fullTime?.away ?? '-'}
+              ${escapeHtml(match.awayTeam?.name)}
+            </b>
+            <div class="date">${fmtDate(match.utcDate)} · ${escapeHtml(match.group || match.stage || '')}</div>
           </div>
           <div class="right"><span class="pill good">FINITA</span></div>
         </div>
-      `).join('') : `<div class="empty">Nessuna partita terminata.</div>`;
+      `).join('') : '<div class="empty">Nessuna partita terminata.</div>';
 
-      $('nextMatches').innerHTML = next.length ? next.map(m => `
+      $('nextMatches').innerHTML = next.length ? next.map(match => `
         <div class="match">
           <div>
-            <b>${escapeHtml(m.homeTeam?.name)} - ${escapeHtml(m.awayTeam?.name)}</b>
-            <div class="date">${fmtDate(m.utcDate)} · ${escapeHtml(m.group || '')}</div>
+            <b>${escapeHtml(match.homeTeam?.name)} - ${escapeHtml(match.awayTeam?.name)}</b>
+            <div class="date">${fmtDate(match.utcDate)} · ${escapeHtml(match.group || match.stage || '')}</div>
           </div>
           <div class="right"><span class="pill">DA GIOCARE</span></div>
         </div>
-      `).join('') : `<div class="empty">Nessuna prossima partita.</div>`;
+      `).join('') : '<div class="empty">Nessuna prossima partita.</div>';
     }
 
     function setupTabs() {
-      document.querySelectorAll('.tab').forEach(btn => {
-        btn.addEventListener('click', () => {
-          document.querySelectorAll('.tab').forEach(b => b.classList.remove('active'));
-          document.querySelectorAll('.view').forEach(v => v.classList.add('hidden'));
+      document.querySelectorAll('.tab').forEach(button => {
+        button.addEventListener('click', () => {
+          document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+          document.querySelectorAll('.view').forEach(view => view.classList.add('hidden'));
 
-          btn.classList.add('active');
-          $(btn.dataset.view).classList.remove('hidden');
+          button.classList.add('active');
+          $(button.dataset.view).classList.remove('hidden');
         });
       });
     }
 
     async function refreshDashboard() {
       await loadData();
+
       renderKpis();
       renderPodium();
       renderRanking();
@@ -748,22 +929,31 @@
         await refreshDashboard();
         setupTabs();
 
-        $('participantSearch').addEventListener('input', renderParticipants);
-        $('teamSearch').addEventListener('input', renderTeams);
+        const participantSearch = $('participantSearch');
+        const teamSearch = $('teamSearch');
+
+        if (participantSearch) {
+          participantSearch.addEventListener('input', renderParticipants);
+        }
+
+        if (teamSearch) {
+          teamSearch.addEventListener('input', renderTeams);
+        }
 
         setInterval(async () => {
           try {
             await refreshDashboard();
-          } catch (err) {
-            console.error('Errore aggiornamento automatico:', err);
+            console.log('Aggiornamento automatico eseguito:', new Date().toLocaleTimeString('it-IT'));
+          } catch (error) {
+            console.error('Errore aggiornamento automatico:', error);
           }
         }, 60000);
 
-      } catch (err) {
+      } catch (error) {
         $('error').innerHTML = `
           <div class="err">
-            <b>Errore caricamento dati:</b> ${escapeHtml(err.message)}<br>
-            Controlla che config.json e results.json siano nella root del repository.
+            <b>Errore caricamento dati:</b> ${escapeHtml(error.message)}<br>
+            Controlla che <b>config.json</b> e <b>results.json</b> siano nella root del repository.
           </div>
         `;
       }
