@@ -832,217 +832,36 @@
     }
 
   
-    /* === CANNONATA MOBILE UPGRADE === */
-    .mobile-list {
-      display: none;
+    /* === MOBILE PREMIUM STABILE - NO REGRESSION === */
+    html, body {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
     }
 
     .team-power {
       display: inline-flex;
       align-items: center;
-      gap: 7px;
-      font-weight: 900;
-      padding: 7px 10px;
-      border-radius: 999px;
-      background: rgba(250, 204, 21, .10);
-      border: 1px solid rgba(250, 204, 21, .24);
-      color: #fff3bf;
-    }
-
-    .spark {
-      filter: drop-shadow(0 0 8px rgba(250, 204, 21, .24));
-    }
-
-    .mobile-rank-card,
-    .mobile-team-card,
-    .mobile-group-card {
-      display: grid;
-      gap: 10px;
-      padding: 14px;
-      border: 1px solid rgba(45, 212, 255, .18);
-      border-radius: 20px;
-      background:
-        linear-gradient(135deg, rgba(45, 212, 255, .075), rgba(255, 255, 255, .018)),
-        rgba(8, 21, 39, .72);
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, .045);
-      margin-bottom: 10px;
-    }
-
-    .mobile-rank-top,
-    .mobile-team-top,
-    .mobile-group-top {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-    }
-
-    .mobile-name {
-      font-size: 16px;
-      font-weight: 950;
-      letter-spacing: -.2px;
-    }
-
-    .mobile-points {
-      font-size: 22px;
-      font-weight: 950;
-      color: #fff4b8;
-      text-shadow: 0 0 18px rgba(250, 204, 21, .18);
-      white-space: nowrap;
-    }
-
-    .mobile-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 7px;
-    }
-
-    .mini-stat {
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      padding: 6px 9px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, .045);
-      border: 1px solid rgba(255, 255, 255, .075);
-      color: var(--muted);
-      font-size: 12px;
-      font-weight: 800;
-    }
-
-    .mini-stat strong {
-      color: var(--text);
-    }
-
-    .group-grid-mobile {
-      display: none;
-    }
-
-    .group-chip {
-      display: inline-flex;
-      align-items: center;
       justify-content: center;
-      min-width: 38px;
-      height: 38px;
-      border-radius: 14px;
-      background: rgba(45, 212, 255, .10);
-      border: 1px solid rgba(45, 212, 255, .22);
+      min-width: 72px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      background: rgba(250, 204, 21, .12);
+      border: 1px solid rgba(250, 204, 21, .32);
+      color: #fff5bf;
       font-weight: 950;
-      color: #dff9ff;
+      white-space: nowrap;
+      box-shadow: 0 0 18px rgba(250, 204, 21, .08);
+    }
+
+    .top-team-row {
+      align-items: center;
     }
 
     @media (max-width: 760px) {
-      .desktop-table {
-        display: none !important;
-      }
-
-      .mobile-list,
-      .group-grid-mobile {
-        display: block;
-      }
-
-      .card {
-        overflow-x: visible;
-      }
-
-      th,
-      td {
-        white-space: normal;
-      }
-
-      .grid {
-        gap: 12px;
-      }
-
-      .podium {
-        display: grid;
-        grid-template-columns: 1fr;
-      }
-
-      .podium-card {
-        text-align: left;
-        display: grid;
-        grid-template-columns: auto 1fr auto;
-        align-items: center;
-        gap: 12px;
-      }
-
-      .podium-card .medal {
-        margin: 0;
-      }
-
-      .podium-card .score {
-        margin: 0;
-        text-align: right;
-      }
-
-      .mobile-rank-card:nth-child(1) {
-        border-color: rgba(250, 204, 21, .42);
-        background:
-          linear-gradient(135deg, rgba(250, 204, 21, .13), rgba(45, 212, 255, .04)),
-          rgba(8, 21, 39, .74);
-      }
-
-      .mobile-rank-card:nth-child(2) {
-        border-color: rgba(203, 213, 225, .28);
-      }
-
-      .mobile-rank-card:nth-child(3) {
-        border-color: rgba(251, 146, 60, .30);
-      }
-
-      .match {
-        padding: 14px;
-        margin-bottom: 10px;
-        border: 1px solid rgba(45, 212, 255, .14);
-        border-radius: 18px;
-        background: rgba(8, 21, 39, .55);
-      }
-
-      .right {
-        min-width: 58px;
-      }
-    }
-
-  
-    /* === FIX DEFINITIVO MOBILE PROPORZIONI === */
-    html,
-    body {
-      width: 100%;
-      max-width: 100%;
-      overflow-x: hidden;
-    }
-
-    body {
-      min-width: 0;
-    }
-
-    .wrap {
-      width: 100%;
-      max-width: 1220px;
-      overflow-x: hidden;
-    }
-
-    img,
-    table,
-    section,
-    header,
-    nav,
-    div {
-      max-width: 100%;
-    }
-
-    @media (max-width: 760px) {
-      html,
-      body {
-        width: 100%;
-        max-width: 100%;
-        overflow-x: hidden;
-      }
-
       body {
         background:
-          radial-gradient(circle at 20% 0%, rgba(45, 212, 255, .18), transparent 34%),
+          radial-gradient(circle at 18% 0%, rgba(45, 212, 255, .18), transparent 34%),
           linear-gradient(180deg, #071426, #06101d 64%, #050b16);
       }
 
@@ -1050,13 +869,12 @@
         width: 100%;
         max-width: 100%;
         margin: 0;
-        padding: 14px 12px 80px;
+        padding: 14px 12px 78px;
         overflow-x: hidden;
       }
 
       .hero {
         width: 100%;
-        max-width: 100%;
         margin: 0 0 14px;
         padding: 20px 16px;
         border-radius: 24px;
@@ -1064,57 +882,58 @@
       }
 
       .hero::after {
-        right: -22px;
-        bottom: -26px;
-        font-size: 105px;
+        right: -26px;
+        bottom: -30px;
+        font-size: 108px;
         opacity: .05;
       }
 
       h1 {
-        font-size: 34px;
+        font-size: 33px;
         line-height: 1.06;
-        max-width: 82%;
-        margin-bottom: 10px;
+        max-width: 88%;
+      }
+
+      h2 {
+        font-size: 22px;
       }
 
       .sub {
         font-size: 15px;
         line-height: 1.42;
-        max-width: 92%;
+        max-width: 94%;
       }
 
       .badge {
         margin-top: 16px;
-        width: fit-content;
-        max-width: 100%;
         font-size: 13px;
         padding: 9px 12px;
+        max-width: 100%;
       }
 
       .kpis {
-        display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
         gap: 10px;
-        width: 100%;
         margin: 14px 0;
       }
 
-      .kpi,
-      .card,
-      .podium-card {
+      .kpi, .card, .podium-card {
         width: 100%;
         max-width: 100%;
         border-radius: 22px;
-        padding: 17px;
+        padding: 16px;
       }
 
       .kpi b {
-        font-size: 32px;
+        font-size: 28px;
         line-height: 1.05;
       }
 
+      .kpi span {
+        font-size: 13px;
+      }
+
       .prize-card {
-        width: 100%;
         margin: 14px 0;
       }
 
@@ -1124,12 +943,11 @@
 
       .prize-total {
         margin-top: 12px;
-        font-size: 13px;
         white-space: normal;
+        font-size: 13px;
       }
 
       .prize-grid {
-        display: grid;
         grid-template-columns: 1fr;
         gap: 10px;
       }
@@ -1158,18 +976,15 @@
         border-radius: 18px;
       }
 
-      .grid {
-        display: grid;
+      .grid, .podium {
         grid-template-columns: 1fr;
         gap: 12px;
-        width: 100%;
       }
 
-      .podium {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 10px;
-        width: 100%;
+      .podium-card.first,
+      .podium-card.second,
+      .podium-card.third {
+        min-height: auto;
       }
 
       .podium-card {
@@ -1178,7 +993,6 @@
         grid-template-columns: auto 1fr auto;
         align-items: center;
         gap: 12px;
-        min-height: auto !important;
       }
 
       .podium-card .medal {
@@ -1196,48 +1010,44 @@
         text-align: right;
       }
 
-      .desktop-table {
-        display: none !important;
-      }
-
-      .mobile-list,
-      .group-grid-mobile {
-        display: block !important;
-      }
-
-      .mobile-rank-card,
-      .mobile-team-card,
-      .mobile-group-card {
+      table {
         width: 100%;
-        max-width: 100%;
+        table-layout: fixed;
       }
 
-      .mobile-rank-top,
-      .mobile-team-top,
-      .mobile-group-top {
-        align-items: flex-start;
+      th, td {
+        white-space: normal;
+        overflow-wrap: anywhere;
+        padding: 10px 6px;
+        font-size: 13px;
       }
 
-      .mobile-name {
-        font-size: 15px;
+      #ranking th:nth-child(1),
+      #ranking td:nth-child(1) {
+        width: 42px;
       }
 
-      .mobile-points {
-        font-size: 20px;
+      #ranking th:nth-child(2),
+      #ranking td:nth-child(2) {
+        width: auto;
       }
 
-      .mobile-meta {
-        gap: 6px;
+      #ranking th:nth-child(3),
+      #ranking td:nth-child(3),
+      #ranking th:nth-child(4),
+      #ranking td:nth-child(4),
+      #ranking th:nth-child(5),
+      #ranking td:nth-child(5) {
+        width: 58px;
+        text-align: center;
       }
 
-      .mini-stat {
-        font-size: 11px;
-        padding: 5px 8px;
+      .rank {
+        width: 32px;
+        height: 32px;
       }
 
       .match {
-        width: 100%;
-        max-width: 100%;
         padding: 13px;
         margin-bottom: 10px;
         border: 1px solid rgba(45, 212, 255, .14);
@@ -1250,20 +1060,53 @@
       }
 
       .right {
-        min-width: auto;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
       }
 
-      table {
-        width: 100%;
-        max-width: 100%;
-        table-layout: auto;
+      .team-power {
+        min-width: 68px;
+        font-size: 13px;
       }
 
-      th,
-      td {
-        white-space: normal;
-        word-break: normal;
-        overflow-wrap: anywhere;
+      .group-card {
+        overflow-x: visible;
+      }
+
+      .group-card table th,
+      .group-card table td {
+        font-size: 12px;
+        padding: 8px 4px;
+      }
+
+      .group-card table th:nth-child(2),
+      .group-card table td:nth-child(2) {
+        width: 34%;
+      }
+    }
+
+    @media (max-width: 390px) {
+      .kpis {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 31px;
+      }
+
+      th, td {
+        font-size: 12px;
+        padding: 8px 4px;
+      }
+
+      #ranking th:nth-child(3),
+      #ranking td:nth-child(3),
+      #ranking th:nth-child(4),
+      #ranking td:nth-child(4),
+      #ranking th:nth-child(5),
+      #ranking td:nth-child(5) {
+        width: 50px;
       }
     }
 
@@ -1326,7 +1169,7 @@
         <div class="card">
           <h2>Classifica generale</h2>
 
-          <table class="desktop-table">
+          <table>
             <thead>
               <tr>
                 <th>#</th>
@@ -1338,7 +1181,6 @@
             </thead>
             <tbody id="ranking"></tbody>
           </table>
-          <div id="rankingMobile" class="mobile-list"></div>
         </div>
 
         <div class="card">
@@ -1483,7 +1325,6 @@
       }, 0);
     }
 
-
     function getFireEmoji(points) {
       const value = Number(points || 0);
       if (value >= 18) return '🚀';
@@ -1542,7 +1383,6 @@
       if (!computed.length) {
         tbody.innerHTML = '<tr><td colspan="5" class="empty">Classifica non ancora disponibile.</td></tr>';
         $('detail').innerHTML = 'Classifica non ancora disponibile.';
-        if ($('rankingMobile')) $('rankingMobile').innerHTML = '';
         return;
       }
 
@@ -1555,26 +1395,6 @@
           <td>${person.alive ?? person.teams?.length ?? '-'}</td>
         </tr>
       `).join('');
-
-      const mobile = $('rankingMobile');
-      if (mobile) {
-        mobile.innerHTML = computed.map((person, index) => `
-          <div class="mobile-rank-card" onclick="showPerson(${index})">
-            <div class="mobile-rank-top">
-              <div>
-                <span class="rank">${index + 1}</span>
-                <span class="mobile-name">${escapeHtml(person.name)}</span>
-              </div>
-              <div class="mobile-points">${Number(person.total || 0).toFixed(0)} pt</div>
-            </div>
-            <div class="mobile-meta">
-              <span class="mini-stat">🎮 PG <strong>${getParticipantPlayed(person)}</strong></span>
-              <span class="mini-stat">🌍 Squadre <strong>${person.alive ?? person.teams?.length ?? '-'}</strong></span>
-              <span class="mini-stat">🏆 Posizione <strong>${index + 1}</strong></span>
-            </div>
-          </div>
-        `).join('');
-      }
 
       if (selectedPersonIndex >= computed.length) {
         selectedPersonIndex = 0;
@@ -1718,88 +1538,20 @@
       }
 
       $('topTeams').innerHTML = top.map((team, index) => `
-        <div class="match">
+        <div class="match top-team-row">
           <div>
-            <b>${index + 1}. <span class="spark">${getFireEmoji(team.weighted)}</span> ${escapeHtml(team.name)}</b>
-            <div class="date">Girone ${escapeHtml(normalizeGroup ? normalizeGroup(team.group) : team.group)} · PG ${team.played ?? 0}</div>
+            <b>${index + 1}. ${getFireEmoji(team.weighted)} ${escapeHtml(team.name)}</b>
+            <div class="date">Girone ${escapeHtml(normalizeGroup(team.group))} · PG ${team.played ?? 0}</div>
           </div>
           <div class="right">
-            <span class="team-power">${getFireEmoji(team.weighted)} ${team.weighted} pt</span>
+            <span class="team-power">${Number(team.weighted || 0).toFixed(0)} pt</span>
           </div>
         </div>
       `).join('');
     }
 
-
-    function calculateWorldCupGroups() {
-      const teams = (config.teams || []).map(team => {
-        const stat = getTeamStatsByName(team.name);
-
-        return {
-          name: team.name,
-          group: normalizeGroup(team.group),
-          played: Number(stat.played ?? 0),
-          won: Number(stat.w ?? 0),
-          draw: Number(stat.d ?? 0),
-          lost: Number(stat.l ?? 0),
-          points: Number(stat.base ?? 0),
-          goalsFor: 0,
-          goalsAgainst: 0,
-          goalDifference: 0
-        };
-      });
-
-      for (const match of results.matches || []) {
-        if (match.status !== 'FINISHED') continue;
-
-        const homeName = match.homeTeam?.name;
-        const awayName = match.awayTeam?.name;
-
-        const home = teams.find(team => normalizeTeamName(team.name) === normalizeTeamName(homeName));
-        const away = teams.find(team => normalizeTeamName(team.name) === normalizeTeamName(awayName));
-
-        if (!home || !away) continue;
-
-        const homeGoals = match.score?.fullTime?.home ?? match.score?.regularTime?.home;
-        const awayGoals = match.score?.fullTime?.away ?? match.score?.regularTime?.away;
-
-        if (homeGoals == null || awayGoals == null) continue;
-
-        home.goalsFor += Number(homeGoals);
-        home.goalsAgainst += Number(awayGoals);
-
-        away.goalsFor += Number(awayGoals);
-        away.goalsAgainst += Number(homeGoals);
-
-        home.goalDifference = home.goalsFor - home.goalsAgainst;
-        away.goalDifference = away.goalsFor - away.goalsAgainst;
-      }
-
-      const groups = {};
-
-      for (const team of teams) {
-        if (!groups[team.group]) {
-          groups[team.group] = [];
-        }
-
-        groups[team.group].push(team);
-      }
-
-      return Object.entries(groups)
-        .sort(([a], [b]) => a.localeCompare(b, 'it', { numeric: true }))
-        .map(([group, rows]) => ({
-          group,
-          rows: rows.sort((a, b) =>
-            b.points - a.points ||
-            b.goalDifference - a.goalDifference ||
-            b.goalsFor - a.goalsFor ||
-            a.name.localeCompare(b.name)
-          )
-        }));
-    }
-
     function renderGroupStandings() {
-      const groups = typeof calculateWorldCupGroups === 'function' ? calculateWorldCupGroups() : [];
+      const groups = calculateWorldCupGroups();
 
       if (!groups.length) {
         $('groupStandings').innerHTML = '<div class="empty">Classifiche gironi non ancora disponibili.</div>';
@@ -1808,9 +1560,9 @@
 
       $('groupStandings').innerHTML = groups.map(group => `
         <div class="card group-card">
-          <h3><span class="group-chip">${escapeHtml(group.group)}</span> Girone ${escapeHtml(group.group)}</h3>
+          <h3>Girone ${escapeHtml(group.group)}</h3>
 
-          <table class="desktop-table">
+          <table>
             <thead>
               <tr>
                 <th>Pos</th>
@@ -1842,29 +1594,6 @@
               `).join('')}
             </tbody>
           </table>
-
-          <div class="group-grid-mobile">
-            ${group.rows.map((row, index) => `
-              <div class="mobile-group-card">
-                <div class="mobile-group-top">
-                  <div>
-                    <span class="rank">${index + 1}</span>
-                    <span class="mobile-name">${escapeHtml(row.name)}</span>
-                  </div>
-                  <div class="mobile-points">${row.points} pt</div>
-                </div>
-                <div class="mobile-meta">
-                  <span class="mini-stat">🎮 PG <strong>${row.played}</strong></span>
-                  <span class="mini-stat">✅ V <strong>${row.won}</strong></span>
-                  <span class="mini-stat">🤝 N <strong>${row.draw}</strong></span>
-                  <span class="mini-stat">❌ P <strong>${row.lost}</strong></span>
-                  <span class="mini-stat">⚽ GF <strong>${row.goalsFor}</strong></span>
-                  <span class="mini-stat">🛡️ GS <strong>${row.goalsAgainst}</strong></span>
-                  <span class="mini-stat">📊 DR <strong>${row.goalDifference}</strong></span>
-                </div>
-              </div>
-            `).join('')}
-          </div>
         </div>
       `).join('');
     }
