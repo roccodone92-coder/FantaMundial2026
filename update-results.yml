@@ -2,14 +2,14 @@ name: Aggiorna risultati Mondiale
 
 on:
   schedule:
-    - cron: '* * * * *'
+    - cron: '*/5 * * * *'
   workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  update:
+  aggiornamento:
     runs-on: ubuntu-latest
 
     steps:
@@ -31,16 +31,8 @@ jobs:
           COMPETITION_CODE: WC
           SEASON: '2026'
 
-      - name: Verifica modifiche
-        run: |
-          echo "Controllo modifiche..."
-          git status
-          cat results.json | head -20
-
-      - name: Commit e push risultati
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add results.json
-          git commit -m "Aggiorna risultati e classifica" || echo "Nessuna modifica da salvare"
-          git push
+      - name: Commit risultati
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Aggiorna risultati e classifica
+          file_pattern: results.json
