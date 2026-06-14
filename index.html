@@ -831,6 +831,179 @@
       }
     }
 
+  
+    /* === CANNONATA MOBILE UPGRADE === */
+    .mobile-list {
+      display: none;
+    }
+
+    .team-power {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-weight: 900;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(250, 204, 21, .10);
+      border: 1px solid rgba(250, 204, 21, .24);
+      color: #fff3bf;
+    }
+
+    .spark {
+      filter: drop-shadow(0 0 8px rgba(250, 204, 21, .24));
+    }
+
+    .mobile-rank-card,
+    .mobile-team-card,
+    .mobile-group-card {
+      display: grid;
+      gap: 10px;
+      padding: 14px;
+      border: 1px solid rgba(45, 212, 255, .18);
+      border-radius: 20px;
+      background:
+        linear-gradient(135deg, rgba(45, 212, 255, .075), rgba(255, 255, 255, .018)),
+        rgba(8, 21, 39, .72);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, .045);
+      margin-bottom: 10px;
+    }
+
+    .mobile-rank-top,
+    .mobile-team-top,
+    .mobile-group-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .mobile-name {
+      font-size: 16px;
+      font-weight: 950;
+      letter-spacing: -.2px;
+    }
+
+    .mobile-points {
+      font-size: 22px;
+      font-weight: 950;
+      color: #fff4b8;
+      text-shadow: 0 0 18px rgba(250, 204, 21, .18);
+      white-space: nowrap;
+    }
+
+    .mobile-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .mini-stat {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 6px 9px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, .045);
+      border: 1px solid rgba(255, 255, 255, .075);
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .mini-stat strong {
+      color: var(--text);
+    }
+
+    .group-grid-mobile {
+      display: none;
+    }
+
+    .group-chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 38px;
+      height: 38px;
+      border-radius: 14px;
+      background: rgba(45, 212, 255, .10);
+      border: 1px solid rgba(45, 212, 255, .22);
+      font-weight: 950;
+      color: #dff9ff;
+    }
+
+    @media (max-width: 760px) {
+      .desktop-table {
+        display: none !important;
+      }
+
+      .mobile-list,
+      .group-grid-mobile {
+        display: block;
+      }
+
+      .card {
+        overflow-x: visible;
+      }
+
+      th,
+      td {
+        white-space: normal;
+      }
+
+      .grid {
+        gap: 12px;
+      }
+
+      .podium {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .podium-card {
+        text-align: left;
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .podium-card .medal {
+        margin: 0;
+      }
+
+      .podium-card .score {
+        margin: 0;
+        text-align: right;
+      }
+
+      .mobile-rank-card:nth-child(1) {
+        border-color: rgba(250, 204, 21, .42);
+        background:
+          linear-gradient(135deg, rgba(250, 204, 21, .13), rgba(45, 212, 255, .04)),
+          rgba(8, 21, 39, .74);
+      }
+
+      .mobile-rank-card:nth-child(2) {
+        border-color: rgba(203, 213, 225, .28);
+      }
+
+      .mobile-rank-card:nth-child(3) {
+        border-color: rgba(251, 146, 60, .30);
+      }
+
+      .match {
+        padding: 14px;
+        margin-bottom: 10px;
+        border: 1px solid rgba(45, 212, 255, .14);
+        border-radius: 18px;
+        background: rgba(8, 21, 39, .55);
+      }
+
+      .right {
+        min-width: 58px;
+      }
+    }
+
   </style>
 </head>
 
@@ -890,7 +1063,7 @@
         <div class="card">
           <h2>Classifica generale</h2>
 
-          <table>
+          <table class="desktop-table">
             <thead>
               <tr>
                 <th>#</th>
@@ -902,6 +1075,7 @@
             </thead>
             <tbody id="ranking"></tbody>
           </table>
+          <div id="rankingMobile" class="mobile-list"></div>
         </div>
 
         <div class="card">
@@ -1046,6 +1220,21 @@
       }, 0);
     }
 
+
+    function getFireEmoji(points) {
+      const value = Number(points || 0);
+      if (value >= 18) return '🚀';
+      if (value >= 12) return '🔥';
+      if (value >= 8) return '⚡';
+      if (value >= 4) return '💪';
+      if (value > 0) return '✨';
+      return '🌱';
+    }
+
+    function getParticipantPlayed(person) {
+      return (person.teams || []).reduce((sum, team) => sum + Number(team.played || 0), 0);
+    }
+
     function renderKpis() {
       $('kParticipants').textContent = config.participants?.length ?? '-';
       $('kTeams').textContent = config.teams?.length ?? '-';
@@ -1090,6 +1279,7 @@
       if (!computed.length) {
         tbody.innerHTML = '<tr><td colspan="5" class="empty">Classifica non ancora disponibile.</td></tr>';
         $('detail').innerHTML = 'Classifica non ancora disponibile.';
+        if ($('rankingMobile')) $('rankingMobile').innerHTML = '';
         return;
       }
 
@@ -1102,6 +1292,26 @@
           <td>${person.alive ?? person.teams?.length ?? '-'}</td>
         </tr>
       `).join('');
+
+      const mobile = $('rankingMobile');
+      if (mobile) {
+        mobile.innerHTML = computed.map((person, index) => `
+          <div class="mobile-rank-card" onclick="showPerson(${index})">
+            <div class="mobile-rank-top">
+              <div>
+                <span class="rank">${index + 1}</span>
+                <span class="mobile-name">${escapeHtml(person.name)}</span>
+              </div>
+              <div class="mobile-points">${Number(person.total || 0).toFixed(0)} pt</div>
+            </div>
+            <div class="mobile-meta">
+              <span class="mini-stat">🎮 PG <strong>${getParticipantPlayed(person)}</strong></span>
+              <span class="mini-stat">🌍 Squadre <strong>${person.alive ?? person.teams?.length ?? '-'}</strong></span>
+              <span class="mini-stat">🏆 Posizione <strong>${index + 1}</strong></span>
+            </div>
+          </div>
+        `).join('');
+      }
 
       if (selectedPersonIndex >= computed.length) {
         selectedPersonIndex = 0;
@@ -1247,82 +1457,18 @@
       $('topTeams').innerHTML = top.map((team, index) => `
         <div class="match">
           <div>
-            <b>${index + 1}. ${escapeHtml(team.name)}</b>
-            <div class="date">Girone ${escapeHtml(normalizeGroup(team.group))} · PG ${team.played} · Fascia ${team.tier}</div>
+            <b>${index + 1}. <span class="spark">${getFireEmoji(team.weighted)}</span> ${escapeHtml(team.name)}</b>
+            <div class="date">Girone ${escapeHtml(normalizeGroup ? normalizeGroup(team.group) : team.group)} · PG ${team.played ?? 0}</div>
           </div>
           <div class="right">
-            <b>${team.weighted} pt</b>
-            <div class="date">${team.record}</div>
+            <span class="team-power">${getFireEmoji(team.weighted)} ${team.weighted} pt</span>
           </div>
         </div>
       `).join('');
     }
 
-    function calculateWorldCupGroups() {
-      const teams = (config.teams || []).map(team => {
-        const stat = getTeamStatsByName(team.name);
-
-        return {
-          name: team.name,
-          group: normalizeGroup(team.group),
-          played: stat.played ?? 0,
-          won: stat.w ?? 0,
-          draw: stat.d ?? 0,
-          lost: stat.l ?? 0,
-          points: stat.base ?? 0,
-          goalsFor: 0,
-          goalsAgainst: 0,
-          goalDifference: 0
-        };
-      });
-
-      for (const match of results.matches || []) {
-        if (match.status !== 'FINISHED') continue;
-
-        const homeName = match.homeTeam?.name;
-        const awayName = match.awayTeam?.name;
-
-        const home = teams.find(t => normalizeTeamName(t.name) === normalizeTeamName(homeName));
-        const away = teams.find(t => normalizeTeamName(t.name) === normalizeTeamName(awayName));
-
-        if (!home || !away) continue;
-
-        const hs = match.score?.fullTime?.home ?? match.score?.regularTime?.home;
-        const as = match.score?.fullTime?.away ?? match.score?.regularTime?.away;
-
-        if (hs == null || as == null) continue;
-
-        home.goalsFor += hs;
-        home.goalsAgainst += as;
-        away.goalsFor += as;
-        away.goalsAgainst += hs;
-
-        home.goalDifference = home.goalsFor - home.goalsAgainst;
-        away.goalDifference = away.goalsFor - away.goalsAgainst;
-      }
-
-      const groups = {};
-
-      for (const team of teams) {
-        if (!groups[team.group]) groups[team.group] = [];
-        groups[team.group].push(team);
-      }
-
-      return Object.entries(groups)
-        .sort(([a], [b]) => a.localeCompare(b, 'it', { numeric:true }))
-        .map(([group, rows]) => ({
-          group,
-          rows: rows.sort((a, b) =>
-            b.points - a.points ||
-            b.goalDifference - a.goalDifference ||
-            b.goalsFor - a.goalsFor ||
-            a.name.localeCompare(b.name)
-          )
-        }));
-    }
-
     function renderGroupStandings() {
-      const groups = calculateWorldCupGroups();
+      const groups = calculateWorldCupGroups ? calculateWorldCupGroups() : [];
 
       if (!groups.length) {
         $('groupStandings').innerHTML = '<div class="empty">Classifiche gironi non ancora disponibili.</div>';
@@ -1331,9 +1477,9 @@
 
       $('groupStandings').innerHTML = groups.map(group => `
         <div class="card group-card">
-          <h3>Girone ${escapeHtml(group.group)}</h3>
+          <h3><span class="group-chip">${escapeHtml(group.group)}</span> Girone ${escapeHtml(group.group)}</h3>
 
-          <table>
+          <table class="desktop-table">
             <thead>
               <tr>
                 <th>Pos</th>
@@ -1365,6 +1511,29 @@
               `).join('')}
             </tbody>
           </table>
+
+          <div class="group-grid-mobile">
+            ${group.rows.map((row, index) => `
+              <div class="mobile-group-card">
+                <div class="mobile-group-top">
+                  <div>
+                    <span class="rank">${index + 1}</span>
+                    <span class="mobile-name">${escapeHtml(row.name)}</span>
+                  </div>
+                  <div class="mobile-points">${row.points} pt</div>
+                </div>
+                <div class="mobile-meta">
+                  <span class="mini-stat">🎮 PG <strong>${row.played}</strong></span>
+                  <span class="mini-stat">✅ V <strong>${row.won}</strong></span>
+                  <span class="mini-stat">🤝 N <strong>${row.draw}</strong></span>
+                  <span class="mini-stat">❌ P <strong>${row.lost}</strong></span>
+                  <span class="mini-stat">⚽ GF <strong>${row.goalsFor}</strong></span>
+                  <span class="mini-stat">🛡️ GS <strong>${row.goalsAgainst}</strong></span>
+                  <span class="mini-stat">📊 DR <strong>${row.goalDifference}</strong></span>
+                </div>
+              </div>
+            `).join('')}
+          </div>
         </div>
       `).join('');
     }
