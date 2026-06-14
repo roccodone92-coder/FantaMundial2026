@@ -831,285 +831,6 @@
       }
     }
 
-  
-    /* === MOBILE PREMIUM STABILE - NO REGRESSION === */
-    html, body {
-      width: 100%;
-      max-width: 100%;
-      overflow-x: hidden;
-    }
-
-    .team-power {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-width: 72px;
-      padding: 8px 10px;
-      border-radius: 999px;
-      background: rgba(250, 204, 21, .12);
-      border: 1px solid rgba(250, 204, 21, .32);
-      color: #fff5bf;
-      font-weight: 950;
-      white-space: nowrap;
-      box-shadow: 0 0 18px rgba(250, 204, 21, .08);
-    }
-
-    .top-team-row {
-      align-items: center;
-    }
-
-    @media (max-width: 760px) {
-      body {
-        background:
-          radial-gradient(circle at 18% 0%, rgba(45, 212, 255, .18), transparent 34%),
-          linear-gradient(180deg, #071426, #06101d 64%, #050b16);
-      }
-
-      .wrap {
-        width: 100%;
-        max-width: 100%;
-        margin: 0;
-        padding: 14px 12px 78px;
-        overflow-x: hidden;
-      }
-
-      .hero {
-        width: 100%;
-        margin: 0 0 14px;
-        padding: 20px 16px;
-        border-radius: 24px;
-        display: block;
-      }
-
-      .hero::after {
-        right: -26px;
-        bottom: -30px;
-        font-size: 108px;
-        opacity: .05;
-      }
-
-      h1 {
-        font-size: 33px;
-        line-height: 1.06;
-        max-width: 88%;
-      }
-
-      h2 {
-        font-size: 22px;
-      }
-
-      .sub {
-        font-size: 15px;
-        line-height: 1.42;
-        max-width: 94%;
-      }
-
-      .badge {
-        margin-top: 16px;
-        font-size: 13px;
-        padding: 9px 12px;
-        max-width: 100%;
-      }
-
-      .kpis {
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-        margin: 14px 0;
-      }
-
-      .kpi, .card, .podium-card {
-        width: 100%;
-        max-width: 100%;
-        border-radius: 22px;
-        padding: 16px;
-      }
-
-      .kpi b {
-        font-size: 28px;
-        line-height: 1.05;
-      }
-
-      .kpi span {
-        font-size: 13px;
-      }
-
-      .prize-card {
-        margin: 14px 0;
-      }
-
-      .prize-title {
-        display: block;
-      }
-
-      .prize-total {
-        margin-top: 12px;
-        white-space: normal;
-        font-size: 13px;
-      }
-
-      .prize-grid {
-        grid-template-columns: 1fr;
-        gap: 10px;
-      }
-
-      .tabs {
-        width: calc(100% + 24px);
-        max-width: calc(100% + 24px);
-        margin-left: -12px;
-        margin-right: -12px;
-        padding: 10px 12px;
-        overflow-x: auto;
-        overflow-y: hidden;
-        flex-wrap: nowrap;
-        scrollbar-width: none;
-      }
-
-      .tabs::-webkit-scrollbar {
-        display: none;
-      }
-
-      .tabs button {
-        flex: 0 0 auto;
-        white-space: nowrap;
-        font-size: 14px;
-        padding: 11px 14px;
-        border-radius: 18px;
-      }
-
-      .grid, .podium {
-        grid-template-columns: 1fr;
-        gap: 12px;
-      }
-
-      .podium-card.first,
-      .podium-card.second,
-      .podium-card.third {
-        min-height: auto;
-      }
-
-      .podium-card {
-        text-align: left;
-        display: grid;
-        grid-template-columns: auto 1fr auto;
-        align-items: center;
-        gap: 12px;
-      }
-
-      .podium-card .medal {
-        margin: 0;
-        font-size: 30px;
-      }
-
-      .podium-card b {
-        font-size: 17px;
-      }
-
-      .podium-card .score {
-        margin: 0;
-        font-size: 24px;
-        text-align: right;
-      }
-
-      table {
-        width: 100%;
-        table-layout: fixed;
-      }
-
-      th, td {
-        white-space: normal;
-        overflow-wrap: anywhere;
-        padding: 10px 6px;
-        font-size: 13px;
-      }
-
-      #ranking th:nth-child(1),
-      #ranking td:nth-child(1) {
-        width: 42px;
-      }
-
-      #ranking th:nth-child(2),
-      #ranking td:nth-child(2) {
-        width: auto;
-      }
-
-      #ranking th:nth-child(3),
-      #ranking td:nth-child(3),
-      #ranking th:nth-child(4),
-      #ranking td:nth-child(4),
-      #ranking th:nth-child(5),
-      #ranking td:nth-child(5) {
-        width: 58px;
-        text-align: center;
-      }
-
-      .rank {
-        width: 32px;
-        height: 32px;
-      }
-
-      .match {
-        padding: 13px;
-        margin-bottom: 10px;
-        border: 1px solid rgba(45, 212, 255, .14);
-        border-radius: 18px;
-        background: rgba(8, 21, 39, .55);
-      }
-
-      .match b {
-        font-size: 14px;
-      }
-
-      .right {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-      }
-
-      .team-power {
-        min-width: 68px;
-        font-size: 13px;
-      }
-
-      .group-card {
-        overflow-x: visible;
-      }
-
-      .group-card table th,
-      .group-card table td {
-        font-size: 12px;
-        padding: 8px 4px;
-      }
-
-      .group-card table th:nth-child(2),
-      .group-card table td:nth-child(2) {
-        width: 34%;
-      }
-    }
-
-    @media (max-width: 390px) {
-      .kpis {
-        grid-template-columns: 1fr;
-      }
-
-      h1 {
-        font-size: 31px;
-      }
-
-      th, td {
-        font-size: 12px;
-        padding: 8px 4px;
-      }
-
-      #ranking th:nth-child(3),
-      #ranking td:nth-child(3),
-      #ranking th:nth-child(4),
-      #ranking td:nth-child(4),
-      #ranking th:nth-child(5),
-      #ranking td:nth-child(5) {
-        width: 50px;
-      }
-    }
-
   </style>
 </head>
 
@@ -1325,20 +1046,6 @@
       }, 0);
     }
 
-    function getFireEmoji(points) {
-      const value = Number(points || 0);
-      if (value >= 18) return '🚀';
-      if (value >= 12) return '🔥';
-      if (value >= 8) return '⚡';
-      if (value >= 4) return '💪';
-      if (value > 0) return '✨';
-      return '🌱';
-    }
-
-    function getParticipantPlayed(person) {
-      return (person.teams || []).reduce((sum, team) => sum + Number(team.played || 0), 0);
-    }
-
     function renderKpis() {
       $('kParticipants').textContent = config.participants?.length ?? '-';
       $('kTeams').textContent = config.teams?.length ?? '-';
@@ -1538,16 +1245,80 @@
       }
 
       $('topTeams').innerHTML = top.map((team, index) => `
-        <div class="match top-team-row">
+        <div class="match">
           <div>
-            <b>${index + 1}. ${getFireEmoji(team.weighted)} ${escapeHtml(team.name)}</b>
-            <div class="date">Girone ${escapeHtml(normalizeGroup(team.group))} · PG ${team.played ?? 0}</div>
+            <b>${index + 1}. ${escapeHtml(team.name)}</b>
+            <div class="date">Girone ${escapeHtml(normalizeGroup(team.group))} · PG ${team.played} · Fascia ${team.tier}</div>
           </div>
           <div class="right">
-            <span class="team-power">${Number(team.weighted || 0).toFixed(0)} pt</span>
+            <b>${team.weighted} pt</b>
+            <div class="date">${team.record}</div>
           </div>
         </div>
       `).join('');
+    }
+
+    function calculateWorldCupGroups() {
+      const teams = (config.teams || []).map(team => {
+        const stat = getTeamStatsByName(team.name);
+
+        return {
+          name: team.name,
+          group: normalizeGroup(team.group),
+          played: stat.played ?? 0,
+          won: stat.w ?? 0,
+          draw: stat.d ?? 0,
+          lost: stat.l ?? 0,
+          points: stat.base ?? 0,
+          goalsFor: 0,
+          goalsAgainst: 0,
+          goalDifference: 0
+        };
+      });
+
+      for (const match of results.matches || []) {
+        if (match.status !== 'FINISHED') continue;
+
+        const homeName = match.homeTeam?.name;
+        const awayName = match.awayTeam?.name;
+
+        const home = teams.find(t => normalizeTeamName(t.name) === normalizeTeamName(homeName));
+        const away = teams.find(t => normalizeTeamName(t.name) === normalizeTeamName(awayName));
+
+        if (!home || !away) continue;
+
+        const hs = match.score?.fullTime?.home ?? match.score?.regularTime?.home;
+        const as = match.score?.fullTime?.away ?? match.score?.regularTime?.away;
+
+        if (hs == null || as == null) continue;
+
+        home.goalsFor += hs;
+        home.goalsAgainst += as;
+        away.goalsFor += as;
+        away.goalsAgainst += hs;
+
+        home.goalDifference = home.goalsFor - home.goalsAgainst;
+        away.goalDifference = away.goalsFor - away.goalsAgainst;
+      }
+
+      const groups = {};
+
+      for (const team of teams) {
+        if (!groups[team.group]) groups[team.group] = [];
+        groups[team.group].push(team);
+      }
+
+      return Object.entries(groups)
+        .sort(([a], [b]) => a.localeCompare(b, 'it', { numeric:true }))
+        .map(([group, rows]) => ({
+          group,
+          rows: rows.sort((a, b) =>
+            b.points - a.points ||
+            b.goalDifference - a.goalDifference ||
+            b.goalsFor - a.goalsFor ||
+            a.name.localeCompare(b.name)
+          )
+        }));
     }
 
     function renderGroupStandings() {
