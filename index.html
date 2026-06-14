@@ -263,6 +263,7 @@
     .match .date{font-size:12px;color:var(--muted);margin-top:4px}
     .right{text-align:right}
     .empty{padding:20px;color:var(--muted);text-align:center}
+    .group-card{margin-bottom:16px;overflow-x:auto}
 
     @media(max-width:1000px){
       .hero{display:block}
@@ -316,6 +317,7 @@
       <button class="tab active" data-view="classifica">🏆 Classifica</button>
       <button class="tab" data-view="partecipanti">👥 Partecipanti</button>
       <button class="tab" data-view="squadre">🔥 Squadre</button>
+      <button class="tab" data-view="gironi">📊 Gironi</button>
       <button class="tab" data-view="partite">⚽ Partite</button>
       <button class="tab" data-view="regolamento">📘 Regolamento</button>
     </nav>
@@ -367,6 +369,13 @@
           <h2>🔥 Top squadre</h2>
           <div id="topTeams"></div>
         </div>
+      </div>
+    </section>
+
+    <section id="gironi" class="view hidden">
+      <div class="card">
+        <h2>📊 Classifiche gironi</h2>
+        <div id="groupStandings"></div>
       </div>
     </section>
 
@@ -506,6 +515,7 @@
           <thead>
             <tr>
               <th>Squadra</th>
+              <th>PG</th>
               <th>Fascia</th>
               <th>Base</th>
               <th>Bonus</th>
@@ -516,7 +526,11 @@
           <tbody>
             ${(p.teams || []).map(t => `
               <tr>
-                <td><b>${escapeHtml(t.team)}</b></td>
+                <td>
+                  <b>${escapeHtml(t.team)}</b><br>
+                  <span class="muted">${t.groupBonusReady ? 'Bonus girone attivo' : 'Bonus girone non ancora attivo'}</span>
+                </td>
+                <td>${t.played ?? 0}</td>
                 <td>${t.tier}</td>
                 <td>${t.base}</td>
                 <td>${t.bonus}</td>
@@ -554,6 +568,7 @@
           base: s.base ?? 0,
           bonus: s.bonus ?? 0,
           weighted: s.weighted ?? 0,
+          played: s.played ?? 0,
           record: `${s.w || 0}-${s.d || 0}-${s.l || 0}`
         };
       }).sort((a,b) => b.weighted - a.weighted || b.base - a.base);
@@ -569,6 +584,7 @@
             <tr>
               <th>Squadra</th>
               <th>Girone</th>
+              <th>PG</th>
               <th>Fascia</th>
               <th>Base</th>
               <th>Bonus</th>
@@ -580,6 +596,7 @@
               <tr>
                 <td><b>${escapeHtml(t.name)}</b><br><span class="muted">${t.record}</span></td>
                 <td>${t.group}</td>
+                <td>${t.played}</td>
                 <td>${t.tier}</td>
                 <td>${t.base}</td>
                 <td>${t.bonus}</td>
@@ -598,12 +615,61 @@
         <div class="match">
           <div>
             <b>${i+1}. ${escapeHtml(t.name)}</b>
-            <div class="date">Girone ${escapeHtml(t.group)} · Fascia ${t.tier}</div>
+            <div class="date">Girone ${escapeHtml(t.group)} · PG ${t.played} · Fascia ${t.tier}</div>
           </div>
           <div class="right">
             <b>${t.weighted} pt</b>
             <div class="date">${t.record}</div>
           </div>
+        </div>
+      `).join('');
+    }
+
+
+    function renderGroupStandings() {
+      const standings = results.standings || [];
+
+      if (!standings.length) {
+        $('groupStandings').innerHTML = '<div class="empty">Classifiche gironi non ancora disponibili.</div>';
+        return;
+      }
+
+      $('groupStandings').innerHTML = standings.map(group => `
+        <div class="card group-card">
+          <h3>${escapeHtml(group.group || group.stage || 'Girone')}</h3>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Pos</th>
+                <th>Squadra</th>
+                <th>PG</th>
+                <th>V</th>
+                <th>N</th>
+                <th>P</th>
+                <th>GF</th>
+                <th>GS</th>
+                <th>DR</th>
+                <th>Pt</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${(group.table || []).map(row => `
+                <tr>
+                  <td><b>${row.position ?? '-'}</b></td>
+                  <td><b>${escapeHtml(row.team?.name || '-')}</b></td>
+                  <td>${row.playedGames ?? 0}</td>
+                  <td>${row.won ?? 0}</td>
+                  <td>${row.draw ?? 0}</td>
+                  <td>${row.lost ?? 0}</td>
+                  <td>${row.goalsFor ?? 0}</td>
+                  <td>${row.goalsAgainst ?? 0}</td>
+                  <td>${row.goalDifference ?? 0}</td>
+                  <td><b>${row.points ?? 0}</b></td>
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
         </div>
       `).join('');
     }
@@ -662,6 +728,7 @@
       renderParticipants();
       renderTeams();
       renderTopTeams();
+      renderGroupStandings();
       renderMatches();
     }
 
