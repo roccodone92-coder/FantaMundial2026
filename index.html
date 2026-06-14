@@ -1467,8 +1467,76 @@
       `).join('');
     }
 
+
+    function calculateWorldCupGroups() {
+      const teams = (config.teams || []).map(team => {
+        const stat = getTeamStatsByName(team.name);
+
+        return {
+          name: team.name,
+          group: normalizeGroup(team.group),
+          played: Number(stat.played ?? 0),
+          won: Number(stat.w ?? 0),
+          draw: Number(stat.d ?? 0),
+          lost: Number(stat.l ?? 0),
+          points: Number(stat.base ?? 0),
+          goalsFor: 0,
+          goalsAgainst: 0,
+          goalDifference: 0
+        };
+      });
+
+      for (const match of results.matches || []) {
+        if (match.status !== 'FINISHED') continue;
+
+        const homeName = match.homeTeam?.name;
+        const awayName = match.awayTeam?.name;
+
+        const home = teams.find(team => normalizeTeamName(team.name) === normalizeTeamName(homeName));
+        const away = teams.find(team => normalizeTeamName(team.name) === normalizeTeamName(awayName));
+
+        if (!home || !away) continue;
+
+        const homeGoals = match.score?.fullTime?.home ?? match.score?.regularTime?.home;
+        const awayGoals = match.score?.fullTime?.away ?? match.score?.regularTime?.away;
+
+        if (homeGoals == null || awayGoals == null) continue;
+
+        home.goalsFor += Number(homeGoals);
+        home.goalsAgainst += Number(awayGoals);
+
+        away.goalsFor += Number(awayGoals);
+        away.goalsAgainst += Number(homeGoals);
+
+        home.goalDifference = home.goalsFor - home.goalsAgainst;
+        away.goalDifference = away.goalsFor - away.goalsAgainst;
+      }
+
+      const groups = {};
+
+      for (const team of teams) {
+        if (!groups[team.group]) {
+          groups[team.group] = [];
+        }
+
+        groups[team.group].push(team);
+      }
+
+      return Object.entries(groups)
+        .sort(([a], [b]) => a.localeCompare(b, 'it', { numeric: true }))
+        .map(([group, rows]) => ({
+          group,
+          rows: rows.sort((a, b) =>
+            b.points - a.points ||
+            b.goalDifference - a.goalDifference ||
+            b.goalsFor - a.goalsFor ||
+            a.name.localeCompare(b.name)
+          )
+        }));
+    }
+
     function renderGroupStandings() {
-      const groups = calculateWorldCupGroups ? calculateWorldCupGroups() : [];
+      const groups = typeof calculateWorldCupGroups === 'function' ? calculateWorldCupGroups() : [];
 
       if (!groups.length) {
         $('groupStandings').innerHTML = '<div class="empty">Classifiche gironi non ancora disponibili.</div>';
