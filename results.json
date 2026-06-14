@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-14T18:17:19.251Z",
+  "updatedAt": "2026-06-14T18:41:54.077Z",
   "source": "football-data.org + storico locale",
   "matches": [
     {
@@ -293,7 +293,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_B",
-      "lastUpdated": "2026-06-13T23:07:33Z",
+      "lastUpdated": "2026-06-13T21:09:44Z",
       "homeTeam": {
         "id": 8030,
         "name": "Qatar",
@@ -359,7 +359,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_C",
-      "lastUpdated": "2026-06-14T02:05:33Z",
+      "lastUpdated": "2026-06-14T00:10:33Z",
       "homeTeam": {
         "id": 764,
         "name": "Brazil",
@@ -557,7 +557,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_E",
-      "lastUpdated": "2026-06-14T18:16:29Z",
+      "lastUpdated": "2026-06-14T18:41:53Z",
       "homeTeam": {
         "id": 759,
         "name": "Germany",
@@ -576,7 +576,7 @@
         "winner": "HOME_TEAM",
         "duration": "REGULAR",
         "fullTime": {
-          "home": 4,
+          "home": 5,
           "away": 1
         },
         "halfTime": {
