@@ -6,6 +6,18 @@ const season = process.env.SEASON || '2026';
 
 const config = JSON.parse(await fs.readFile('config.json', 'utf8'));
 
+const rules = {
+  win: config.rules?.win ?? 3,
+  draw: config.rules?.draw ?? 1,
+  loss: config.rules?.loss ?? 0,
+  groupQualificationBonus: config.rules?.groupQualificationBonus ?? 5,
+  thirdPlaceBonus: config.rules?.thirdPlaceBonus ?? 2,
+  tier1LastInGroupPenalty: config.rules?.tier1LastInGroupPenalty ?? -10,
+  nextRoundBonus: config.rules?.nextRoundBonus ?? config.rules?.roundProgressionBonus ?? 5,
+  finalWinBonus: config.rules?.finalWinBonus ?? config.rules?.winnerBonus ?? 10,
+  multipliers: config.rules?.multipliers ?? { "1": 1, "2": 2, "3": 3, "4": 4 }
+};
+
 const apiAliases = {
   Mexico: 'Messico',
   'South Africa': 'Sudafrica',
@@ -24,6 +36,7 @@ const apiAliases = {
   Netherlands: 'Paesi Bassi',
   Japan: 'Giappone',
   'Ivory Coast': 'Costa d’Avorio',
+  "Côte d'Ivoire": 'Costa d’Avorio',
   'Côte d’Ivoire': 'Costa d’Avorio',
   'Cote dIvoire': 'Costa d’Avorio',
   Sweden: 'Svezia',
@@ -59,41 +72,53 @@ const apiAliases = {
   Uzbekistan: 'Uzbekistan',
   Colombia: 'Colombia',
   Iraq: 'Iraq',
-  Curacao: 'Curaçao',
-  Curaçao: 'Curaçao'
+  Curaçao: 'Curaçao',
+  Curacao: 'Curaçao'
 };
 
-const norm = s => (s || '')
-  .toString()
+const norm = value => String(value || '')
   .normalize('NFD')
   .replace(/[\u0300-\u036f]/g, '')
   .toLowerCase()
   .replace(/[^a-z0-9]+/g, ' ')
   .trim();
 
-const teamByNorm = new Map(config.teams.map(t => [norm(t.name), t]));
-const aliases = new Map(Object.entries(config.aliases || {}).map(([k, v]) => [norm(k), v]));
+const teamByNorm = new Map((config.teams || []).map(team => [norm(team.name), team]));
+const configAliases = new Map(Object.entries(config.aliases || {}).map(([key, value]) => [norm(key), value]));
 
 function canonical(name) {
   if (!name) return name;
+
   if (apiAliases[name]) return apiAliases[name];
 
-  const n = norm(name);
-  return aliases.get(n) || teamByNorm.get(n)?.name || name;
+  const normalized = norm(name);
+
+  if (configAliases.has(normalized)) return configAliases.get(normalized);
+  if (teamByNorm.has(normalized)) return teamByNorm.get(normalized).name;
+
+  const aliasKey = Object.keys(apiAliases).find(key => norm(key) === normalized);
+  if (aliasKey) return apiAliases[aliasKey];
+
+  return name;
 }
 
-async function api(path) {
-  const res = await fetch(`https://api.football-data.org/v4${path}`, {
-    headers: {
-      'X-Auth-Token': token
-    }
-  });
+function matchKey(match) {
+  if (match?.id) return `id:${match.id}`;
 
-  if (!res.ok) {
-    throw new Error(`${res.status} ${await res.text()}`);
-  }
+  const date = match?.utcDate || '';
+  const home = canonical(match?.homeTeam?.name || '');
+  const away = canonical(match?.awayTeam?.name || '');
 
-  return res.json();
+  return `fallback:${date}:${home}:${away}`;
+}
+
+function cleanMatch(match) {
+  return {
+    ...match,
+    homeTeam: match.homeTeam || {},
+    awayTeam: match.awayTeam || {},
+    score: match.score || {}
+  };
 }
 
 async function readOldResults() {
@@ -111,19 +136,38 @@ async function readOldResults() {
   }
 }
 
+async function api(path) {
+  const response = await fetch(`https://api.football-data.org/v4${path}`, {
+    headers: {
+      'X-Auth-Token': token
+    }
+  });
+
+  if (!response.ok) {
+    throw new Error(`${response.status} ${await response.text()}`);
+  }
+
+  return response.json();
+}
+
 function mergeMatches(oldMatches = [], newMatches = []) {
   const map = new Map();
 
-  for (const match of oldMatches) {
-    if (match?.id) {
-      map.set(String(match.id), match);
-    }
+  for (const match of oldMatches || []) {
+    if (!match) continue;
+    map.set(matchKey(match), cleanMatch(match));
   }
 
-  for (const match of newMatches) {
-    if (match?.id) {
-      map.set(String(match.id), match);
-    }
+  for (const match of newMatches || []) {
+    if (!match) continue;
+
+    const key = matchKey(match);
+    const previous = map.get(key);
+
+    map.set(key, {
+      ...(previous || {}),
+      ...cleanMatch(match)
+    });
   }
 
   return Array.from(map.values()).sort((a, b) => {
@@ -131,18 +175,10 @@ function mergeMatches(oldMatches = [], newMatches = []) {
   });
 }
 
-function mergeStandings(oldStandings = [], newStandings = []) {
-  if (Array.isArray(newStandings) && newStandings.length > 0) {
-    return newStandings;
-  }
-
-  return Array.isArray(oldStandings) ? oldStandings : [];
-}
-
-function scoreMatches(matches) {
-  const teamStats = Object.fromEntries(
-    config.teams.map(t => [
-      t.name,
+function createEmptyTeamStats() {
+  return Object.fromEntries(
+    (config.teams || []).map(team => [
+      team.name,
       {
         base: 0,
         bonus: 0,
@@ -151,151 +187,226 @@ function scoreMatches(matches) {
         w: 0,
         d: 0,
         l: 0,
+        goalsFor: 0,
+        goalsAgainst: 0,
+        goalDifference: 0,
         details: []
       }
     ])
   );
+}
 
-  for (const m of matches || []) {
-    if (m.status !== 'FINISHED') continue;
+function scoreMatches(matches) {
+  const teamStats = createEmptyTeamStats();
 
-    const home = canonical(m.homeTeam?.name);
-    const away = canonical(m.awayTeam?.name);
+  for (const match of matches || []) {
+    if (match.status !== 'FINISHED') continue;
 
-    if (!teamStats[home] || !teamStats[away]) continue;
+    const home = canonical(match.homeTeam?.name);
+    const away = canonical(match.awayTeam?.name);
 
-    const hs = m.score?.fullTime?.home ?? m.score?.regularTime?.home;
-    const as = m.score?.fullTime?.away ?? m.score?.regularTime?.away;
+    if (!teamStats[home] || !teamStats[away]) {
+      console.warn(
+        'Squadra non riconosciuta:',
+        match.homeTeam?.name,
+        '=>',
+        home,
+        '|',
+        match.awayTeam?.name,
+        '=>',
+        away
+      );
+      continue;
+    }
 
-    if (hs == null || as == null) continue;
+    const homeGoals = match.score?.fullTime?.home ?? match.score?.regularTime?.home;
+    const awayGoals = match.score?.fullTime?.away ?? match.score?.regularTime?.away;
 
-    const add = (team, pts, result) => {
-      const s = teamStats[team];
+    if (homeGoals == null || awayGoals == null) continue;
 
-      s.base += pts;
-      s.played += 1;
-      s[result] += 1;
+    const addResult = (team, points, result, gf, ga) => {
+      const stat = teamStats[team];
 
-      s.details.push(`${home} ${hs}-${as} ${away}: +${pts}`);
+      stat.base += points;
+      stat.played += 1;
+      stat[result] += 1;
+      stat.goalsFor += gf;
+      stat.goalsAgainst += ga;
+      stat.goalDifference = stat.goalsFor - stat.goalsAgainst;
+
+      stat.details.push(`${home} ${homeGoals}-${awayGoals} ${away}: +${points}`);
     };
 
-    if (hs > as) {
-      add(home, 3, 'w');
-      add(away, 0, 'l');
-    } else if (hs < as) {
-      add(home, 0, 'l');
-      add(away, 3, 'w');
+    if (homeGoals > awayGoals) {
+      addResult(home, rules.win, 'w', homeGoals, awayGoals);
+      addResult(away, rules.loss, 'l', awayGoals, homeGoals);
+    } else if (homeGoals < awayGoals) {
+      addResult(home, rules.loss, 'l', homeGoals, awayGoals);
+      addResult(away, rules.win, 'w', awayGoals, homeGoals);
     } else {
-      add(home, 1, 'd');
-      add(away, 1, 'd');
+      addResult(home, rules.draw, 'd', homeGoals, awayGoals);
+      addResult(away, rules.draw, 'd', awayGoals, homeGoals);
     }
   }
 
   return teamStats;
 }
 
-function applyStandings(teamStats, standings) {
-  for (const table of standings || []) {
-    for (const row of table.table || []) {
+function buildInternalStandings(teamStats) {
+  const groups = {};
+
+  for (const team of config.teams || []) {
+    const group = team.group || '?';
+    const stat = teamStats[team.name] || {};
+
+    if (!groups[group]) groups[group] = [];
+
+    groups[group].push({
+      position: 0,
+      team: {
+        name: team.name
+      },
+      playedGames: stat.played || 0,
+      won: stat.w || 0,
+      draw: stat.d || 0,
+      lost: stat.l || 0,
+      goalsFor: stat.goalsFor || 0,
+      goalsAgainst: stat.goalsAgainst || 0,
+      goalDifference: stat.goalDifference || 0,
+      points: stat.base || 0,
+      tier: team.tier,
+      credits: team.credits
+    });
+  }
+
+  return Object.entries(groups)
+    .sort(([a], [b]) => String(a).localeCompare(String(b), 'it', { numeric: true }))
+    .map(([group, rows]) => {
+      const table = rows
+        .sort((a, b) =>
+          b.points - a.points ||
+          b.goalDifference - a.goalDifference ||
+          b.goalsFor - a.goalsFor ||
+          a.team.name.localeCompare(b.team.name)
+        )
+        .map((row, index) => ({
+          ...row,
+          position: index + 1
+        }));
+
+      return {
+        stage: 'GROUP_STAGE',
+        type: 'TOTAL',
+        group,
+        table
+      };
+    });
+}
+
+function applyGroupBonuses(teamStats, standings) {
+  for (const group of standings || []) {
+    for (const row of group.table || []) {
       const name = canonical(row.team?.name);
 
       if (!teamStats[name]) continue;
 
       const playedGames = row.playedGames ?? teamStats[name].played ?? 0;
 
-      // Bonus/malus girone SOLO a girone terminato.
+      // Bonus girone solo quando la squadra ha giocato 3 partite.
       if (playedGames < 3) continue;
 
       if (row.position <= 2) {
-        teamStats[name].bonus += config.rules.groupQualificationBonus;
-        teamStats[name].details.push(`Passaggio girone: +${config.rules.groupQualificationBonus}`);
+        teamStats[name].bonus += rules.groupQualificationBonus;
+        teamStats[name].details.push(`Passaggio girone: +${rules.groupQualificationBonus}`);
       }
 
       if (row.position === 3) {
-        teamStats[name].bonus += config.rules.thirdPlaceBonus;
-        teamStats[name].details.push(`Terza classificata girone: +${config.rules.thirdPlaceBonus}`);
+        teamStats[name].bonus += rules.thirdPlaceBonus;
+        teamStats[name].details.push(`Terza classificata girone: +${rules.thirdPlaceBonus}`);
       }
 
-      const meta = config.teams.find(t => t.name === name);
+      const meta = (config.teams || []).find(team => team.name === name);
 
       if (meta?.tier === 1 && row.position === 4) {
-        teamStats[name].bonus += config.rules.tier1LastInGroupPenalty;
-        teamStats[name].details.push(`Prima fascia ultima nel girone: ${config.rules.tier1LastInGroupPenalty}`);
+        teamStats[name].bonus += rules.tier1LastInGroupPenalty;
+        teamStats[name].details.push(`Prima fascia ultima nel girone: ${rules.tier1LastInGroupPenalty}`);
       }
     }
   }
 }
 
+function getKnockoutWinner(match) {
+  const home = canonical(match.homeTeam?.name);
+  const away = canonical(match.awayTeam?.name);
+
+  if (match.score?.winner === 'HOME_TEAM') return home;
+  if (match.score?.winner === 'AWAY_TEAM') return away;
+
+  const homeGoals = match.score?.fullTime?.home ?? match.score?.regularTime?.home;
+  const awayGoals = match.score?.fullTime?.away ?? match.score?.regularTime?.away;
+
+  if (homeGoals > awayGoals) return home;
+  if (homeGoals < awayGoals) return away;
+
+  const homePenalties = match.score?.penalties?.home;
+  const awayPenalties = match.score?.penalties?.away;
+
+  if (homePenalties > awayPenalties) return home;
+  if (homePenalties < awayPenalties) return away;
+
+  return null;
+}
+
 function applyKnockoutBonuses(teamStats, matches) {
-  for (const m of matches || []) {
-    if (m.status !== 'FINISHED') continue;
+  for (const match of matches || []) {
+    if (match.status !== 'FINISHED') continue;
 
-    const stage = m.stage || '';
-    const home = canonical(m.homeTeam?.name);
-    const away = canonical(m.awayTeam?.name);
-
-    if (!teamStats[home] || !teamStats[away]) continue;
-
-    const hs = m.score?.fullTime?.home ?? m.score?.regularTime?.home;
-    const as = m.score?.fullTime?.away ?? m.score?.regularTime?.away;
-
-    if (hs == null || as == null) continue;
-
-    let winner = null;
-
-    if (hs > as) winner = home;
-    if (hs < as) winner = away;
-
-    if (!winner && m.score?.penalties) {
-      const hp = m.score.penalties.home;
-      const ap = m.score.penalties.away;
-
-      if (hp > ap) winner = home;
-      if (hp < ap) winner = away;
-    }
-
-    if (!winner) continue;
+    const stage = String(match.stage || '');
 
     const isKnockout =
       stage.includes('LAST_16') ||
       stage.includes('ROUND_OF_16') ||
       stage.includes('QUARTER_FINAL') ||
       stage.includes('SEMI_FINAL') ||
-      stage.includes('FINAL');
+      stage === 'FINAL';
 
     if (!isKnockout) continue;
 
-    if (stage.includes('FINAL')) {
-      teamStats[winner].bonus += config.rules.finalWinBonus ?? 10;
-      teamStats[winner].details.push(`Vittoria finale: +${config.rules.finalWinBonus ?? 10}`);
+    const winner = getKnockoutWinner(match);
+
+    if (!winner || !teamStats[winner]) continue;
+
+    if (stage === 'FINAL') {
+      teamStats[winner].bonus += rules.finalWinBonus;
+      teamStats[winner].details.push(`Vittoria finale: +${rules.finalWinBonus}`);
     } else {
-      teamStats[winner].bonus += config.rules.nextRoundBonus ?? 5;
-      teamStats[winner].details.push(`Passaggio turno successivo: +${config.rules.nextRoundBonus ?? 5}`);
+      teamStats[winner].bonus += rules.nextRoundBonus;
+      teamStats[winner].details.push(`Passaggio turno successivo: +${rules.nextRoundBonus}`);
     }
   }
 }
 
 function computeWeighted(teamStats) {
-  for (const [team, s] of Object.entries(teamStats)) {
-    const meta = config.teams.find(t => t.name === team);
-    const mult = config.rules.multipliers[String(meta?.tier || 1)] || 1;
+  for (const [teamName, stat] of Object.entries(teamStats)) {
+    const meta = (config.teams || []).find(team => team.name === teamName);
+    const multiplier = rules.multipliers[String(meta?.tier || 1)] || 1;
 
-    s.weighted = (s.base + s.bonus) * mult;
+    stat.weighted = (stat.base + stat.bonus) * multiplier;
   }
 }
 
 function computeParticipants(teamStats) {
-  return config.participants.map(p => {
-    const rows = p.teams.map(team => {
-      const realTeam = canonical(team);
+  return (config.participants || []).map(participant => {
+    const rows = (participant.teams || []).map(teamName => {
+      const realTeam = canonical(teamName);
 
-      const meta = config.teams.find(t => t.name === realTeam) || {
+      const meta = (config.teams || []).find(team => team.name === realTeam) || {
         tier: 1,
         credits: 0,
         group: '?'
       };
 
-      const s = teamStats[realTeam] || {
+      const stat = teamStats[realTeam] || {
         base: 0,
         bonus: 0,
         weighted: 0,
@@ -303,90 +414,91 @@ function computeParticipants(teamStats) {
         w: 0,
         d: 0,
         l: 0,
+        goalsFor: 0,
+        goalsAgainst: 0,
+        goalDifference: 0,
         details: []
       };
 
-      const raw = s.base + s.bonus;
-      const mult = config.rules.multipliers[String(meta.tier)] || 1;
+      const raw = stat.base + stat.bonus;
+      const multiplier = rules.multipliers[String(meta.tier)] || 1;
 
       return {
         team: realTeam,
-        originalName: team,
+        originalName: teamName,
         group: meta.group,
         tier: meta.tier,
         credits: meta.credits,
-        played: s.played,
-        base: s.base,
-        bonus: s.bonus,
-        groupBonusReady: s.played >= 3,
-        multiplier: mult,
-        total: raw * mult,
-        record: `${s.w}-${s.d}-${s.l}`,
-        details: s.details
+        played: stat.played,
+        base: stat.base,
+        bonus: stat.bonus,
+        multiplier,
+        total: raw * multiplier,
+        record: `${stat.w}-${stat.d}-${stat.l}`,
+        goalsFor: stat.goalsFor,
+        goalsAgainst: stat.goalsAgainst,
+        goalDifference: stat.goalDifference,
+        details: stat.details
       };
     });
 
-    const total = rows.reduce((a, b) => a + b.total, 0);
-    const credits = rows.reduce((a, b) => a + b.credits, 0);
-    const alive = rows.length;
+    const total = rows.reduce((sum, team) => sum + team.total, 0);
+    const credits = rows.reduce((sum, team) => sum + (team.credits || 0), 0);
+    const played = rows.reduce((sum, team) => sum + (team.played || 0), 0);
 
     return {
-      name: p.name,
+      name: participant.name,
       total,
       credits,
-      alive,
+      played,
+      alive: rows.length,
       teams: rows
     };
   }).sort((a, b) => b.total - a.total);
 }
 
-let out;
+let output;
 
 try {
   if (!token) throw new Error('FOOTBALL_DATA_TOKEN mancante');
 
-  const old = await readOldResults();
+  const oldResults = await readOldResults();
 
   const matchesData = await api(`/competitions/${competition}/matches?season=${season}`);
 
-  let standingsData = { standings: [] };
-
-  try {
-    standingsData = await api(`/competitions/${competition}/standings?season=${season}`);
-  } catch (e) {
-    console.warn('Standings non disponibili:', e.message);
-  }
-
-  const oldMatches = Array.isArray(old.matches) ? old.matches : [];
+  const oldMatches = Array.isArray(oldResults.matches) ? oldResults.matches : [];
   const newMatches = Array.isArray(matchesData.matches) ? matchesData.matches : [];
+
   const matches = mergeMatches(oldMatches, newMatches);
 
-  const standings = mergeStandings(old.standings, standingsData.standings);
-
   const teamStats = scoreMatches(matches);
+  const standings = buildInternalStandings(teamStats);
 
-  applyStandings(teamStats, standings);
+  applyGroupBonuses(teamStats, standings);
   applyKnockoutBonuses(teamStats, matches);
   computeWeighted(teamStats);
 
-  out = {
+  output = {
     updatedAt: new Date().toISOString(),
-    source: 'football-data.org + storico locale',
+    source: 'football-data.org + storico locale persistente',
     matches,
     standings,
     teamStats,
     computed: computeParticipants(teamStats)
   };
 
-} catch (err) {
-  const old = await readOldResults();
+} catch (error) {
+  const oldResults = await readOldResults();
 
-  out = {
-    ...old,
+  output = {
+    ...oldResults,
     updatedAt: new Date().toISOString(),
-    source: `fallback: ${err.message}`,
-    computed: old.computed || []
+    source: `fallback: ${error.message}`,
+    matches: oldResults.matches || [],
+    standings: oldResults.standings || [],
+    teamStats: oldResults.teamStats || {},
+    computed: oldResults.computed || []
   };
 }
 
-await fs.writeFile('results.json', JSON.stringify(out, null, 2));
+await fs.writeFile('results.json', JSON.stringify(output, null, 2));
