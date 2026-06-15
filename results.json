@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-15T21:37:11.680Z",
+  "updatedAt": "2026-06-15T23:17:04.451Z",
   "source": "football-data.org + storico locale persistente",
   "matches": [
     {
@@ -887,7 +887,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_G",
-      "lastUpdated": "2026-06-15T21:03:08Z",
+      "lastUpdated": "2026-06-15T23:04:15Z",
       "homeTeam": {
         "id": 805,
         "name": "Belgium",
@@ -949,11 +949,11 @@
       },
       "id": 537370,
       "utcDate": "2026-06-15T22:00:00Z",
-      "status": "TIMED",
+      "status": "PAUSED",
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_H",
-      "lastUpdated": "2026-06-11T15:20:18Z",
+      "lastUpdated": "2026-06-15T22:59:19Z",
       "homeTeam": {
         "id": 801,
         "name": "Saudi Arabia",
@@ -969,15 +969,15 @@
         "crest": "https://crests.football-data.org/758.svg"
       },
       "score": {
-        "winner": null,
+        "winner": "HOME_TEAM",
         "duration": "REGULAR",
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 0
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 0
         }
       },
       "odds": {
@@ -1049,7 +1049,14 @@
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": []
+      "referees": [
+        {
+          "id": 56007,
+          "name": "César Ramos",
+          "type": "REFEREE",
+          "nationality": "Mexico"
+        }
+      ]
     },
     {
       "area": {
