@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-16T21:05:49.298Z",
+  "updatedAt": "2026-06-16T21:06:34.451Z",
   "source": "football-data.org + storico locale persistente",
   "matches": [
     {
@@ -1085,7 +1085,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_I",
-      "lastUpdated": "2026-06-16T21:04:47Z",
+      "lastUpdated": "2026-06-16T21:06:17Z",
       "homeTeam": {
         "id": 773,
         "name": "France",
@@ -1104,7 +1104,7 @@
         "winner": "HOME_TEAM",
         "duration": "REGULAR",
         "fullTime": {
-          "home": 2,
+          "home": 3,
           "away": 1
         },
         "halfTime": {
