@@ -6,6 +6,350 @@ const season = process.env.SEASON || '2026';
 
 const config = JSON.parse(await fs.readFile('config.json', 'utf8'));
 
+/*
+  PARTITE STORICHE FISSE
+  Servono a impedire che la classifica perda partite già giocate se l'API,
+  in qualche aggiornamento, non restituisce più vecchi risultati.
+*/
+const fixedHistoricalMatches = [
+  {
+    id: 'fixed-2026-06-11-mexico-south-africa',
+    utcDate: '2026-06-11T19:00:00Z',
+    status: 'FINISHED',
+    stage: 'GROUP_STAGE',
+    group: 'A',
+    homeTeam: { name: 'Mexico' },
+    awayTeam: { name: 'South Africa' },
+    score: {
+      winner: 'HOME_TEAM',
+      fullTime: { home: 2, away: 0 },
+      regularTime: { home: 2, away: 0 }
+    }
+  },
+  {
+    id: 'fixed-2026-06-11-south-korea-czechia',
+    utcDate: '2026-06-12T02:00:00Z',
+    status: 'FINISHED',
+    stage: 'GROUP_STAGE',
+    group: 'A',
+    homeTeam: { name: 'South Korea' },
+    awayTeam: { name: 'Czechia' },
+    score: {
+      winner: 'HOME_TEAM',
+      fullTime: { home: 2, away: 1 },
+      regularTime: { home: 2, away: 1 }
+    }
+  },
+  {
+    id: 'fixed-2026-06-12-canada-bosnia',
+    utcDate: '2026-06-12T19:00:00Z',
+    status: 'FINISHED',
+    stage: 'GROUP_STAGE',
+    group: 'B',
+    homeTeam: { name: 'Canada' },
+    awayTeam: { name: 'Bosnia and Herzegovina' },
+    score: {
+      winner: 'DRAW',
+      fullTime: { home: 1, away: 1 },
+      regularTime: { home: 1, away: 1 }
+    }
+  },
+  {
+    id: 'fixed-2026-06-12-usa-paraguay',
+    utcDate: '2026-06-13T01:00:00Z',
+    status: 'FINISHED',
+    stage: 'GROUP_STAGE',
+    group: 'D',
+    homeTeam: { name: 'United States' },
+    awayTeam: { name: 'Paraguay' },
+    score: {
+      winner: 'HOME_TEAM',
+      fullTime: { home: 4, away: 1 },
+      regularTime: { home: 4, away: 1 }
+    }
+  },
+  {
+    id: 'fixed-2026-06-13-qatar-switzerland',
+    utcDate: '2026-06-13T19:00:00Z',
+    status: 'FINISHED',
+    stage: 'GROUP_STAGE',
+    group: 'B',
+    homeTeam: { name: 'Qatar' },
+    awayTeam: { name: 'Switzerland' },
+    score: {
+      winner: 'DRAW',
+      fullTime: { home: 1, away: 1 },
+      regularTime: { home: 1, away: 1 }
+    }
+  },
+  {
+    id: 'fixed-2026-06-13-brazil-morocco',
+    utcDate: '2026-06-13T22:00:00Z',
+    status: 'FINISHED',
+    stage: 'GROUP_STAGE',
+    group: 'C',
+    homeTeam: { name: 'Brazil' },
+    awayTeam: { name: 'Morocco' },
+    score: {
+      winner: 'DRAW',
+      fullTime: { home: 1, away: 1 },
+      regularTime: { home: 1, away: 1 }
+    }
+  },
+  {
+    id: 'fixed-2026-06-14-haiti-scotland',
+    utcDate: '2026-06-14T01:00:00Z',
+    status: 'FINISHED',
+    stage: 'GROUP_STAGE',
+    group: 'C',
+    homeTeam: { name: 'Haiti' },
+    awayTeam: { name: 'Scotland' },
+    score: {
+      winner: 'AWAY_TEAM',
+      fullTime: { home: 0, away: 1 },
+      regularTime: { home: 0, away: 1 }
+    }
+  },
+  {
+    id: 'fixed-2026-06-14-australia-turkey',
+    utcDate: '2026-06-14T04:00:00Z',
+    status: 'FINISHED',
+    stage: 'GROUP_STAGE',
+    group: 'D',
+    homeTeam: { name: 'Australia' },
+    awayTeam: { name: 'Turkey' },
+    score: {
+      winner: 'HOME_TEAM',
+      fullTime: { home: 2, away: 0 },
+      regularTime: { home: 2, away: 0 }
+    }
+  },
+  {
+    id: 'fixed-2026-06-14-germany-curacao',
+    utcDate: '2026-06-14T17:00:00Z',
+    status: 'FINISHED',
+    stage: 'GROUP_STAGE',
+    group: 'E',
+    homeTeam: { name: 'Germany' },
+    awayTeam: { name: 'Curacao' },
+    score: {
+      winner: 'HOME_TEAM',
+      fullTime: { home: 7, away: 1 },
+      regularTime: { home: 7, away: 1 }
+    }
+  },
+  {
+    id: 'fixed-2026-06-14-netherlands-japan',
+    utcDate: '2026-06-14T20:00:00Z',
+    status: 'FINISHED',
+    stage: 'GROUP_STAGE',
+    group: 'F',
+    homeTeam: { name: 'Netherlands' },
+    awayTeam: { name: 'Japan' },
+    score: {
+      winner: 'DRAW',
+      fullTime: { home: 2, away: 2 },
+      regularTime: { home: 2, away: 2 }
+    }
+  },
+  {
+    id: 'fixed-2026-06-14-ivory-coast-ecuador',
+    utcDate: '2026-06-14T23:00:00Z',
+    status: 'FINISHED',
+    stage: 'GROUP_STAGE',
+    group: 'E',
+    homeTeam: { name: 'Ivory Coast' },
+    awayTeam: { name: 'Ecuador' },
+    score: {
+      winner: 'HOME_TEAM',
+      fullTime: { home: 1, away: 0 },
+      regularTime: { home: 1, away: 0 }
+    }
+  },
+  {
+    id: 'fixed-2026-06-15-sweden-tunisia',
+    utcDate: '2026-06-15T02:00:00Z',
+    status: 'FINISHED',
+    stage: 'GROUP_STAGE',
+    group: 'F',
+    homeTeam: { name: 'Sweden' },
+    awayTeam: { name: 'Tunisia' },
+    score: {
+      winner: 'HOME_TEAM',
+      fullTime: { home: 5, away: 1 },
+      regularTime: { home: 5, away: 1 }
+    }
+  },
+  {
+    id: 'fixed-2026-06-15-spain-cape-verde',
+    utcDate: '2026-06-15T16:00:00Z',
+    status: 'FINISHED',
+    stage: 'GROUP_STAGE',
+    group: 'H',
+    homeTeam: { name: 'Spain' },
+    awayTeam: { name: 'Cape Verde' },
+    score: {
+      winner: 'DRAW',
+      fullTime: { home: 0, away: 0 },
+      regularTime: { home: 0, away: 0 }
+    }
+  },
+  {
+    id: 'fixed-2026-06-15-belgium-egypt',
+    utcDate: '2026-06-15T19:00:00Z',
+    status: 'FINISHED',
+    stage: 'GROUP_STAGE',
+    group: 'G',
+    homeTeam: { name: 'Belgium' },
+    awayTeam: { name: 'Egypt' },
+    score: {
+      winner: 'DRAW',
+      fullTime: { home: 1, away: 1 },
+      regularTime: { home: 1, away: 1 }
+    }
+  },
+  {
+    id: 'fixed-2026-06-15-saudi-arabia-uruguay',
+    utcDate: '2026-06-15T22:00:00Z',
+    status: 'FINISHED',
+    stage: 'GROUP_STAGE',
+    group: 'H',
+    homeTeam: { name: 'Saudi Arabia' },
+    awayTeam: { name: 'Uruguay' },
+    score: {
+      winner: 'DRAW',
+      fullTime: { home: 1, away: 1 },
+      regularTime: { home: 1, away: 1 }
+    }
+  },
+  {
+    id: 'fixed-2026-06-16-iran-new-zealand',
+    utcDate: '2026-06-16T01:00:00Z',
+    status: 'FINISHED',
+    stage: 'GROUP_STAGE',
+    group: 'G',
+    homeTeam: { name: 'Iran' },
+    awayTeam: { name: 'New Zealand' },
+    score: {
+      winner: 'DRAW',
+      fullTime: { home: 2, away: 2 },
+      regularTime: { home: 2, away: 2 }
+    }
+  },
+  {
+    id: 'fixed-2026-06-16-france-senegal',
+    utcDate: '2026-06-16T19:00:00Z',
+    status: 'FINISHED',
+    stage: 'GROUP_STAGE',
+    group: 'I',
+    homeTeam: { name: 'France' },
+    awayTeam: { name: 'Senegal' },
+    score: {
+      winner: 'HOME_TEAM',
+      fullTime: { home: 3, away: 1 },
+      regularTime: { home: 3, away: 1 }
+    }
+  },
+  {
+    id: 'fixed-2026-06-16-iraq-norway',
+    utcDate: '2026-06-16T22:00:00Z',
+    status: 'FINISHED',
+    stage: 'GROUP_STAGE',
+    group: 'I',
+    homeTeam: { name: 'Iraq' },
+    awayTeam: { name: 'Norway' },
+    score: {
+      winner: 'AWAY_TEAM',
+      fullTime: { home: 1, away: 4 },
+      regularTime: { home: 1, away: 4 }
+    }
+  },
+  {
+    id: 'fixed-2026-06-17-argentina-algeria',
+    utcDate: '2026-06-17T01:00:00Z',
+    status: 'FINISHED',
+    stage: 'GROUP_STAGE',
+    group: 'J',
+    homeTeam: { name: 'Argentina' },
+    awayTeam: { name: 'Algeria' },
+    score: {
+      winner: 'HOME_TEAM',
+      fullTime: { home: 3, away: 0 },
+      regularTime: { home: 3, away: 0 }
+    }
+  },
+  {
+    id: 'fixed-2026-06-17-austria-jordan',
+    utcDate: '2026-06-17T04:00:00Z',
+    status: 'FINISHED',
+    stage: 'GROUP_STAGE',
+    group: 'J',
+    homeTeam: { name: 'Austria' },
+    awayTeam: { name: 'Jordan' },
+    score: {
+      winner: 'HOME_TEAM',
+      fullTime: { home: 3, away: 1 },
+      regularTime: { home: 3, away: 1 }
+    }
+  },
+  {
+    id: 'fixed-2026-06-17-portugal-dr-congo',
+    utcDate: '2026-06-17T17:00:00Z',
+    status: 'FINISHED',
+    stage: 'GROUP_STAGE',
+    group: 'K',
+    homeTeam: { name: 'Portugal' },
+    awayTeam: { name: 'DR Congo' },
+    score: {
+      winner: 'DRAW',
+      fullTime: { home: 1, away: 1 },
+      regularTime: { home: 1, away: 1 }
+    }
+  },
+  {
+    id: 'fixed-2026-06-17-england-croatia',
+    utcDate: '2026-06-17T20:00:00Z',
+    status: 'FINISHED',
+    stage: 'GROUP_STAGE',
+    group: 'L',
+    homeTeam: { name: 'England' },
+    awayTeam: { name: 'Croatia' },
+    score: {
+      winner: 'HOME_TEAM',
+      fullTime: { home: 4, away: 2 },
+      regularTime: { home: 4, away: 2 }
+    }
+  },
+  {
+    id: 'fixed-2026-06-17-ghana-panama',
+    utcDate: '2026-06-17T23:00:00Z',
+    status: 'FINISHED',
+    stage: 'GROUP_STAGE',
+    group: 'L',
+    homeTeam: { name: 'Ghana' },
+    awayTeam: { name: 'Panama' },
+    score: {
+      winner: 'HOME_TEAM',
+      fullTime: { home: 1, away: 0 },
+      regularTime: { home: 1, away: 0 }
+    }
+  },
+  {
+    id: 'fixed-2026-06-18-uzbekistan-colombia',
+    utcDate: '2026-06-18T02:00:00Z',
+    status: 'FINISHED',
+    stage: 'GROUP_STAGE',
+    group: 'K',
+    homeTeam: { name: 'Uzbekistan' },
+    awayTeam: { name: 'Colombia' },
+    score: {
+      winner: 'AWAY_TEAM',
+      fullTime: { home: 1, away: 3 },
+      regularTime: { home: 1, away: 3 }
+    }
+  }
+];
+
 const rules = {
   win: config.rules?.win ?? 3,
   draw: config.rules?.draw ?? 1,
@@ -48,6 +392,7 @@ const apiAliases = {
   'Saudi Arabia': 'Arabia Saudita',
   'New Zealand': 'Nuova Zelanda',
   France: 'Francia',
+  Senegal: 'Senegal',
   Norway: 'Norvegia',
   Algeria: 'Algeria',
   Jordan: 'Giordania',
@@ -102,14 +447,19 @@ function canonical(name) {
   return name;
 }
 
+/*
+  CHIAVE DI DEDUPLICA CORRETTA
+  Non usa l'ID, perché le partite storiche fisse hanno ID fixed-...
+  mentre l'API usa ID numerici. Se usassimo l'ID, la stessa partita
+  verrebbe contata due volte.
+*/
 function matchKey(match) {
-  if (match?.id) return `id:${match.id}`;
-
-  const date = match?.utcDate || '';
+  const date = String(match?.utcDate || '').slice(0, 10);
   const home = canonical(match?.homeTeam?.name || '');
   const away = canonical(match?.awayTeam?.name || '');
+  const stage = String(match?.stage || 'GROUP_STAGE');
 
-  return `fallback:${date}:${home}:${away}`;
+  return `${stage}:${date}:${norm(home)}:${norm(away)}`;
 }
 
 function cleanMatch(match) {
@@ -469,7 +819,10 @@ try {
   const oldMatches = Array.isArray(oldResults.matches) ? oldResults.matches : [];
   const newMatches = Array.isArray(matchesData.matches) ? matchesData.matches : [];
 
-  const matches = mergeMatches(oldMatches, newMatches);
+  const matches = mergeMatches(
+    mergeMatches(fixedHistoricalMatches, oldMatches),
+    newMatches
+  );
 
   const teamStats = scoreMatches(matches);
   const standings = buildInternalStandings(teamStats);
@@ -480,7 +833,7 @@ try {
 
   output = {
     updatedAt: new Date().toISOString(),
-    source: 'football-data.org + storico locale persistente',
+    source: 'football-data.org + storico fisso + storico locale',
     matches,
     standings,
     teamStats,
