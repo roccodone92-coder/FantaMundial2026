@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-06-18T17:01:33.828Z",
-  "source": "football-data.org + storico fisso + storico locale",
+  "updatedAt": "2026-06-18T17:06:45.357Z",
+  "source": "football-data.org + storico locale persistente",
   "matches": [
     {
       "id": "fixed-2026-06-11-mexico-south-africa",
