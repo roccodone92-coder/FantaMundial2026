@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-18T17:07:27.176Z",
+  "updatedAt": "2026-06-18T17:15:42.656Z",
   "source": "football-data.org + storico locale persistente",
   "matches": [
     {
@@ -53,7 +53,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_A",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": 769,
         "name": "Mexico",
@@ -143,7 +143,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_A",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": 772,
         "name": "South Korea",
@@ -233,7 +233,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_B",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T22:25:00Z",
       "homeTeam": {
         "id": 828,
         "name": "Canada",
@@ -249,15 +249,15 @@
         "crest": "https://crests.football-data.org/bosnia.svg"
       },
       "score": {
-        "winner": "DRAW",
+        "winner": null,
         "duration": "REGULAR",
         "fullTime": {
-          "home": 1,
-          "away": 1
+          "home": null,
+          "away": null
         },
         "halfTime": {
-          "home": 0,
-          "away": 1
+          "home": null,
+          "away": null
         }
       },
       "odds": {
@@ -323,7 +323,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_D",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-13T03:25:00Z",
       "homeTeam": {
         "id": 771,
         "name": "United States",
@@ -413,7 +413,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_B",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-13T21:09:44Z",
       "homeTeam": {
         "id": 8030,
         "name": "Qatar",
@@ -503,7 +503,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_C",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-14T00:10:33Z",
       "homeTeam": {
         "id": 764,
         "name": "Brazil",
@@ -593,7 +593,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_C",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-14T03:09:14Z",
       "homeTeam": {
         "id": 836,
         "name": "Haiti",
@@ -683,7 +683,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_D",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-14T06:03:26Z",
       "homeTeam": {
         "id": 779,
         "name": "Australia",
@@ -773,7 +773,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_E",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-15T08:25:00Z",
       "homeTeam": {
         "id": 759,
         "name": "Germany",
@@ -863,7 +863,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_F",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-15T08:25:01Z",
       "homeTeam": {
         "id": 8601,
         "name": "Netherlands",
@@ -953,7 +953,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_E",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-15T08:25:01Z",
       "homeTeam": {
         "id": 1935,
         "name": "Ivory Coast",
@@ -1043,7 +1043,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_F",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-15T08:25:01Z",
       "homeTeam": {
         "id": 792,
         "name": "Sweden",
@@ -1133,7 +1133,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_H",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-16T03:25:00Z",
       "homeTeam": {
         "id": 760,
         "name": "Spain",
@@ -1223,7 +1223,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_G",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-16T03:25:00Z",
       "homeTeam": {
         "id": 805,
         "name": "Belgium",
@@ -1313,7 +1313,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_H",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-16T03:25:00Z",
       "homeTeam": {
         "id": 801,
         "name": "Saudi Arabia",
@@ -1325,7 +1325,7 @@
         "id": 758,
         "name": "Uruguay",
         "shortName": "Uruguay",
-        "tla": "URU",
+        "tla": "URY",
         "crest": "https://crests.football-data.org/758.svg"
       },
       "score": {
@@ -1403,7 +1403,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_G",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-16T03:25:00Z",
       "homeTeam": {
         "id": 840,
         "name": "Iran",
@@ -2185,11 +2185,11 @@
       },
       "id": 537329,
       "utcDate": "2026-06-18T16:00:00Z",
-      "status": "PAUSED",
+      "status": "IN_PLAY",
       "matchday": 2,
       "stage": "GROUP_STAGE",
       "group": "GROUP_A",
-      "lastUpdated": "2026-06-18T16:56:04Z",
+      "lastUpdated": "2026-06-18T17:15:16Z",
       "homeTeam": {
         "id": 798,
         "name": "Czechia",
@@ -2255,7 +2255,7 @@
       "matchday": 2,
       "stage": "GROUP_STAGE",
       "group": "GROUP_B",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": 788,
         "name": "Switzerland",
@@ -2321,7 +2321,7 @@
       "matchday": 2,
       "stage": "GROUP_STAGE",
       "group": "GROUP_B",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": 828,
         "name": "Canada",
@@ -2380,7 +2380,7 @@
       "matchday": 2,
       "stage": "GROUP_STAGE",
       "group": "GROUP_A",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": 769,
         "name": "Mexico",
@@ -2439,7 +2439,7 @@
       "matchday": 2,
       "stage": "GROUP_STAGE",
       "group": "GROUP_D",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": 771,
         "name": "United States",
@@ -2498,7 +2498,7 @@
       "matchday": 2,
       "stage": "GROUP_STAGE",
       "group": "GROUP_C",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": 8873,
         "name": "Scotland",
@@ -2557,7 +2557,7 @@
       "matchday": 2,
       "stage": "GROUP_STAGE",
       "group": "GROUP_C",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": 764,
         "name": "Brazil",
@@ -2616,7 +2616,7 @@
       "matchday": 2,
       "stage": "GROUP_STAGE",
       "group": "GROUP_D",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": 803,
         "name": "Turkey",
@@ -2675,7 +2675,7 @@
       "matchday": 2,
       "stage": "GROUP_STAGE",
       "group": "GROUP_F",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": 8601,
         "name": "Netherlands",
@@ -2734,7 +2734,7 @@
       "matchday": 2,
       "stage": "GROUP_STAGE",
       "group": "GROUP_E",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": 759,
         "name": "Germany",
@@ -2793,7 +2793,7 @@
       "matchday": 2,
       "stage": "GROUP_STAGE",
       "group": "GROUP_E",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": 791,
         "name": "Ecuador",
@@ -2852,7 +2852,7 @@
       "matchday": 2,
       "stage": "GROUP_STAGE",
       "group": "GROUP_F",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": 802,
         "name": "Tunisia",
@@ -2911,7 +2911,7 @@
       "matchday": 2,
       "stage": "GROUP_STAGE",
       "group": "GROUP_H",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": 760,
         "name": "Spain",
@@ -2970,7 +2970,7 @@
       "matchday": 2,
       "stage": "GROUP_STAGE",
       "group": "GROUP_G",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": 805,
         "name": "Belgium",
@@ -3029,12 +3029,12 @@
       "matchday": 2,
       "stage": "GROUP_STAGE",
       "group": "GROUP_H",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": 758,
         "name": "Uruguay",
         "shortName": "Uruguay",
-        "tla": "URU",
+        "tla": "URY",
         "crest": "https://crests.football-data.org/758.svg"
       },
       "awayTeam": {
@@ -3088,7 +3088,7 @@
       "matchday": 2,
       "stage": "GROUP_STAGE",
       "group": "GROUP_G",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": 783,
         "name": "New Zealand",
@@ -3147,7 +3147,7 @@
       "matchday": 2,
       "stage": "GROUP_STAGE",
       "group": "GROUP_J",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": 762,
         "name": "Argentina",
@@ -3206,7 +3206,7 @@
       "matchday": 2,
       "stage": "GROUP_STAGE",
       "group": "GROUP_I",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": 773,
         "name": "France",
@@ -3265,7 +3265,7 @@
       "matchday": 2,
       "stage": "GROUP_STAGE",
       "group": "GROUP_I",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": 8872,
         "name": "Norway",
@@ -3324,7 +3324,7 @@
       "matchday": 2,
       "stage": "GROUP_STAGE",
       "group": "GROUP_J",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": 8049,
         "name": "Jordan",
@@ -3383,7 +3383,7 @@
       "matchday": 2,
       "stage": "GROUP_STAGE",
       "group": "GROUP_K",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": 765,
         "name": "Portugal",
@@ -3442,7 +3442,7 @@
       "matchday": 2,
       "stage": "GROUP_STAGE",
       "group": "GROUP_L",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": 770,
         "name": "England",
@@ -3501,7 +3501,7 @@
       "matchday": 2,
       "stage": "GROUP_STAGE",
       "group": "GROUP_L",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": 1836,
         "name": "Panama",
@@ -3560,7 +3560,7 @@
       "matchday": 2,
       "stage": "GROUP_STAGE",
       "group": "GROUP_K",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": 818,
         "name": "Colombia",
@@ -3619,7 +3619,7 @@
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_B",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": 788,
         "name": "Switzerland",
@@ -3678,7 +3678,7 @@
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_B",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": 1060,
         "name": "Bosnia-Herzegovina",
@@ -3737,7 +3737,7 @@
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_C",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": 815,
         "name": "Morocco",
@@ -3796,7 +3796,7 @@
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_C",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": 8873,
         "name": "Scotland",
@@ -3855,7 +3855,7 @@
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_A",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": 798,
         "name": "Czechia",
@@ -3914,7 +3914,7 @@
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_A",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": 774,
         "name": "South Africa",
@@ -3973,7 +3973,7 @@
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_E",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": 791,
         "name": "Ecuador",
@@ -4032,7 +4032,7 @@
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_E",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": 9460,
         "name": "Curaçao",
@@ -4091,7 +4091,7 @@
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_F",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": 802,
         "name": "Tunisia",
@@ -4150,7 +4150,7 @@
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_F",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": 766,
         "name": "Japan",
@@ -4209,7 +4209,7 @@
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_D",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": 803,
         "name": "Turkey",
@@ -4268,7 +4268,7 @@
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_D",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": 761,
         "name": "Paraguay",
@@ -4327,7 +4327,7 @@
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_I",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": 8872,
         "name": "Norway",
@@ -4386,7 +4386,7 @@
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_I",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": 804,
         "name": "Senegal",
@@ -4445,12 +4445,12 @@
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_H",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": 758,
         "name": "Uruguay",
         "shortName": "Uruguay",
-        "tla": "URU",
+        "tla": "URY",
         "crest": "https://crests.football-data.org/758.svg"
       },
       "awayTeam": {
@@ -4504,7 +4504,7 @@
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_H",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": 1930,
         "name": "Cape Verde Islands",
@@ -4563,7 +4563,7 @@
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_G",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": 783,
         "name": "New Zealand",
@@ -4622,7 +4622,7 @@
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_G",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": 825,
         "name": "Egypt",
@@ -4681,7 +4681,7 @@
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_L",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": 1836,
         "name": "Panama",
@@ -4740,7 +4740,7 @@
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_L",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": 799,
         "name": "Croatia",
@@ -4799,7 +4799,7 @@
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_K",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": 818,
         "name": "Colombia",
@@ -4858,7 +4858,7 @@
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_K",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": 1934,
         "name": "Congo DR",
@@ -4917,7 +4917,7 @@
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_J",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": 8049,
         "name": "Jordan",
@@ -4976,7 +4976,7 @@
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_J",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": 778,
         "name": "Algeria",
@@ -5035,7 +5035,7 @@
       "matchday": null,
       "stage": "LAST_32",
       "group": null,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": null,
         "name": null,
@@ -5094,7 +5094,7 @@
       "matchday": null,
       "stage": "LAST_32",
       "group": null,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": null,
         "name": null,
@@ -5153,7 +5153,7 @@
       "matchday": null,
       "stage": "LAST_32",
       "group": null,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": null,
         "name": null,
@@ -5212,7 +5212,7 @@
       "matchday": null,
       "stage": "LAST_32",
       "group": null,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": null,
         "name": null,
@@ -5271,7 +5271,7 @@
       "matchday": null,
       "stage": "LAST_32",
       "group": null,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": null,
         "name": null,
@@ -5330,7 +5330,7 @@
       "matchday": null,
       "stage": "LAST_32",
       "group": null,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": null,
         "name": null,
@@ -5389,7 +5389,7 @@
       "matchday": null,
       "stage": "LAST_32",
       "group": null,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": null,
         "name": null,
@@ -5448,7 +5448,7 @@
       "matchday": null,
       "stage": "LAST_32",
       "group": null,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": null,
         "name": null,
@@ -5507,7 +5507,7 @@
       "matchday": null,
       "stage": "LAST_32",
       "group": null,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": null,
         "name": null,
@@ -5566,7 +5566,7 @@
       "matchday": null,
       "stage": "LAST_32",
       "group": null,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": null,
         "name": null,
@@ -5625,7 +5625,7 @@
       "matchday": null,
       "stage": "LAST_32",
       "group": null,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": null,
         "name": null,
@@ -5684,7 +5684,7 @@
       "matchday": null,
       "stage": "LAST_32",
       "group": null,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": null,
         "name": null,
@@ -5743,7 +5743,7 @@
       "matchday": null,
       "stage": "LAST_32",
       "group": null,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": null,
         "name": null,
@@ -5802,7 +5802,7 @@
       "matchday": null,
       "stage": "LAST_32",
       "group": null,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": null,
         "name": null,
@@ -5861,7 +5861,7 @@
       "matchday": null,
       "stage": "LAST_32",
       "group": null,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": null,
         "name": null,
@@ -5920,7 +5920,7 @@
       "matchday": null,
       "stage": "LAST_32",
       "group": null,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": null,
         "name": null,
@@ -5979,7 +5979,7 @@
       "matchday": null,
       "stage": "LAST_16",
       "group": null,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": null,
         "name": null,
@@ -6038,7 +6038,7 @@
       "matchday": null,
       "stage": "LAST_16",
       "group": null,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": null,
         "name": null,
@@ -6097,7 +6097,7 @@
       "matchday": null,
       "stage": "LAST_16",
       "group": null,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": null,
         "name": null,
@@ -6156,7 +6156,7 @@
       "matchday": null,
       "stage": "LAST_16",
       "group": null,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": null,
         "name": null,
@@ -6215,7 +6215,7 @@
       "matchday": null,
       "stage": "LAST_16",
       "group": null,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": null,
         "name": null,
@@ -6274,7 +6274,7 @@
       "matchday": null,
       "stage": "LAST_16",
       "group": null,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": null,
         "name": null,
@@ -6333,7 +6333,7 @@
       "matchday": null,
       "stage": "LAST_16",
       "group": null,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": null,
         "name": null,
@@ -6392,7 +6392,7 @@
       "matchday": null,
       "stage": "LAST_16",
       "group": null,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": null,
         "name": null,
@@ -6451,7 +6451,7 @@
       "matchday": null,
       "stage": "QUARTER_FINALS",
       "group": null,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": null,
         "name": null,
@@ -6510,7 +6510,7 @@
       "matchday": null,
       "stage": "QUARTER_FINALS",
       "group": null,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": null,
         "name": null,
@@ -6569,7 +6569,7 @@
       "matchday": null,
       "stage": "QUARTER_FINALS",
       "group": null,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": null,
         "name": null,
@@ -6628,7 +6628,7 @@
       "matchday": null,
       "stage": "QUARTER_FINALS",
       "group": null,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": null,
         "name": null,
@@ -6687,7 +6687,7 @@
       "matchday": null,
       "stage": "SEMI_FINALS",
       "group": null,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": null,
         "name": null,
@@ -6746,7 +6746,7 @@
       "matchday": null,
       "stage": "SEMI_FINALS",
       "group": null,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": null,
         "name": null,
@@ -6805,7 +6805,7 @@
       "matchday": null,
       "stage": "THIRD_PLACE",
       "group": null,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": null,
         "name": null,
@@ -6864,7 +6864,7 @@
       "matchday": null,
       "stage": "FINAL",
       "group": null,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T15:20:17Z",
       "homeTeam": {
         "id": null,
         "name": null,
@@ -6977,38 +6977,6 @@
         {
           "position": 1,
           "team": {
-            "name": "Bosnia ed Erzegovina"
-          },
-          "playedGames": 2,
-          "won": 0,
-          "draw": 2,
-          "lost": 0,
-          "goalsFor": 2,
-          "goalsAgainst": 2,
-          "goalDifference": 0,
-          "points": 2,
-          "tier": 4,
-          "credits": 1
-        },
-        {
-          "position": 2,
-          "team": {
-            "name": "Canada"
-          },
-          "playedGames": 2,
-          "won": 0,
-          "draw": 2,
-          "lost": 0,
-          "goalsFor": 2,
-          "goalsAgainst": 2,
-          "goalDifference": 0,
-          "points": 2,
-          "tier": 2,
-          "credits": 3
-        },
-        {
-          "position": 3,
-          "team": {
             "name": "Qatar"
           },
           "playedGames": 2,
@@ -7023,7 +6991,7 @@
           "credits": 2
         },
         {
-          "position": 4,
+          "position": 2,
           "team": {
             "name": "Svizzera"
           },
@@ -7037,6 +7005,38 @@
           "points": 2,
           "tier": 1,
           "credits": 5
+        },
+        {
+          "position": 3,
+          "team": {
+            "name": "Bosnia ed Erzegovina"
+          },
+          "playedGames": 1,
+          "won": 0,
+          "draw": 1,
+          "lost": 0,
+          "goalsFor": 1,
+          "goalsAgainst": 1,
+          "goalDifference": 0,
+          "points": 1,
+          "tier": 4,
+          "credits": 1
+        },
+        {
+          "position": 4,
+          "team": {
+            "name": "Canada"
+          },
+          "playedGames": 1,
+          "won": 0,
+          "draw": 1,
+          "lost": 0,
+          "goalsFor": 1,
+          "goalsAgainst": 1,
+          "goalDifference": 0,
+          "points": 1,
+          "tier": 2,
+          "credits": 3
         }
       ]
     },
@@ -7833,18 +7833,17 @@
       ]
     },
     "Canada": {
-      "base": 2,
+      "base": 1,
       "bonus": 0,
-      "weighted": 4,
-      "played": 2,
+      "weighted": 2,
+      "played": 1,
       "w": 0,
-      "d": 2,
+      "d": 1,
       "l": 0,
-      "goalsFor": 2,
-      "goalsAgainst": 2,
+      "goalsFor": 1,
+      "goalsAgainst": 1,
       "goalDifference": 0,
       "details": [
-        "Canada 1-1 Bosnia ed Erzegovina: +1",
         "Canada 1-1 Bosnia ed Erzegovina: +1"
       ]
     },
@@ -7865,18 +7864,17 @@
       ]
     },
     "Bosnia ed Erzegovina": {
-      "base": 2,
+      "base": 1,
       "bonus": 0,
-      "weighted": 8,
-      "played": 2,
+      "weighted": 4,
+      "played": 1,
       "w": 0,
-      "d": 2,
+      "d": 1,
       "l": 0,
-      "goalsFor": 2,
-      "goalsAgainst": 2,
+      "goalsFor": 1,
+      "goalsAgainst": 1,
       "goalDifference": 0,
       "details": [
-        "Canada 1-1 Bosnia ed Erzegovina: +1",
         "Canada 1-1 Bosnia ed Erzegovina: +1"
       ]
     },
@@ -8524,9 +8522,9 @@
   "computed": [
     {
       "name": "Mic/Lor",
-      "total": 118,
+      "total": 114,
       "credits": 29,
-      "played": 24,
+      "played": 23,
       "alive": 12,
       "teams": [
         {
@@ -8715,17 +8713,16 @@
           "group": "B",
           "tier": 4,
           "credits": 1,
-          "played": 2,
-          "base": 2,
+          "played": 1,
+          "base": 1,
           "bonus": 0,
           "multiplier": 4,
-          "total": 8,
-          "record": "0-2-0",
-          "goalsFor": 2,
-          "goalsAgainst": 2,
+          "total": 4,
+          "record": "0-1-0",
+          "goalsFor": 1,
+          "goalsAgainst": 1,
           "goalDifference": 0,
           "details": [
-            "Canada 1-1 Bosnia ed Erzegovina: +1",
             "Canada 1-1 Bosnia ed Erzegovina: +1"
           ]
         },
@@ -8773,9 +8770,9 @@
     },
     {
       "name": "Pippo",
-      "total": 90,
+      "total": 84,
       "credits": 29,
-      "played": 24,
+      "played": 22,
       "alive": 12,
       "teams": [
         {
@@ -8824,17 +8821,16 @@
           "group": "B",
           "tier": 2,
           "credits": 3,
-          "played": 2,
-          "base": 2,
+          "played": 1,
+          "base": 1,
           "bonus": 0,
           "multiplier": 2,
-          "total": 4,
-          "record": "0-2-0",
-          "goalsFor": 2,
-          "goalsAgainst": 2,
+          "total": 2,
+          "record": "0-1-0",
+          "goalsFor": 1,
+          "goalsAgainst": 1,
           "goalDifference": 0,
           "details": [
-            "Canada 1-1 Bosnia ed Erzegovina: +1",
             "Canada 1-1 Bosnia ed Erzegovina: +1"
           ]
         },
@@ -8984,17 +8980,16 @@
           "group": "B",
           "tier": 4,
           "credits": 1,
-          "played": 2,
-          "base": 2,
+          "played": 1,
+          "base": 1,
           "bonus": 0,
           "multiplier": 4,
-          "total": 8,
-          "record": "0-2-0",
-          "goalsFor": 2,
-          "goalsAgainst": 2,
+          "total": 4,
+          "record": "0-1-0",
+          "goalsFor": 1,
+          "goalsAgainst": 1,
           "goalDifference": 0,
           "details": [
-            "Canada 1-1 Bosnia ed Erzegovina: +1",
             "Canada 1-1 Bosnia ed Erzegovina: +1"
           ]
         },
@@ -9022,9 +9017,9 @@
     },
     {
       "name": "Della",
-      "total": 86,
+      "total": 82,
       "credits": 29,
-      "played": 24,
+      "played": 23,
       "alive": 12,
       "teams": [
         {
@@ -9253,276 +9248,26 @@
           "group": "B",
           "tier": 4,
           "credits": 1,
-          "played": 2,
-          "base": 2,
+          "played": 1,
+          "base": 1,
           "bonus": 0,
           "multiplier": 4,
-          "total": 8,
-          "record": "0-2-0",
-          "goalsFor": 2,
-          "goalsAgainst": 2,
-          "goalDifference": 0,
-          "details": [
-            "Canada 1-1 Bosnia ed Erzegovina: +1",
-            "Canada 1-1 Bosnia ed Erzegovina: +1"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Rocco",
-      "total": 78,
-      "credits": 29,
-      "played": 24,
-      "alive": 12,
-      "teams": [
-        {
-          "team": "Spagna",
-          "originalName": "Spagna",
-          "group": "H",
-          "tier": 1,
-          "credits": 5,
-          "played": 2,
-          "base": 2,
-          "bonus": 0,
-          "multiplier": 1,
-          "total": 2,
-          "record": "0-2-0",
-          "goalsFor": 0,
-          "goalsAgainst": 0,
-          "goalDifference": 0,
-          "details": [
-            "Spagna 0-0 Capo Verde: +1",
-            "Spagna 0-0 Capo Verde: +1"
-          ]
-        },
-        {
-          "team": "Inghilterra",
-          "originalName": "Inghilterra",
-          "group": "L",
-          "tier": 1,
-          "credits": 5,
-          "played": 2,
-          "base": 6,
-          "bonus": 0,
-          "multiplier": 1,
-          "total": 6,
-          "record": "2-0-0",
-          "goalsFor": 8,
-          "goalsAgainst": 4,
-          "goalDifference": 4,
-          "details": [
-            "Inghilterra 4-2 Croazia: +3",
-            "Inghilterra 4-2 Croazia: +3"
-          ]
-        },
-        {
-          "team": "Colombia",
-          "originalName": "Colombia",
-          "group": "K",
-          "tier": 2,
-          "credits": 3,
-          "played": 2,
-          "base": 6,
-          "bonus": 0,
-          "multiplier": 2,
-          "total": 12,
-          "record": "2-0-0",
-          "goalsFor": 6,
-          "goalsAgainst": 2,
-          "goalDifference": 4,
-          "details": [
-            "Uzbekistan 1-3 Colombia: +3",
-            "Uzbekistan 1-3 Colombia: +3"
-          ]
-        },
-        {
-          "team": "Marocco",
-          "originalName": "Marocco",
-          "group": "C",
-          "tier": 2,
-          "credits": 3,
-          "played": 2,
-          "base": 2,
-          "bonus": 0,
-          "multiplier": 2,
           "total": 4,
-          "record": "0-2-0",
-          "goalsFor": 2,
-          "goalsAgainst": 2,
+          "record": "0-1-0",
+          "goalsFor": 1,
+          "goalsAgainst": 1,
           "goalDifference": 0,
           "details": [
-            "Brasile 1-1 Marocco: +1",
-            "Brasile 1-1 Marocco: +1"
-          ]
-        },
-        {
-          "team": "Canada",
-          "originalName": "Canada",
-          "group": "B",
-          "tier": 2,
-          "credits": 3,
-          "played": 2,
-          "base": 2,
-          "bonus": 0,
-          "multiplier": 2,
-          "total": 4,
-          "record": "0-2-0",
-          "goalsFor": 2,
-          "goalsAgainst": 2,
-          "goalDifference": 0,
-          "details": [
-            "Canada 1-1 Bosnia ed Erzegovina: +1",
             "Canada 1-1 Bosnia ed Erzegovina: +1"
-          ]
-        },
-        {
-          "team": "Norvegia",
-          "originalName": "Norvegia",
-          "group": "I",
-          "tier": 3,
-          "credits": 2,
-          "played": 2,
-          "base": 6,
-          "bonus": 0,
-          "multiplier": 3,
-          "total": 18,
-          "record": "2-0-0",
-          "goalsFor": 8,
-          "goalsAgainst": 2,
-          "goalDifference": 6,
-          "details": [
-            "Iraq 1-4 Norvegia: +3",
-            "Iraq 1-4 Norvegia: +3"
-          ]
-        },
-        {
-          "team": "Egitto",
-          "originalName": "Egitto",
-          "group": "G",
-          "tier": 3,
-          "credits": 2,
-          "played": 2,
-          "base": 2,
-          "bonus": 0,
-          "multiplier": 3,
-          "total": 6,
-          "record": "0-2-0",
-          "goalsFor": 2,
-          "goalsAgainst": 2,
-          "goalDifference": 0,
-          "details": [
-            "Belgio 1-1 Egitto: +1",
-            "Belgio 1-1 Egitto: +1"
-          ]
-        },
-        {
-          "team": "Costa d’Avorio",
-          "originalName": "Costa d’Avorio",
-          "group": "E",
-          "tier": 3,
-          "credits": 2,
-          "played": 2,
-          "base": 6,
-          "bonus": 0,
-          "multiplier": 3,
-          "total": 18,
-          "record": "2-0-0",
-          "goalsFor": 2,
-          "goalsAgainst": 0,
-          "goalDifference": 2,
-          "details": [
-            "Costa d’Avorio 1-0 Ecuador: +3",
-            "Costa d’Avorio 1-0 Ecuador: +3"
-          ]
-        },
-        {
-          "team": "Paraguay",
-          "originalName": "Paraguay",
-          "group": "D",
-          "tier": 4,
-          "credits": 1,
-          "played": 2,
-          "base": 0,
-          "bonus": 0,
-          "multiplier": 4,
-          "total": 0,
-          "record": "0-0-2",
-          "goalsFor": 2,
-          "goalsAgainst": 8,
-          "goalDifference": -6,
-          "details": [
-            "USA 4-1 Paraguay: +0",
-            "USA 4-1 Paraguay: +0"
-          ]
-        },
-        {
-          "team": "Bosnia ed Erzegovina",
-          "originalName": "Bosnia ed Erzegovina",
-          "group": "B",
-          "tier": 4,
-          "credits": 1,
-          "played": 2,
-          "base": 2,
-          "bonus": 0,
-          "multiplier": 4,
-          "total": 8,
-          "record": "0-2-0",
-          "goalsFor": 2,
-          "goalsAgainst": 2,
-          "goalDifference": 0,
-          "details": [
-            "Canada 1-1 Bosnia ed Erzegovina: +1",
-            "Canada 1-1 Bosnia ed Erzegovina: +1"
-          ]
-        },
-        {
-          "team": "Tunisia",
-          "originalName": "Tunisia",
-          "group": "F",
-          "tier": 4,
-          "credits": 1,
-          "played": 2,
-          "base": 0,
-          "bonus": 0,
-          "multiplier": 4,
-          "total": 0,
-          "record": "0-0-2",
-          "goalsFor": 2,
-          "goalsAgainst": 10,
-          "goalDifference": -8,
-          "details": [
-            "Svezia 5-1 Tunisia: +0",
-            "Svezia 5-1 Tunisia: +0"
-          ]
-        },
-        {
-          "team": "Sudafrica",
-          "originalName": "Sudafrica",
-          "group": "A",
-          "tier": 4,
-          "credits": 1,
-          "played": 2,
-          "base": 0,
-          "bonus": 0,
-          "multiplier": 4,
-          "total": 0,
-          "record": "0-0-2",
-          "goalsFor": 0,
-          "goalsAgainst": 4,
-          "goalDifference": -4,
-          "details": [
-            "Messico 2-0 Sudafrica: +0",
-            "Messico 2-0 Sudafrica: +0"
           ]
         }
       ]
     },
     {
       "name": "Zanna",
-      "total": 78,
+      "total": 74,
       "credits": 29,
-      "played": 24,
+      "played": 23,
       "alive": 12,
       "teams": [
         {
@@ -9691,17 +9436,16 @@
           "group": "B",
           "tier": 4,
           "credits": 1,
-          "played": 2,
-          "base": 2,
+          "played": 1,
+          "base": 1,
           "bonus": 0,
           "multiplier": 4,
-          "total": 8,
-          "record": "0-2-0",
-          "goalsFor": 2,
-          "goalsAgainst": 2,
+          "total": 4,
+          "record": "0-1-0",
+          "goalsFor": 1,
+          "goalsAgainst": 1,
           "goalDifference": 0,
           "details": [
-            "Canada 1-1 Bosnia ed Erzegovina: +1",
             "Canada 1-1 Bosnia ed Erzegovina: +1"
           ]
         },
@@ -9768,32 +9512,12 @@
       ]
     },
     {
-      "name": "Beppe",
-      "total": 70,
+      "name": "Rocco",
+      "total": 72,
       "credits": 29,
-      "played": 24,
+      "played": 22,
       "alive": 12,
       "teams": [
-        {
-          "team": "Inghilterra",
-          "originalName": "Inghilterra",
-          "group": "L",
-          "tier": 1,
-          "credits": 5,
-          "played": 2,
-          "base": 6,
-          "bonus": 0,
-          "multiplier": 1,
-          "total": 6,
-          "record": "2-0-0",
-          "goalsFor": 8,
-          "goalsAgainst": 4,
-          "goalDifference": 4,
-          "details": [
-            "Inghilterra 4-2 Croazia: +3",
-            "Inghilterra 4-2 Croazia: +3"
-          ]
-        },
         {
           "team": "Spagna",
           "originalName": "Spagna",
@@ -9815,9 +9539,49 @@
           ]
         },
         {
-          "team": "Canada",
-          "originalName": "Canada",
-          "group": "B",
+          "team": "Inghilterra",
+          "originalName": "Inghilterra",
+          "group": "L",
+          "tier": 1,
+          "credits": 5,
+          "played": 2,
+          "base": 6,
+          "bonus": 0,
+          "multiplier": 1,
+          "total": 6,
+          "record": "2-0-0",
+          "goalsFor": 8,
+          "goalsAgainst": 4,
+          "goalDifference": 4,
+          "details": [
+            "Inghilterra 4-2 Croazia: +3",
+            "Inghilterra 4-2 Croazia: +3"
+          ]
+        },
+        {
+          "team": "Colombia",
+          "originalName": "Colombia",
+          "group": "K",
+          "tier": 2,
+          "credits": 3,
+          "played": 2,
+          "base": 6,
+          "bonus": 0,
+          "multiplier": 2,
+          "total": 12,
+          "record": "2-0-0",
+          "goalsFor": 6,
+          "goalsAgainst": 2,
+          "goalDifference": 4,
+          "details": [
+            "Uzbekistan 1-3 Colombia: +3",
+            "Uzbekistan 1-3 Colombia: +3"
+          ]
+        },
+        {
+          "team": "Marocco",
+          "originalName": "Marocco",
+          "group": "C",
           "tier": 2,
           "credits": 3,
           "played": 2,
@@ -9830,48 +9594,27 @@
           "goalsAgainst": 2,
           "goalDifference": 0,
           "details": [
-            "Canada 1-1 Bosnia ed Erzegovina: +1",
+            "Brasile 1-1 Marocco: +1",
+            "Brasile 1-1 Marocco: +1"
+          ]
+        },
+        {
+          "team": "Canada",
+          "originalName": "Canada",
+          "group": "B",
+          "tier": 2,
+          "credits": 3,
+          "played": 1,
+          "base": 1,
+          "bonus": 0,
+          "multiplier": 2,
+          "total": 2,
+          "record": "0-1-0",
+          "goalsFor": 1,
+          "goalsAgainst": 1,
+          "goalDifference": 0,
+          "details": [
             "Canada 1-1 Bosnia ed Erzegovina: +1"
-          ]
-        },
-        {
-          "team": "Croazia",
-          "originalName": "Croazia",
-          "group": "L",
-          "tier": 2,
-          "credits": 3,
-          "played": 2,
-          "base": 0,
-          "bonus": 0,
-          "multiplier": 2,
-          "total": 0,
-          "record": "0-0-2",
-          "goalsFor": 4,
-          "goalsAgainst": 8,
-          "goalDifference": -4,
-          "details": [
-            "Inghilterra 4-2 Croazia: +0",
-            "Inghilterra 4-2 Croazia: +0"
-          ]
-        },
-        {
-          "team": "Turchia",
-          "originalName": "Turchia",
-          "group": "D",
-          "tier": 2,
-          "credits": 3,
-          "played": 2,
-          "base": 0,
-          "bonus": 0,
-          "multiplier": 2,
-          "total": 0,
-          "record": "0-0-2",
-          "goalsFor": 0,
-          "goalsAgainst": 4,
-          "goalDifference": -4,
-          "details": [
-            "Australia 2-0 Turchia: +0",
-            "Australia 2-0 Turchia: +0"
           ]
         },
         {
@@ -9935,26 +9678,6 @@
           ]
         },
         {
-          "team": "Bosnia ed Erzegovina",
-          "originalName": "Bosnia ed Erzegovina",
-          "group": "B",
-          "tier": 4,
-          "credits": 1,
-          "played": 2,
-          "base": 2,
-          "bonus": 0,
-          "multiplier": 4,
-          "total": 8,
-          "record": "0-2-0",
-          "goalsFor": 2,
-          "goalsAgainst": 2,
-          "goalDifference": 0,
-          "details": [
-            "Canada 1-1 Bosnia ed Erzegovina: +1",
-            "Canada 1-1 Bosnia ed Erzegovina: +1"
-          ]
-        },
-        {
           "team": "Paraguay",
           "originalName": "Paraguay",
           "group": "D",
@@ -9972,6 +9695,25 @@
           "details": [
             "USA 4-1 Paraguay: +0",
             "USA 4-1 Paraguay: +0"
+          ]
+        },
+        {
+          "team": "Bosnia ed Erzegovina",
+          "originalName": "Bosnia ed Erzegovina",
+          "group": "B",
+          "tier": 4,
+          "credits": 1,
+          "played": 1,
+          "base": 1,
+          "bonus": 0,
+          "multiplier": 4,
+          "total": 4,
+          "record": "0-1-0",
+          "goalsFor": 1,
+          "goalsAgainst": 1,
+          "goalDifference": 0,
+          "details": [
+            "Canada 1-1 Bosnia ed Erzegovina: +1"
           ]
         },
         {
@@ -9995,32 +9737,32 @@
           ]
         },
         {
-          "team": "RD Congo",
-          "originalName": "RD Congo",
-          "group": "K",
+          "team": "Sudafrica",
+          "originalName": "Sudafrica",
+          "group": "A",
           "tier": 4,
           "credits": 1,
           "played": 2,
-          "base": 2,
+          "base": 0,
           "bonus": 0,
           "multiplier": 4,
-          "total": 8,
-          "record": "0-2-0",
-          "goalsFor": 2,
-          "goalsAgainst": 2,
-          "goalDifference": 0,
+          "total": 0,
+          "record": "0-0-2",
+          "goalsFor": 0,
+          "goalsAgainst": 4,
+          "goalDifference": -4,
           "details": [
-            "Portogallo 1-1 RD Congo: +1",
-            "Portogallo 1-1 RD Congo: +1"
+            "Messico 2-0 Sudafrica: +0",
+            "Messico 2-0 Sudafrica: +0"
           ]
         }
       ]
     },
     {
       "name": "Tommy",
-      "total": 68,
+      "total": 64,
       "credits": 29,
-      "played": 24,
+      "played": 23,
       "alive": 12,
       "teams": [
         {
@@ -10189,17 +9931,16 @@
           "group": "B",
           "tier": 4,
           "credits": 1,
-          "played": 2,
-          "base": 2,
+          "played": 1,
+          "base": 1,
           "bonus": 0,
           "multiplier": 4,
-          "total": 8,
-          "record": "0-2-0",
-          "goalsFor": 2,
-          "goalsAgainst": 2,
+          "total": 4,
+          "record": "0-1-0",
+          "goalsFor": 1,
+          "goalsAgainst": 1,
           "goalDifference": 0,
           "details": [
-            "Canada 1-1 Bosnia ed Erzegovina: +1",
             "Canada 1-1 Bosnia ed Erzegovina: +1"
           ]
         },
@@ -10266,10 +10007,257 @@
       ]
     },
     {
-      "name": "Rambo",
+      "name": "Beppe",
       "total": 64,
       "credits": 29,
-      "played": 24,
+      "played": 22,
+      "alive": 12,
+      "teams": [
+        {
+          "team": "Inghilterra",
+          "originalName": "Inghilterra",
+          "group": "L",
+          "tier": 1,
+          "credits": 5,
+          "played": 2,
+          "base": 6,
+          "bonus": 0,
+          "multiplier": 1,
+          "total": 6,
+          "record": "2-0-0",
+          "goalsFor": 8,
+          "goalsAgainst": 4,
+          "goalDifference": 4,
+          "details": [
+            "Inghilterra 4-2 Croazia: +3",
+            "Inghilterra 4-2 Croazia: +3"
+          ]
+        },
+        {
+          "team": "Spagna",
+          "originalName": "Spagna",
+          "group": "H",
+          "tier": 1,
+          "credits": 5,
+          "played": 2,
+          "base": 2,
+          "bonus": 0,
+          "multiplier": 1,
+          "total": 2,
+          "record": "0-2-0",
+          "goalsFor": 0,
+          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "details": [
+            "Spagna 0-0 Capo Verde: +1",
+            "Spagna 0-0 Capo Verde: +1"
+          ]
+        },
+        {
+          "team": "Canada",
+          "originalName": "Canada",
+          "group": "B",
+          "tier": 2,
+          "credits": 3,
+          "played": 1,
+          "base": 1,
+          "bonus": 0,
+          "multiplier": 2,
+          "total": 2,
+          "record": "0-1-0",
+          "goalsFor": 1,
+          "goalsAgainst": 1,
+          "goalDifference": 0,
+          "details": [
+            "Canada 1-1 Bosnia ed Erzegovina: +1"
+          ]
+        },
+        {
+          "team": "Croazia",
+          "originalName": "Croazia",
+          "group": "L",
+          "tier": 2,
+          "credits": 3,
+          "played": 2,
+          "base": 0,
+          "bonus": 0,
+          "multiplier": 2,
+          "total": 0,
+          "record": "0-0-2",
+          "goalsFor": 4,
+          "goalsAgainst": 8,
+          "goalDifference": -4,
+          "details": [
+            "Inghilterra 4-2 Croazia: +0",
+            "Inghilterra 4-2 Croazia: +0"
+          ]
+        },
+        {
+          "team": "Turchia",
+          "originalName": "Turchia",
+          "group": "D",
+          "tier": 2,
+          "credits": 3,
+          "played": 2,
+          "base": 0,
+          "bonus": 0,
+          "multiplier": 2,
+          "total": 0,
+          "record": "0-0-2",
+          "goalsFor": 0,
+          "goalsAgainst": 4,
+          "goalDifference": -4,
+          "details": [
+            "Australia 2-0 Turchia: +0",
+            "Australia 2-0 Turchia: +0"
+          ]
+        },
+        {
+          "team": "Norvegia",
+          "originalName": "Norvegia",
+          "group": "I",
+          "tier": 3,
+          "credits": 2,
+          "played": 2,
+          "base": 6,
+          "bonus": 0,
+          "multiplier": 3,
+          "total": 18,
+          "record": "2-0-0",
+          "goalsFor": 8,
+          "goalsAgainst": 2,
+          "goalDifference": 6,
+          "details": [
+            "Iraq 1-4 Norvegia: +3",
+            "Iraq 1-4 Norvegia: +3"
+          ]
+        },
+        {
+          "team": "Egitto",
+          "originalName": "Egitto",
+          "group": "G",
+          "tier": 3,
+          "credits": 2,
+          "played": 2,
+          "base": 2,
+          "bonus": 0,
+          "multiplier": 3,
+          "total": 6,
+          "record": "0-2-0",
+          "goalsFor": 2,
+          "goalsAgainst": 2,
+          "goalDifference": 0,
+          "details": [
+            "Belgio 1-1 Egitto: +1",
+            "Belgio 1-1 Egitto: +1"
+          ]
+        },
+        {
+          "team": "Costa d’Avorio",
+          "originalName": "Costa d’Avorio",
+          "group": "E",
+          "tier": 3,
+          "credits": 2,
+          "played": 2,
+          "base": 6,
+          "bonus": 0,
+          "multiplier": 3,
+          "total": 18,
+          "record": "2-0-0",
+          "goalsFor": 2,
+          "goalsAgainst": 0,
+          "goalDifference": 2,
+          "details": [
+            "Costa d’Avorio 1-0 Ecuador: +3",
+            "Costa d’Avorio 1-0 Ecuador: +3"
+          ]
+        },
+        {
+          "team": "Bosnia ed Erzegovina",
+          "originalName": "Bosnia ed Erzegovina",
+          "group": "B",
+          "tier": 4,
+          "credits": 1,
+          "played": 1,
+          "base": 1,
+          "bonus": 0,
+          "multiplier": 4,
+          "total": 4,
+          "record": "0-1-0",
+          "goalsFor": 1,
+          "goalsAgainst": 1,
+          "goalDifference": 0,
+          "details": [
+            "Canada 1-1 Bosnia ed Erzegovina: +1"
+          ]
+        },
+        {
+          "team": "Paraguay",
+          "originalName": "Paraguay",
+          "group": "D",
+          "tier": 4,
+          "credits": 1,
+          "played": 2,
+          "base": 0,
+          "bonus": 0,
+          "multiplier": 4,
+          "total": 0,
+          "record": "0-0-2",
+          "goalsFor": 2,
+          "goalsAgainst": 8,
+          "goalDifference": -6,
+          "details": [
+            "USA 4-1 Paraguay: +0",
+            "USA 4-1 Paraguay: +0"
+          ]
+        },
+        {
+          "team": "Tunisia",
+          "originalName": "Tunisia",
+          "group": "F",
+          "tier": 4,
+          "credits": 1,
+          "played": 2,
+          "base": 0,
+          "bonus": 0,
+          "multiplier": 4,
+          "total": 0,
+          "record": "0-0-2",
+          "goalsFor": 2,
+          "goalsAgainst": 10,
+          "goalDifference": -8,
+          "details": [
+            "Svezia 5-1 Tunisia: +0",
+            "Svezia 5-1 Tunisia: +0"
+          ]
+        },
+        {
+          "team": "RD Congo",
+          "originalName": "RD Congo",
+          "group": "K",
+          "tier": 4,
+          "credits": 1,
+          "played": 2,
+          "base": 2,
+          "bonus": 0,
+          "multiplier": 4,
+          "total": 8,
+          "record": "0-2-0",
+          "goalsFor": 2,
+          "goalsAgainst": 2,
+          "goalDifference": 0,
+          "details": [
+            "Portogallo 1-1 RD Congo: +1",
+            "Portogallo 1-1 RD Congo: +1"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Rambo",
+      "total": 60,
+      "credits": 29,
+      "played": 23,
       "alive": 12,
       "teams": [
         {
@@ -10438,17 +10426,16 @@
           "group": "B",
           "tier": 4,
           "credits": 1,
-          "played": 2,
-          "base": 2,
+          "played": 1,
+          "base": 1,
           "bonus": 0,
           "multiplier": 4,
-          "total": 8,
-          "record": "0-2-0",
-          "goalsFor": 2,
-          "goalsAgainst": 2,
+          "total": 4,
+          "record": "0-1-0",
+          "goalsFor": 1,
+          "goalsAgainst": 1,
           "goalDifference": 0,
           "details": [
-            "Canada 1-1 Bosnia ed Erzegovina: +1",
             "Canada 1-1 Bosnia ed Erzegovina: +1"
           ]
         },
@@ -10516,9 +10503,9 @@
     },
     {
       "name": "Sim/Ric",
-      "total": 64,
+      "total": 60,
       "credits": 29,
-      "played": 24,
+      "played": 23,
       "alive": 12,
       "teams": [
         {
@@ -10647,17 +10634,16 @@
           "group": "B",
           "tier": 4,
           "credits": 1,
-          "played": 2,
-          "base": 2,
+          "played": 1,
+          "base": 1,
           "bonus": 0,
           "multiplier": 4,
-          "total": 8,
-          "record": "0-2-0",
-          "goalsFor": 2,
-          "goalsAgainst": 2,
+          "total": 4,
+          "record": "0-1-0",
+          "goalsFor": 1,
+          "goalsAgainst": 1,
           "goalDifference": 0,
           "details": [
-            "Canada 1-1 Bosnia ed Erzegovina: +1",
             "Canada 1-1 Bosnia ed Erzegovina: +1"
           ]
         },
@@ -10765,9 +10751,9 @@
     },
     {
       "name": "Ste/Sven",
-      "total": 60,
+      "total": 56,
       "credits": 29,
-      "played": 24,
+      "played": 23,
       "alive": 12,
       "teams": [
         {
@@ -10896,17 +10882,16 @@
           "group": "B",
           "tier": 4,
           "credits": 1,
-          "played": 2,
-          "base": 2,
+          "played": 1,
+          "base": 1,
           "bonus": 0,
           "multiplier": 4,
-          "total": 8,
-          "record": "0-2-0",
-          "goalsFor": 2,
-          "goalsAgainst": 2,
+          "total": 4,
+          "record": "0-1-0",
+          "goalsFor": 1,
+          "goalsAgainst": 1,
           "goalDifference": 0,
           "details": [
-            "Canada 1-1 Bosnia ed Erzegovina: +1",
             "Canada 1-1 Bosnia ed Erzegovina: +1"
           ]
         },
@@ -11014,9 +10999,9 @@
     },
     {
       "name": "Elia",
-      "total": 46,
+      "total": 42,
       "credits": 29,
-      "played": 24,
+      "played": 23,
       "alive": 12,
       "teams": [
         {
@@ -11185,17 +11170,16 @@
           "group": "B",
           "tier": 4,
           "credits": 1,
-          "played": 2,
-          "base": 2,
+          "played": 1,
+          "base": 1,
           "bonus": 0,
           "multiplier": 4,
-          "total": 8,
-          "record": "0-2-0",
-          "goalsFor": 2,
-          "goalsAgainst": 2,
+          "total": 4,
+          "record": "0-1-0",
+          "goalsFor": 1,
+          "goalsAgainst": 1,
           "goalDifference": 0,
           "details": [
-            "Canada 1-1 Bosnia ed Erzegovina: +1",
             "Canada 1-1 Bosnia ed Erzegovina: +1"
           ]
         },
@@ -11263,9 +11247,9 @@
     },
     {
       "name": "Beggio",
-      "total": 34,
+      "total": 30,
       "credits": 29,
-      "played": 24,
+      "played": 23,
       "alive": 12,
       "teams": [
         {
@@ -11414,17 +11398,16 @@
           "group": "B",
           "tier": 4,
           "credits": 1,
-          "played": 2,
-          "base": 2,
+          "played": 1,
+          "base": 1,
           "bonus": 0,
           "multiplier": 4,
-          "total": 8,
-          "record": "0-2-0",
-          "goalsFor": 2,
-          "goalsAgainst": 2,
+          "total": 4,
+          "record": "0-1-0",
+          "goalsFor": 1,
+          "goalsAgainst": 1,
           "goalDifference": 0,
           "details": [
-            "Canada 1-1 Bosnia ed Erzegovina: +1",
             "Canada 1-1 Bosnia ed Erzegovina: +1"
           ]
         },
