@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-18T17:15:42.656Z",
+  "updatedAt": "2026-06-18T17:18:27.367Z",
   "source": "football-data.org + storico locale persistente",
   "matches": [
     {
@@ -2189,7 +2189,7 @@
       "matchday": 2,
       "stage": "GROUP_STAGE",
       "group": "GROUP_A",
-      "lastUpdated": "2026-06-18T17:15:16Z",
+      "lastUpdated": "2026-06-18T17:18:16Z",
       "homeTeam": {
         "id": 798,
         "name": "Czechia",
