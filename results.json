@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-19T22:12:45.613Z",
+  "updatedAt": "2026-06-19T23:48:27.606Z",
   "source": "football-data.org + storico fisso + storico locale",
   "matches": [
     {
@@ -1943,7 +1943,7 @@
       "matchday": 2,
       "stage": "GROUP_STAGE",
       "group": "GROUP_C",
-      "lastUpdated": "2026-06-19T22:12:19Z",
+      "lastUpdated": "2026-06-19T23:47:49Z",
       "homeTeam": {
         "id": 8873,
         "name": "Scotland",
@@ -1966,8 +1966,8 @@
           "away": 1
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 1
         }
       },
       "odds": {
@@ -2039,7 +2039,14 @@
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": []
+      "referees": [
+        {
+          "id": 206208,
+          "name": "Alejandro Hernández Hernández",
+          "type": "REFEREE",
+          "nationality": "Spain"
+        }
+      ]
     },
     {
       "area": {
