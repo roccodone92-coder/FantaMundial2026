@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-20T20:51:53.005Z",
+  "updatedAt": "2026-06-20T22:16:23.604Z",
   "source": "football-data.org + storico fisso + storico locale",
   "matches": [
     {
@@ -55,7 +55,7 @@
         "winner": null
       },
       "matchday": 1,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T08:25:00Z",
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -121,7 +121,7 @@
         "winner": null
       },
       "matchday": 1,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T08:25:00Z",
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -187,7 +187,7 @@
         "winner": null
       },
       "matchday": 1,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-12T22:25:00Z",
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -253,7 +253,7 @@
         "winner": null
       },
       "matchday": 1,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-13T03:25:00Z",
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -319,7 +319,7 @@
         "winner": null
       },
       "matchday": 1,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-13T21:09:44Z",
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -385,7 +385,7 @@
         "winner": null
       },
       "matchday": 1,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-14T00:10:33Z",
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -451,7 +451,7 @@
         "winner": null
       },
       "matchday": 1,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-14T03:09:14Z",
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -517,7 +517,7 @@
         "winner": null
       },
       "matchday": 1,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-14T06:03:26Z",
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -583,7 +583,7 @@
         "winner": null
       },
       "matchday": 1,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-15T08:25:00Z",
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -649,7 +649,7 @@
         "winner": null
       },
       "matchday": 1,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-15T08:25:01Z",
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -715,7 +715,7 @@
         "winner": null
       },
       "matchday": 1,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-15T08:25:01Z",
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -781,7 +781,7 @@
         "winner": null
       },
       "matchday": 1,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-15T08:25:01Z",
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -847,7 +847,7 @@
         "winner": null
       },
       "matchday": 1,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-16T03:25:00Z",
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -913,7 +913,7 @@
         "winner": null
       },
       "matchday": 1,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-16T03:25:00Z",
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -943,7 +943,7 @@
         "id": 758,
         "name": "Uruguay",
         "shortName": "Uruguay",
-        "tla": "URU",
+        "tla": "URY",
         "crest": "https://crests.football-data.org/758.svg"
       },
       "score": {
@@ -979,7 +979,7 @@
         "winner": null
       },
       "matchday": 1,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-16T03:25:00Z",
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -1045,7 +1045,7 @@
         "winner": null
       },
       "matchday": 1,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-16T03:25:00Z",
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -2203,11 +2203,11 @@
       },
       "id": 537353,
       "utcDate": "2026-06-20T20:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "matchday": 2,
       "stage": "GROUP_STAGE",
       "group": "GROUP_E",
-      "lastUpdated": "2026-06-20T20:50:52Z",
+      "lastUpdated": "2026-06-20T22:05:03Z",
       "homeTeam": {
         "id": 759,
         "name": "Germany",
@@ -2223,15 +2223,15 @@
         "crest": "https://crests.football-data.org/787.svg"
       },
       "score": {
-        "winner": "AWAY_TEAM",
+        "winner": "HOME_TEAM",
         "duration": "REGULAR",
         "fullTime": {
-          "home": 0,
+          "home": 2,
           "away": 1
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 1
         }
       },
       "odds": {
@@ -2273,7 +2273,7 @@
       "matchday": 2,
       "stage": "GROUP_STAGE",
       "group": "GROUP_E",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-11T15:20:18Z",
       "homeTeam": {
         "id": 791,
         "name": "Ecuador",
@@ -2303,7 +2303,14 @@
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": []
+      "referees": [
+        {
+          "id": 176659,
+          "name": "Ning Ma",
+          "type": "REFEREE",
+          "nationality": "China PR"
+        }
+      ]
     },
     {
       "area": {
@@ -2332,7 +2339,7 @@
       "matchday": 2,
       "stage": "GROUP_STAGE",
       "group": "GROUP_F",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-11T15:20:18Z",
       "homeTeam": {
         "id": 802,
         "name": "Tunisia",
@@ -2391,7 +2398,7 @@
       "matchday": 2,
       "stage": "GROUP_STAGE",
       "group": "GROUP_H",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-11T15:20:18Z",
       "homeTeam": {
         "id": 760,
         "name": "Spain",
@@ -2450,7 +2457,7 @@
       "matchday": 2,
       "stage": "GROUP_STAGE",
       "group": "GROUP_G",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-11T15:20:18Z",
       "homeTeam": {
         "id": 805,
         "name": "Belgium",
@@ -2509,12 +2516,12 @@
       "matchday": 2,
       "stage": "GROUP_STAGE",
       "group": "GROUP_H",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-11T15:20:18Z",
       "homeTeam": {
         "id": 758,
         "name": "Uruguay",
         "shortName": "Uruguay",
-        "tla": "URU",
+        "tla": "URY",
         "crest": "https://crests.football-data.org/758.svg"
       },
       "awayTeam": {
@@ -2568,7 +2575,7 @@
       "matchday": 2,
       "stage": "GROUP_STAGE",
       "group": "GROUP_G",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-11T15:20:18Z",
       "homeTeam": {
         "id": 783,
         "name": "New Zealand",
@@ -2627,7 +2634,7 @@
       "matchday": 2,
       "stage": "GROUP_STAGE",
       "group": "GROUP_J",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-11T15:20:18Z",
       "homeTeam": {
         "id": 762,
         "name": "Argentina",
@@ -2686,7 +2693,7 @@
       "matchday": 2,
       "stage": "GROUP_STAGE",
       "group": "GROUP_I",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-11T15:20:18Z",
       "homeTeam": {
         "id": 773,
         "name": "France",
@@ -2745,7 +2752,7 @@
       "matchday": 2,
       "stage": "GROUP_STAGE",
       "group": "GROUP_I",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-11T15:20:18Z",
       "homeTeam": {
         "id": 8872,
         "name": "Norway",
@@ -2804,7 +2811,7 @@
       "matchday": 2,
       "stage": "GROUP_STAGE",
       "group": "GROUP_J",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-11T15:20:18Z",
       "homeTeam": {
         "id": 8049,
         "name": "Jordan",
@@ -2863,7 +2870,7 @@
       "matchday": 2,
       "stage": "GROUP_STAGE",
       "group": "GROUP_K",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-11T15:20:18Z",
       "homeTeam": {
         "id": 765,
         "name": "Portugal",
@@ -2922,7 +2929,7 @@
       "matchday": 2,
       "stage": "GROUP_STAGE",
       "group": "GROUP_L",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-11T15:20:18Z",
       "homeTeam": {
         "id": 770,
         "name": "England",
@@ -2981,7 +2988,7 @@
       "matchday": 2,
       "stage": "GROUP_STAGE",
       "group": "GROUP_L",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-11T15:20:18Z",
       "homeTeam": {
         "id": 1836,
         "name": "Panama",
@@ -3040,7 +3047,7 @@
       "matchday": 2,
       "stage": "GROUP_STAGE",
       "group": "GROUP_K",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-11T15:20:18Z",
       "homeTeam": {
         "id": 818,
         "name": "Colombia",
@@ -3099,7 +3106,7 @@
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_B",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-11T15:20:18Z",
       "homeTeam": {
         "id": 788,
         "name": "Switzerland",
@@ -3158,7 +3165,7 @@
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_B",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-11T15:20:18Z",
       "homeTeam": {
         "id": 1060,
         "name": "Bosnia-Herzegovina",
@@ -3217,7 +3224,7 @@
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_C",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-11T15:20:18Z",
       "homeTeam": {
         "id": 815,
         "name": "Morocco",
@@ -3276,7 +3283,7 @@
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_C",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-11T15:20:18Z",
       "homeTeam": {
         "id": 8873,
         "name": "Scotland",
@@ -3335,7 +3342,7 @@
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_A",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-11T15:20:18Z",
       "homeTeam": {
         "id": 798,
         "name": "Czechia",
@@ -3394,7 +3401,7 @@
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_A",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-11T15:20:18Z",
       "homeTeam": {
         "id": 774,
         "name": "South Africa",
@@ -3453,7 +3460,7 @@
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_E",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-11T15:20:18Z",
       "homeTeam": {
         "id": 791,
         "name": "Ecuador",
@@ -3512,7 +3519,7 @@
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_E",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-11T15:20:18Z",
       "homeTeam": {
         "id": 9460,
         "name": "Curaçao",
@@ -3571,7 +3578,7 @@
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_F",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-11T15:20:18Z",
       "homeTeam": {
         "id": 802,
         "name": "Tunisia",
@@ -3630,7 +3637,7 @@
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_F",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-11T15:20:18Z",
       "homeTeam": {
         "id": 766,
         "name": "Japan",
@@ -3689,7 +3696,7 @@
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_D",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-11T15:20:18Z",
       "homeTeam": {
         "id": 803,
         "name": "Turkey",
@@ -3748,7 +3755,7 @@
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_D",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-11T15:20:18Z",
       "homeTeam": {
         "id": 761,
         "name": "Paraguay",
@@ -3807,7 +3814,7 @@
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_I",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-11T15:20:18Z",
       "homeTeam": {
         "id": 8872,
         "name": "Norway",
@@ -3866,7 +3873,7 @@
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_I",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-11T15:20:18Z",
       "homeTeam": {
         "id": 804,
         "name": "Senegal",
@@ -3925,12 +3932,12 @@
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_H",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-11T15:20:18Z",
       "homeTeam": {
         "id": 758,
         "name": "Uruguay",
         "shortName": "Uruguay",
-        "tla": "URU",
+        "tla": "URY",
         "crest": "https://crests.football-data.org/758.svg"
       },
       "awayTeam": {
@@ -3984,7 +3991,7 @@
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_H",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-11T15:20:18Z",
       "homeTeam": {
         "id": 1930,
         "name": "Cape Verde Islands",
@@ -4043,7 +4050,7 @@
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_G",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-11T15:20:18Z",
       "homeTeam": {
         "id": 783,
         "name": "New Zealand",
@@ -4102,7 +4109,7 @@
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_G",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-11T15:20:18Z",
       "homeTeam": {
         "id": 825,
         "name": "Egypt",
@@ -4161,7 +4168,7 @@
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_L",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-11T15:20:18Z",
       "homeTeam": {
         "id": 1836,
         "name": "Panama",
@@ -4220,7 +4227,7 @@
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_L",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-11T15:20:18Z",
       "homeTeam": {
         "id": 799,
         "name": "Croatia",
@@ -4279,7 +4286,7 @@
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_K",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-11T15:20:18Z",
       "homeTeam": {
         "id": 818,
         "name": "Colombia",
@@ -4338,7 +4345,7 @@
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_K",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-11T15:20:18Z",
       "homeTeam": {
         "id": 1934,
         "name": "Congo DR",
@@ -4397,7 +4404,7 @@
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_J",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-11T15:20:18Z",
       "homeTeam": {
         "id": 8049,
         "name": "Jordan",
@@ -4456,7 +4463,7 @@
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_J",
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-11T15:20:18Z",
       "homeTeam": {
         "id": 778,
         "name": "Algeria",
@@ -4515,7 +4522,7 @@
       "matchday": null,
       "stage": "LAST_32",
       "group": null,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-11T15:20:18Z",
       "homeTeam": {
         "id": null,
         "name": null,
@@ -4574,7 +4581,7 @@
       "matchday": null,
       "stage": "LAST_32",
       "group": null,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-11T15:20:18Z",
       "homeTeam": {
         "id": null,
         "name": null,
@@ -4633,7 +4640,7 @@
       "matchday": null,
       "stage": "LAST_32",
       "group": null,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-11T15:20:18Z",
       "homeTeam": {
         "id": null,
         "name": null,
@@ -4692,7 +4699,7 @@
       "matchday": null,
       "stage": "LAST_32",
       "group": null,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-11T15:20:18Z",
       "homeTeam": {
         "id": null,
         "name": null,
@@ -4751,7 +4758,7 @@
       "matchday": null,
       "stage": "LAST_32",
       "group": null,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-11T15:20:18Z",
       "homeTeam": {
         "id": null,
         "name": null,
@@ -4810,7 +4817,7 @@
       "matchday": null,
       "stage": "LAST_32",
       "group": null,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-11T15:20:18Z",
       "homeTeam": {
         "id": null,
         "name": null,
@@ -4869,7 +4876,7 @@
       "matchday": null,
       "stage": "LAST_32",
       "group": null,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-11T15:20:18Z",
       "homeTeam": {
         "id": null,
         "name": null,
@@ -4928,7 +4935,7 @@
       "matchday": null,
       "stage": "LAST_16",
       "group": null,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-11T15:20:18Z",
       "homeTeam": {
         "id": null,
         "name": null,
@@ -4987,7 +4994,7 @@
       "matchday": null,
       "stage": "LAST_16",
       "group": null,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-11T15:20:18Z",
       "homeTeam": {
         "id": null,
         "name": null,
@@ -5046,7 +5053,7 @@
       "matchday": null,
       "stage": "LAST_16",
       "group": null,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-11T15:20:18Z",
       "homeTeam": {
         "id": null,
         "name": null,
@@ -5105,7 +5112,7 @@
       "matchday": null,
       "stage": "LAST_16",
       "group": null,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-11T15:20:18Z",
       "homeTeam": {
         "id": null,
         "name": null,
@@ -5164,7 +5171,7 @@
       "matchday": null,
       "stage": "QUARTER_FINALS",
       "group": null,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-11T15:20:18Z",
       "homeTeam": {
         "id": null,
         "name": null,
@@ -5223,7 +5230,7 @@
       "matchday": null,
       "stage": "QUARTER_FINALS",
       "group": null,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-11T15:20:18Z",
       "homeTeam": {
         "id": null,
         "name": null,
@@ -5282,7 +5289,7 @@
       "matchday": null,
       "stage": "QUARTER_FINALS",
       "group": null,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-11T15:20:18Z",
       "homeTeam": {
         "id": null,
         "name": null,
@@ -5341,7 +5348,7 @@
       "matchday": null,
       "stage": "QUARTER_FINALS",
       "group": null,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-11T15:20:18Z",
       "homeTeam": {
         "id": null,
         "name": null,
@@ -5400,7 +5407,7 @@
       "matchday": null,
       "stage": "SEMI_FINALS",
       "group": null,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-11T15:20:18Z",
       "homeTeam": {
         "id": null,
         "name": null,
@@ -5459,7 +5466,7 @@
       "matchday": null,
       "stage": "SEMI_FINALS",
       "group": null,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-11T15:20:18Z",
       "homeTeam": {
         "id": null,
         "name": null,
@@ -5518,7 +5525,7 @@
       "matchday": null,
       "stage": "THIRD_PLACE",
       "group": null,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-11T15:20:18Z",
       "homeTeam": {
         "id": null,
         "name": null,
@@ -5577,7 +5584,7 @@
       "matchday": null,
       "stage": "FINAL",
       "group": null,
-      "lastUpdated": "2026-06-16T15:20:15Z",
+      "lastUpdated": "2026-06-11T15:20:18Z",
       "homeTeam": {
         "id": null,
         "name": null,
@@ -5905,14 +5912,14 @@
           "team": {
             "name": "Germania"
           },
-          "playedGames": 1,
-          "won": 1,
+          "playedGames": 2,
+          "won": 2,
           "draw": 0,
           "lost": 0,
-          "goalsFor": 7,
-          "goalsAgainst": 1,
-          "goalDifference": 6,
-          "points": 3,
+          "goalsFor": 9,
+          "goalsAgainst": 2,
+          "goalDifference": 7,
+          "points": 6,
           "tier": 1,
           "credits": 5
         },
@@ -5921,13 +5928,13 @@
           "team": {
             "name": "Costa d’Avorio"
           },
-          "playedGames": 1,
+          "playedGames": 2,
           "won": 1,
           "draw": 0,
-          "lost": 0,
-          "goalsFor": 1,
-          "goalsAgainst": 0,
-          "goalDifference": 1,
+          "lost": 1,
+          "goalsFor": 2,
+          "goalsAgainst": 2,
+          "goalDifference": 0,
           "points": 3,
           "tier": 3,
           "credits": 2
@@ -6722,18 +6729,19 @@
       ]
     },
     "Germania": {
-      "base": 3,
+      "base": 6,
       "bonus": 0,
-      "weighted": 3,
-      "played": 1,
-      "w": 1,
+      "weighted": 6,
+      "played": 2,
+      "w": 2,
       "d": 0,
       "l": 0,
-      "goalsFor": 7,
-      "goalsAgainst": 1,
-      "goalDifference": 6,
+      "goalsFor": 9,
+      "goalsAgainst": 2,
+      "goalDifference": 7,
       "details": [
-        "Germania 7-1 Curaçao: +3"
+        "Germania 7-1 Curaçao: +3",
+        "Germania 2-1 Costa d’Avorio: +3"
       ]
     },
     "Ecuador": {
@@ -6755,15 +6763,16 @@
       "base": 3,
       "bonus": 0,
       "weighted": 9,
-      "played": 1,
+      "played": 2,
       "w": 1,
       "d": 0,
-      "l": 0,
-      "goalsFor": 1,
-      "goalsAgainst": 0,
-      "goalDifference": 1,
+      "l": 1,
+      "goalsFor": 2,
+      "goalsAgainst": 2,
+      "goalDifference": 0,
       "details": [
-        "Costa d’Avorio 1-0 Ecuador: +3"
+        "Costa d’Avorio 1-0 Ecuador: +3",
+        "Germania 2-1 Costa d’Avorio: +0"
       ]
     },
     "Curaçao": {
@@ -7209,7 +7218,7 @@
       "name": "Mic/Lor",
       "total": 77,
       "credits": 29,
-      "played": 16,
+      "played": 17,
       "alive": 12,
       "teams": [
         {
@@ -7372,17 +7381,18 @@
           "group": "E",
           "tier": 3,
           "credits": 2,
-          "played": 1,
+          "played": 2,
           "base": 3,
           "bonus": 0,
           "multiplier": 3,
           "total": 9,
-          "record": "1-0-0",
-          "goalsFor": 1,
-          "goalsAgainst": 0,
-          "goalDifference": 1,
+          "record": "1-0-1",
+          "goalsFor": 2,
+          "goalsAgainst": 2,
+          "goalDifference": 0,
           "details": [
-            "Costa d’Avorio 1-0 Ecuador: +3"
+            "Costa d’Avorio 1-0 Ecuador: +3",
+            "Germania 2-1 Costa d’Avorio: +0"
           ]
         },
         {
@@ -7450,7 +7460,7 @@
       "name": "Rocco",
       "total": 67,
       "credits": 29,
-      "played": 17,
+      "played": 18,
       "alive": 12,
       "teams": [
         {
@@ -7594,17 +7604,18 @@
           "group": "E",
           "tier": 3,
           "credits": 2,
-          "played": 1,
+          "played": 2,
           "base": 3,
           "bonus": 0,
           "multiplier": 3,
           "total": 9,
-          "record": "1-0-0",
-          "goalsFor": 1,
-          "goalsAgainst": 0,
-          "goalDifference": 1,
+          "record": "1-0-1",
+          "goalsFor": 2,
+          "goalsAgainst": 2,
+          "goalDifference": 0,
           "details": [
-            "Costa d’Avorio 1-0 Ecuador: +3"
+            "Costa d’Avorio 1-0 Ecuador: +3",
+            "Germania 2-1 Costa d’Avorio: +0"
           ]
         },
         {
@@ -7692,7 +7703,7 @@
       "name": "Pippo",
       "total": 63,
       "credits": 29,
-      "played": 16,
+      "played": 17,
       "alive": 12,
       "teams": [
         {
@@ -7816,17 +7827,18 @@
           "group": "E",
           "tier": 3,
           "credits": 2,
-          "played": 1,
+          "played": 2,
           "base": 3,
           "bonus": 0,
           "multiplier": 3,
           "total": 9,
-          "record": "1-0-0",
-          "goalsFor": 1,
-          "goalsAgainst": 0,
-          "goalDifference": 1,
+          "record": "1-0-1",
+          "goalsFor": 2,
+          "goalsAgainst": 2,
+          "goalDifference": 0,
           "details": [
-            "Costa d’Avorio 1-0 Ecuador: +3"
+            "Costa d’Avorio 1-0 Ecuador: +3",
+            "Germania 2-1 Costa d’Avorio: +0"
           ]
         },
         {
@@ -7933,7 +7945,7 @@
       "name": "Della",
       "total": 61,
       "credits": 29,
-      "played": 17,
+      "played": 18,
       "alive": 12,
       "teams": [
         {
@@ -8078,17 +8090,18 @@
           "group": "E",
           "tier": 3,
           "credits": 2,
-          "played": 1,
+          "played": 2,
           "base": 3,
           "bonus": 0,
           "multiplier": 3,
           "total": 9,
-          "record": "1-0-0",
-          "goalsFor": 1,
-          "goalsAgainst": 0,
-          "goalDifference": 1,
+          "record": "1-0-1",
+          "goalsFor": 2,
+          "goalsAgainst": 2,
+          "goalDifference": 0,
           "details": [
-            "Costa d’Avorio 1-0 Ecuador: +3"
+            "Costa d’Avorio 1-0 Ecuador: +3",
+            "Germania 2-1 Costa d’Avorio: +0"
           ]
         },
         {
@@ -8415,9 +8428,9 @@
     },
     {
       "name": "Rambo",
-      "total": 54,
+      "total": 57,
       "credits": 29,
-      "played": 17,
+      "played": 19,
       "alive": 12,
       "teams": [
         {
@@ -8445,17 +8458,18 @@
           "group": "E",
           "tier": 1,
           "credits": 5,
-          "played": 1,
-          "base": 3,
+          "played": 2,
+          "base": 6,
           "bonus": 0,
           "multiplier": 1,
-          "total": 3,
-          "record": "1-0-0",
-          "goalsFor": 7,
-          "goalsAgainst": 1,
-          "goalDifference": 6,
+          "total": 6,
+          "record": "2-0-0",
+          "goalsFor": 9,
+          "goalsAgainst": 2,
+          "goalDifference": 7,
           "details": [
-            "Germania 7-1 Curaçao: +3"
+            "Germania 7-1 Curaçao: +3",
+            "Germania 2-1 Costa d’Avorio: +3"
           ]
         },
         {
@@ -8561,17 +8575,18 @@
           "group": "E",
           "tier": 3,
           "credits": 2,
-          "played": 1,
+          "played": 2,
           "base": 3,
           "bonus": 0,
           "multiplier": 3,
           "total": 9,
-          "record": "1-0-0",
-          "goalsFor": 1,
-          "goalsAgainst": 0,
-          "goalDifference": 1,
+          "record": "1-0-1",
+          "goalsFor": 2,
+          "goalsAgainst": 2,
+          "goalDifference": 0,
           "details": [
-            "Costa d’Avorio 1-0 Ecuador: +3"
+            "Costa d’Avorio 1-0 Ecuador: +3",
+            "Germania 2-1 Costa d’Avorio: +0"
           ]
         },
         {
@@ -8659,7 +8674,7 @@
       "name": "Beppe",
       "total": 53,
       "credits": 29,
-      "played": 16,
+      "played": 17,
       "alive": 12,
       "teams": [
         {
@@ -8803,17 +8818,18 @@
           "group": "E",
           "tier": 3,
           "credits": 2,
-          "played": 1,
+          "played": 2,
           "base": 3,
           "bonus": 0,
           "multiplier": 3,
           "total": 9,
-          "record": "1-0-0",
-          "goalsFor": 1,
-          "goalsAgainst": 0,
-          "goalDifference": 1,
+          "record": "1-0-1",
+          "goalsFor": 2,
+          "goalsAgainst": 2,
+          "goalDifference": 0,
           "details": [
-            "Costa d’Avorio 1-0 Ecuador: +3"
+            "Costa d’Avorio 1-0 Ecuador: +3",
+            "Germania 2-1 Costa d’Avorio: +0"
           ]
         },
         {
@@ -8900,7 +8916,7 @@
       "name": "Ste/Sven",
       "total": 52,
       "credits": 29,
-      "played": 16,
+      "played": 17,
       "alive": 12,
       "teams": [
         {
@@ -9005,17 +9021,18 @@
           "group": "E",
           "tier": 3,
           "credits": 2,
-          "played": 1,
+          "played": 2,
           "base": 3,
           "bonus": 0,
           "multiplier": 3,
           "total": 9,
-          "record": "1-0-0",
-          "goalsFor": 1,
-          "goalsAgainst": 0,
-          "goalDifference": 1,
+          "record": "1-0-1",
+          "goalsFor": 2,
+          "goalsAgainst": 2,
+          "goalDifference": 0,
           "details": [
-            "Costa d’Avorio 1-0 Ecuador: +3"
+            "Costa d’Avorio 1-0 Ecuador: +3",
+            "Germania 2-1 Costa d’Avorio: +0"
           ]
         },
         {
