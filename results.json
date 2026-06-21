@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-21T10:45:39.199Z",
+  "updatedAt": "2026-06-21T16:23:53.838Z",
   "source": "football-data.org + storico fisso + storico locale",
   "matches": [
     {
@@ -2401,11 +2401,11 @@
       },
       "id": 537371,
       "utcDate": "2026-06-21T16:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "matchday": 2,
       "stage": "GROUP_STAGE",
       "group": "GROUP_H",
-      "lastUpdated": "2026-06-20T15:20:13Z",
+      "lastUpdated": "2026-06-21T16:23:22Z",
       "homeTeam": {
         "id": 760,
         "name": "Spain",
@@ -2421,11 +2421,11 @@
         "crest": "https://crests.football-data.org/saudi_arabia.svg"
       },
       "score": {
-        "winner": null,
+        "winner": "HOME_TEAM",
         "duration": "REGULAR",
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 0
         },
         "halfTime": {
           "home": null,
@@ -2435,7 +2435,14 @@
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": []
+      "referees": [
+        {
+          "id": 11260,
+          "name": "Raphael Claus",
+          "type": "REFEREE",
+          "nationality": "Brazil"
+        }
+      ]
     },
     {
       "area": {
