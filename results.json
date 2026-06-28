@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-28T21:35:23.216Z",
+  "updatedAt": "2026-06-28T23:48:05.035Z",
   "source": "football-data.org + storico fisso + storico locale",
   "matches": [
     {
@@ -4826,7 +4826,7 @@
       "matchday": null,
       "stage": "LAST_32",
       "group": null,
-      "lastUpdated": "2026-06-28T21:02:00Z",
+      "lastUpdated": "2026-06-28T22:45:19Z",
       "homeTeam": {
         "id": 774,
         "name": "South Africa",
