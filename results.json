@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-28T19:57:36.945Z",
+  "updatedAt": "2026-06-28T21:02:36.480Z",
   "source": "football-data.org + storico fisso + storico locale",
   "matches": [
     {
@@ -4822,11 +4822,11 @@
       },
       "id": 537417,
       "utcDate": "2026-06-28T19:00:00Z",
-      "status": "PAUSED",
+      "status": "FINISHED",
       "matchday": null,
       "stage": "LAST_32",
       "group": null,
-      "lastUpdated": "2026-06-28T19:54:42Z",
+      "lastUpdated": "2026-06-28T21:02:00Z",
       "homeTeam": {
         "id": 774,
         "name": "South Africa",
@@ -4842,11 +4842,11 @@
         "crest": "https://crests.football-data.org/canada.svg"
       },
       "score": {
-        "winner": "DRAW",
+        "winner": "AWAY_TEAM",
         "duration": "REGULAR",
         "fullTime": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "halfTime": {
           "home": 0,
@@ -7253,13 +7253,13 @@
           "team": {
             "name": "Sudafrica"
           },
-          "playedGames": 3,
+          "playedGames": 4,
           "won": 1,
           "draw": 1,
-          "lost": 1,
+          "lost": 2,
           "goalsFor": 2,
-          "goalsAgainst": 3,
-          "goalDifference": -1,
+          "goalsAgainst": 4,
+          "goalDifference": -2,
           "points": 4,
           "tier": 4,
           "credits": 1
@@ -7306,6 +7306,22 @@
         {
           "position": 1,
           "team": {
+            "name": "Canada"
+          },
+          "playedGames": 4,
+          "won": 2,
+          "draw": 1,
+          "lost": 1,
+          "goalsFor": 9,
+          "goalsAgainst": 3,
+          "goalDifference": 6,
+          "points": 7,
+          "tier": 2,
+          "credits": 3
+        },
+        {
+          "position": 2,
+          "team": {
             "name": "Svizzera"
           },
           "playedGames": 3,
@@ -7318,22 +7334,6 @@
           "points": 7,
           "tier": 1,
           "credits": 5
-        },
-        {
-          "position": 2,
-          "team": {
-            "name": "Canada"
-          },
-          "playedGames": 3,
-          "won": 1,
-          "draw": 1,
-          "lost": 1,
-          "goalsFor": 8,
-          "goalsAgainst": 3,
-          "goalDifference": 5,
-          "points": 4,
-          "tier": 2,
-          "credits": 3
         },
         {
           "position": 3,
@@ -8138,17 +8138,18 @@
       "base": 4,
       "bonus": 5,
       "weighted": 36,
-      "played": 3,
+      "played": 4,
       "w": 1,
       "d": 1,
-      "l": 1,
+      "l": 2,
       "goalsFor": 2,
-      "goalsAgainst": 3,
-      "goalDifference": -1,
+      "goalsAgainst": 4,
+      "goalDifference": -2,
       "details": [
         "Messico 2-0 Sudafrica: +0",
         "Repubblica Ceca 1-1 Sudafrica: +1",
         "Sudafrica 1-0 Corea del Sud: +3",
+        "Sudafrica 0-1 Canada: +0",
         "Passaggio girone: +5"
       ]
     },
@@ -8171,20 +8172,21 @@
       ]
     },
     "Canada": {
-      "base": 4,
+      "base": 7,
       "bonus": 5,
-      "weighted": 18,
-      "played": 3,
-      "w": 1,
+      "weighted": 24,
+      "played": 4,
+      "w": 2,
       "d": 1,
       "l": 1,
-      "goalsFor": 8,
+      "goalsFor": 9,
       "goalsAgainst": 3,
-      "goalDifference": 5,
+      "goalDifference": 6,
       "details": [
         "Canada 1-1 Bosnia ed Erzegovina: +1",
         "Canada 6-0 Qatar: +3",
         "Svizzera 2-1 Canada: +0",
+        "Sudafrica 0-1 Canada: +3",
         "Passaggio girone: +5"
       ]
     },
@@ -8936,6 +8938,280 @@
   },
   "computed": [
     {
+      "name": "Pippo",
+      "total": 282,
+      "credits": 29,
+      "played": 37,
+      "alive": 12,
+      "teams": [
+        {
+          "team": "Spagna",
+          "originalName": "Spagna",
+          "group": "H",
+          "tier": 1,
+          "credits": 5,
+          "played": 3,
+          "base": 7,
+          "bonus": 5,
+          "multiplier": 1,
+          "total": 12,
+          "record": "2-1-0",
+          "goalsFor": 5,
+          "goalsAgainst": 0,
+          "goalDifference": 5,
+          "details": [
+            "Spagna 0-0 Capo Verde: +1",
+            "Spagna 4-0 Arabia Saudita: +3",
+            "Uruguay 0-1 Spagna: +3",
+            "Passaggio girone: +5"
+          ]
+        },
+        {
+          "team": "Giappone",
+          "originalName": "Giappone",
+          "group": "F",
+          "tier": 2,
+          "credits": 3,
+          "played": 3,
+          "base": 5,
+          "bonus": 5,
+          "multiplier": 2,
+          "total": 20,
+          "record": "1-2-0",
+          "goalsFor": 7,
+          "goalsAgainst": 3,
+          "goalDifference": 4,
+          "details": [
+            "Paesi Bassi 2-2 Giappone: +1",
+            "Tunisia 0-4 Giappone: +3",
+            "Giappone 1-1 Svezia: +1",
+            "Passaggio girone: +5"
+          ]
+        },
+        {
+          "team": "Canada",
+          "originalName": "Canada",
+          "group": "B",
+          "tier": 2,
+          "credits": 3,
+          "played": 4,
+          "base": 7,
+          "bonus": 5,
+          "multiplier": 2,
+          "total": 24,
+          "record": "2-1-1",
+          "goalsFor": 9,
+          "goalsAgainst": 3,
+          "goalDifference": 6,
+          "details": [
+            "Canada 1-1 Bosnia ed Erzegovina: +1",
+            "Canada 6-0 Qatar: +3",
+            "Svizzera 2-1 Canada: +0",
+            "Sudafrica 0-1 Canada: +3",
+            "Passaggio girone: +5"
+          ]
+        },
+        {
+          "team": "Colombia",
+          "originalName": "Colombia",
+          "group": "K",
+          "tier": 2,
+          "credits": 3,
+          "played": 3,
+          "base": 7,
+          "bonus": 5,
+          "multiplier": 2,
+          "total": 24,
+          "record": "2-1-0",
+          "goalsFor": 4,
+          "goalsAgainst": 1,
+          "goalDifference": 3,
+          "details": [
+            "Uzbekistan 1-3 Colombia: +3",
+            "Colombia 1-0 RD Congo: +3",
+            "Colombia 0-0 Portogallo: +1",
+            "Passaggio girone: +5"
+          ]
+        },
+        {
+          "team": "Croazia",
+          "originalName": "Croazia",
+          "group": "L",
+          "tier": 2,
+          "credits": 3,
+          "played": 3,
+          "base": 6,
+          "bonus": 5,
+          "multiplier": 2,
+          "total": 22,
+          "record": "2-0-1",
+          "goalsFor": 5,
+          "goalsAgainst": 5,
+          "goalDifference": 0,
+          "details": [
+            "Inghilterra 4-2 Croazia: +0",
+            "Panama 0-1 Croazia: +3",
+            "Croazia 2-1 Ghana: +3",
+            "Passaggio girone: +5"
+          ]
+        },
+        {
+          "team": "Norvegia",
+          "originalName": "Norvegia",
+          "group": "I",
+          "tier": 3,
+          "credits": 2,
+          "played": 3,
+          "base": 6,
+          "bonus": 5,
+          "multiplier": 3,
+          "total": 33,
+          "record": "2-0-1",
+          "goalsFor": 8,
+          "goalsAgainst": 7,
+          "goalDifference": 1,
+          "details": [
+            "Iraq 1-4 Norvegia: +3",
+            "Norvegia 3-2 Senegal: +3",
+            "Norvegia 1-4 Francia: +0",
+            "Passaggio girone: +5"
+          ]
+        },
+        {
+          "team": "Costa d’Avorio",
+          "originalName": "Costa d’Avorio",
+          "group": "E",
+          "tier": 3,
+          "credits": 2,
+          "played": 3,
+          "base": 6,
+          "bonus": 5,
+          "multiplier": 3,
+          "total": 33,
+          "record": "2-0-1",
+          "goalsFor": 4,
+          "goalsAgainst": 2,
+          "goalDifference": 2,
+          "details": [
+            "Costa d’Avorio 1-0 Ecuador: +3",
+            "Germania 2-1 Costa d’Avorio: +0",
+            "Curaçao 0-2 Costa d’Avorio: +3",
+            "Passaggio girone: +5"
+          ]
+        },
+        {
+          "team": "Egitto",
+          "originalName": "Egitto",
+          "group": "G",
+          "tier": 3,
+          "credits": 2,
+          "played": 3,
+          "base": 5,
+          "bonus": 5,
+          "multiplier": 3,
+          "total": 30,
+          "record": "1-2-0",
+          "goalsFor": 5,
+          "goalsAgainst": 3,
+          "goalDifference": 2,
+          "details": [
+            "Belgio 1-1 Egitto: +1",
+            "Nuova Zelanda 1-3 Egitto: +3",
+            "Egitto 1-1 Iran: +1",
+            "Passaggio girone: +5"
+          ]
+        },
+        {
+          "team": "Svezia",
+          "originalName": "Svezia",
+          "group": "F",
+          "tier": 3,
+          "credits": 2,
+          "played": 3,
+          "base": 4,
+          "bonus": 2,
+          "multiplier": 3,
+          "total": 18,
+          "record": "1-1-1",
+          "goalsFor": 7,
+          "goalsAgainst": 7,
+          "goalDifference": 0,
+          "details": [
+            "Svezia 5-1 Tunisia: +3",
+            "Paesi Bassi 5-1 Svezia: +0",
+            "Giappone 1-1 Svezia: +1",
+            "Terza classificata girone: +2"
+          ]
+        },
+        {
+          "team": "Algeria",
+          "originalName": "Algeria",
+          "group": "J",
+          "tier": 3,
+          "credits": 2,
+          "played": 3,
+          "base": 4,
+          "bonus": 2,
+          "multiplier": 3,
+          "total": 18,
+          "record": "1-1-1",
+          "goalsFor": 5,
+          "goalsAgainst": 7,
+          "goalDifference": -2,
+          "details": [
+            "Argentina 3-0 Algeria: +0",
+            "Giordania 1-2 Algeria: +3",
+            "Algeria 3-3 Austria: +1",
+            "Terza classificata girone: +2"
+          ]
+        },
+        {
+          "team": "Bosnia ed Erzegovina",
+          "originalName": "Bosnia ed Erzegovina",
+          "group": "B",
+          "tier": 4,
+          "credits": 1,
+          "played": 3,
+          "base": 4,
+          "bonus": 2,
+          "multiplier": 4,
+          "total": 24,
+          "record": "1-1-1",
+          "goalsFor": 5,
+          "goalsAgainst": 6,
+          "goalDifference": -1,
+          "details": [
+            "Canada 1-1 Bosnia ed Erzegovina: +1",
+            "Svizzera 4-1 Bosnia ed Erzegovina: +0",
+            "Bosnia ed Erzegovina 3-1 Qatar: +3",
+            "Terza classificata girone: +2"
+          ]
+        },
+        {
+          "team": "Paraguay",
+          "originalName": "Paraguay",
+          "group": "D",
+          "tier": 4,
+          "credits": 1,
+          "played": 3,
+          "base": 4,
+          "bonus": 2,
+          "multiplier": 4,
+          "total": 24,
+          "record": "1-1-1",
+          "goalsFor": 2,
+          "goalsAgainst": 4,
+          "goalDifference": -2,
+          "details": [
+            "USA 4-1 Paraguay: +0",
+            "Turchia 0-1 Paraguay: +3",
+            "Paraguay 0-0 Australia: +1",
+            "Terza classificata girone: +2"
+          ]
+        }
+      ]
+    },
+    {
       "name": "Mic/Lor",
       "total": 278,
       "credits": 29,
@@ -9209,283 +9485,10 @@
       ]
     },
     {
-      "name": "Pippo",
+      "name": "Rocco",
       "total": 276,
       "credits": 29,
-      "played": 36,
-      "alive": 12,
-      "teams": [
-        {
-          "team": "Spagna",
-          "originalName": "Spagna",
-          "group": "H",
-          "tier": 1,
-          "credits": 5,
-          "played": 3,
-          "base": 7,
-          "bonus": 5,
-          "multiplier": 1,
-          "total": 12,
-          "record": "2-1-0",
-          "goalsFor": 5,
-          "goalsAgainst": 0,
-          "goalDifference": 5,
-          "details": [
-            "Spagna 0-0 Capo Verde: +1",
-            "Spagna 4-0 Arabia Saudita: +3",
-            "Uruguay 0-1 Spagna: +3",
-            "Passaggio girone: +5"
-          ]
-        },
-        {
-          "team": "Giappone",
-          "originalName": "Giappone",
-          "group": "F",
-          "tier": 2,
-          "credits": 3,
-          "played": 3,
-          "base": 5,
-          "bonus": 5,
-          "multiplier": 2,
-          "total": 20,
-          "record": "1-2-0",
-          "goalsFor": 7,
-          "goalsAgainst": 3,
-          "goalDifference": 4,
-          "details": [
-            "Paesi Bassi 2-2 Giappone: +1",
-            "Tunisia 0-4 Giappone: +3",
-            "Giappone 1-1 Svezia: +1",
-            "Passaggio girone: +5"
-          ]
-        },
-        {
-          "team": "Canada",
-          "originalName": "Canada",
-          "group": "B",
-          "tier": 2,
-          "credits": 3,
-          "played": 3,
-          "base": 4,
-          "bonus": 5,
-          "multiplier": 2,
-          "total": 18,
-          "record": "1-1-1",
-          "goalsFor": 8,
-          "goalsAgainst": 3,
-          "goalDifference": 5,
-          "details": [
-            "Canada 1-1 Bosnia ed Erzegovina: +1",
-            "Canada 6-0 Qatar: +3",
-            "Svizzera 2-1 Canada: +0",
-            "Passaggio girone: +5"
-          ]
-        },
-        {
-          "team": "Colombia",
-          "originalName": "Colombia",
-          "group": "K",
-          "tier": 2,
-          "credits": 3,
-          "played": 3,
-          "base": 7,
-          "bonus": 5,
-          "multiplier": 2,
-          "total": 24,
-          "record": "2-1-0",
-          "goalsFor": 4,
-          "goalsAgainst": 1,
-          "goalDifference": 3,
-          "details": [
-            "Uzbekistan 1-3 Colombia: +3",
-            "Colombia 1-0 RD Congo: +3",
-            "Colombia 0-0 Portogallo: +1",
-            "Passaggio girone: +5"
-          ]
-        },
-        {
-          "team": "Croazia",
-          "originalName": "Croazia",
-          "group": "L",
-          "tier": 2,
-          "credits": 3,
-          "played": 3,
-          "base": 6,
-          "bonus": 5,
-          "multiplier": 2,
-          "total": 22,
-          "record": "2-0-1",
-          "goalsFor": 5,
-          "goalsAgainst": 5,
-          "goalDifference": 0,
-          "details": [
-            "Inghilterra 4-2 Croazia: +0",
-            "Panama 0-1 Croazia: +3",
-            "Croazia 2-1 Ghana: +3",
-            "Passaggio girone: +5"
-          ]
-        },
-        {
-          "team": "Norvegia",
-          "originalName": "Norvegia",
-          "group": "I",
-          "tier": 3,
-          "credits": 2,
-          "played": 3,
-          "base": 6,
-          "bonus": 5,
-          "multiplier": 3,
-          "total": 33,
-          "record": "2-0-1",
-          "goalsFor": 8,
-          "goalsAgainst": 7,
-          "goalDifference": 1,
-          "details": [
-            "Iraq 1-4 Norvegia: +3",
-            "Norvegia 3-2 Senegal: +3",
-            "Norvegia 1-4 Francia: +0",
-            "Passaggio girone: +5"
-          ]
-        },
-        {
-          "team": "Costa d’Avorio",
-          "originalName": "Costa d’Avorio",
-          "group": "E",
-          "tier": 3,
-          "credits": 2,
-          "played": 3,
-          "base": 6,
-          "bonus": 5,
-          "multiplier": 3,
-          "total": 33,
-          "record": "2-0-1",
-          "goalsFor": 4,
-          "goalsAgainst": 2,
-          "goalDifference": 2,
-          "details": [
-            "Costa d’Avorio 1-0 Ecuador: +3",
-            "Germania 2-1 Costa d’Avorio: +0",
-            "Curaçao 0-2 Costa d’Avorio: +3",
-            "Passaggio girone: +5"
-          ]
-        },
-        {
-          "team": "Egitto",
-          "originalName": "Egitto",
-          "group": "G",
-          "tier": 3,
-          "credits": 2,
-          "played": 3,
-          "base": 5,
-          "bonus": 5,
-          "multiplier": 3,
-          "total": 30,
-          "record": "1-2-0",
-          "goalsFor": 5,
-          "goalsAgainst": 3,
-          "goalDifference": 2,
-          "details": [
-            "Belgio 1-1 Egitto: +1",
-            "Nuova Zelanda 1-3 Egitto: +3",
-            "Egitto 1-1 Iran: +1",
-            "Passaggio girone: +5"
-          ]
-        },
-        {
-          "team": "Svezia",
-          "originalName": "Svezia",
-          "group": "F",
-          "tier": 3,
-          "credits": 2,
-          "played": 3,
-          "base": 4,
-          "bonus": 2,
-          "multiplier": 3,
-          "total": 18,
-          "record": "1-1-1",
-          "goalsFor": 7,
-          "goalsAgainst": 7,
-          "goalDifference": 0,
-          "details": [
-            "Svezia 5-1 Tunisia: +3",
-            "Paesi Bassi 5-1 Svezia: +0",
-            "Giappone 1-1 Svezia: +1",
-            "Terza classificata girone: +2"
-          ]
-        },
-        {
-          "team": "Algeria",
-          "originalName": "Algeria",
-          "group": "J",
-          "tier": 3,
-          "credits": 2,
-          "played": 3,
-          "base": 4,
-          "bonus": 2,
-          "multiplier": 3,
-          "total": 18,
-          "record": "1-1-1",
-          "goalsFor": 5,
-          "goalsAgainst": 7,
-          "goalDifference": -2,
-          "details": [
-            "Argentina 3-0 Algeria: +0",
-            "Giordania 1-2 Algeria: +3",
-            "Algeria 3-3 Austria: +1",
-            "Terza classificata girone: +2"
-          ]
-        },
-        {
-          "team": "Bosnia ed Erzegovina",
-          "originalName": "Bosnia ed Erzegovina",
-          "group": "B",
-          "tier": 4,
-          "credits": 1,
-          "played": 3,
-          "base": 4,
-          "bonus": 2,
-          "multiplier": 4,
-          "total": 24,
-          "record": "1-1-1",
-          "goalsFor": 5,
-          "goalsAgainst": 6,
-          "goalDifference": -1,
-          "details": [
-            "Canada 1-1 Bosnia ed Erzegovina: +1",
-            "Svizzera 4-1 Bosnia ed Erzegovina: +0",
-            "Bosnia ed Erzegovina 3-1 Qatar: +3",
-            "Terza classificata girone: +2"
-          ]
-        },
-        {
-          "team": "Paraguay",
-          "originalName": "Paraguay",
-          "group": "D",
-          "tier": 4,
-          "credits": 1,
-          "played": 3,
-          "base": 4,
-          "bonus": 2,
-          "multiplier": 4,
-          "total": 24,
-          "record": "1-1-1",
-          "goalsFor": 2,
-          "goalsAgainst": 4,
-          "goalDifference": -2,
-          "details": [
-            "USA 4-1 Paraguay: +0",
-            "Turchia 0-1 Paraguay: +3",
-            "Paraguay 0-0 Australia: +1",
-            "Terza classificata girone: +2"
-          ]
-        }
-      ]
-    },
-    {
-      "name": "Rocco",
-      "total": 270,
-      "credits": 29,
-      "played": 36,
+      "played": 38,
       "alive": 12,
       "teams": [
         {
@@ -9582,19 +9585,20 @@
           "group": "B",
           "tier": 2,
           "credits": 3,
-          "played": 3,
-          "base": 4,
+          "played": 4,
+          "base": 7,
           "bonus": 5,
           "multiplier": 2,
-          "total": 18,
-          "record": "1-1-1",
-          "goalsFor": 8,
+          "total": 24,
+          "record": "2-1-1",
+          "goalsFor": 9,
           "goalsAgainst": 3,
-          "goalDifference": 5,
+          "goalDifference": 6,
           "details": [
             "Canada 1-1 Bosnia ed Erzegovina: +1",
             "Canada 6-0 Qatar: +3",
             "Svizzera 2-1 Canada: +0",
+            "Sudafrica 0-1 Canada: +3",
             "Passaggio girone: +5"
           ]
         },
@@ -9735,19 +9739,20 @@
           "group": "A",
           "tier": 4,
           "credits": 1,
-          "played": 3,
+          "played": 4,
           "base": 4,
           "bonus": 5,
           "multiplier": 4,
           "total": 36,
-          "record": "1-1-1",
+          "record": "1-1-2",
           "goalsFor": 2,
-          "goalsAgainst": 3,
-          "goalDifference": -1,
+          "goalsAgainst": 4,
+          "goalDifference": -2,
           "details": [
             "Messico 2-0 Sudafrica: +0",
             "Repubblica Ceca 1-1 Sudafrica: +1",
             "Sudafrica 1-0 Corea del Sud: +3",
+            "Sudafrica 0-1 Canada: +0",
             "Passaggio girone: +5"
           ]
         }
@@ -9757,7 +9762,7 @@
       "name": "Zanna",
       "total": 245,
       "credits": 29,
-      "played": 36,
+      "played": 37,
       "alive": 12,
       "teams": [
         {
@@ -10006,19 +10011,20 @@
           "group": "A",
           "tier": 4,
           "credits": 1,
-          "played": 3,
+          "played": 4,
           "base": 4,
           "bonus": 5,
           "multiplier": 4,
           "total": 36,
-          "record": "1-1-1",
+          "record": "1-1-2",
           "goalsFor": 2,
-          "goalsAgainst": 3,
-          "goalDifference": -1,
+          "goalsAgainst": 4,
+          "goalDifference": -2,
           "details": [
             "Messico 2-0 Sudafrica: +0",
             "Repubblica Ceca 1-1 Sudafrica: +1",
             "Sudafrica 1-0 Corea del Sud: +3",
+            "Sudafrica 0-1 Canada: +0",
             "Passaggio girone: +5"
           ]
         }
@@ -10026,9 +10032,9 @@
     },
     {
       "name": "Beppe",
-      "total": 238,
+      "total": 244,
       "credits": 29,
-      "played": 36,
+      "played": 37,
       "alive": 12,
       "teams": [
         {
@@ -10081,19 +10087,20 @@
           "group": "B",
           "tier": 2,
           "credits": 3,
-          "played": 3,
-          "base": 4,
+          "played": 4,
+          "base": 7,
           "bonus": 5,
           "multiplier": 2,
-          "total": 18,
-          "record": "1-1-1",
-          "goalsFor": 8,
+          "total": 24,
+          "record": "2-1-1",
+          "goalsFor": 9,
           "goalsAgainst": 3,
-          "goalDifference": 5,
+          "goalDifference": 6,
           "details": [
             "Canada 1-1 Bosnia ed Erzegovina: +1",
             "Canada 6-0 Qatar: +3",
             "Svizzera 2-1 Canada: +0",
+            "Sudafrica 0-1 Canada: +3",
             "Passaggio girone: +5"
           ]
         },
@@ -10299,7 +10306,7 @@
       "name": "Elia",
       "total": 232,
       "credits": 29,
-      "played": 36,
+      "played": 37,
       "alive": 12,
       "teams": [
         {
@@ -10548,19 +10555,20 @@
           "group": "A",
           "tier": 4,
           "credits": 1,
-          "played": 3,
+          "played": 4,
           "base": 4,
           "bonus": 5,
           "multiplier": 4,
           "total": 36,
-          "record": "1-1-1",
+          "record": "1-1-2",
           "goalsFor": 2,
-          "goalsAgainst": 3,
-          "goalDifference": -1,
+          "goalsAgainst": 4,
+          "goalDifference": -2,
           "details": [
             "Messico 2-0 Sudafrica: +0",
             "Repubblica Ceca 1-1 Sudafrica: +1",
             "Sudafrica 1-0 Corea del Sud: +3",
+            "Sudafrica 0-1 Canada: +0",
             "Passaggio girone: +5"
           ]
         }
@@ -10570,7 +10578,7 @@
       "name": "Ste/Sven",
       "total": 231,
       "credits": 29,
-      "played": 36,
+      "played": 37,
       "alive": 12,
       "teams": [
         {
@@ -10733,19 +10741,20 @@
           "group": "A",
           "tier": 4,
           "credits": 1,
-          "played": 3,
+          "played": 4,
           "base": 4,
           "bonus": 5,
           "multiplier": 4,
           "total": 36,
-          "record": "1-1-1",
+          "record": "1-1-2",
           "goalsFor": 2,
-          "goalsAgainst": 3,
-          "goalDifference": -1,
+          "goalsAgainst": 4,
+          "goalDifference": -2,
           "details": [
             "Messico 2-0 Sudafrica: +0",
             "Repubblica Ceca 1-1 Sudafrica: +1",
             "Sudafrica 1-0 Corea del Sud: +3",
+            "Sudafrica 0-1 Canada: +0",
             "Passaggio girone: +5"
           ]
         },
@@ -10841,7 +10850,7 @@
       "name": "Rambo",
       "total": 227,
       "credits": 29,
-      "played": 36,
+      "played": 37,
       "alive": 12,
       "teams": [
         {
@@ -11068,19 +11077,20 @@
           "group": "A",
           "tier": 4,
           "credits": 1,
-          "played": 3,
+          "played": 4,
           "base": 4,
           "bonus": 5,
           "multiplier": 4,
           "total": 36,
-          "record": "1-1-1",
+          "record": "1-1-2",
           "goalsFor": 2,
-          "goalsAgainst": 3,
-          "goalDifference": -1,
+          "goalsAgainst": 4,
+          "goalDifference": -2,
           "details": [
             "Messico 2-0 Sudafrica: +0",
             "Repubblica Ceca 1-1 Sudafrica: +1",
             "Sudafrica 1-0 Corea del Sud: +3",
+            "Sudafrica 0-1 Canada: +0",
             "Passaggio girone: +5"
           ]
         },
@@ -11111,7 +11121,7 @@
       "name": "Sim/Ric",
       "total": 225,
       "credits": 29,
-      "played": 36,
+      "played": 37,
       "alive": 12,
       "teams": [
         {
@@ -11317,19 +11327,20 @@
           "group": "A",
           "tier": 4,
           "credits": 1,
-          "played": 3,
+          "played": 4,
           "base": 4,
           "bonus": 5,
           "multiplier": 4,
           "total": 36,
-          "record": "1-1-1",
+          "record": "1-1-2",
           "goalsFor": 2,
-          "goalsAgainst": 3,
-          "goalDifference": -1,
+          "goalsAgainst": 4,
+          "goalDifference": -2,
           "details": [
             "Messico 2-0 Sudafrica: +0",
             "Repubblica Ceca 1-1 Sudafrica: +1",
             "Sudafrica 1-0 Corea del Sud: +3",
+            "Sudafrica 0-1 Canada: +0",
             "Passaggio girone: +5"
           ]
         },
@@ -11922,7 +11933,7 @@
       "name": "Beggio",
       "total": 179,
       "credits": 29,
-      "played": 36,
+      "played": 37,
       "alive": 12,
       "teams": [
         {
@@ -12061,19 +12072,20 @@
           "group": "A",
           "tier": 4,
           "credits": 1,
-          "played": 3,
+          "played": 4,
           "base": 4,
           "bonus": 5,
           "multiplier": 4,
           "total": 36,
-          "record": "1-1-1",
+          "record": "1-1-2",
           "goalsFor": 2,
-          "goalsAgainst": 3,
-          "goalDifference": -1,
+          "goalsAgainst": 4,
+          "goalDifference": -2,
           "details": [
             "Messico 2-0 Sudafrica: +0",
             "Repubblica Ceca 1-1 Sudafrica: +1",
             "Sudafrica 1-0 Corea del Sud: +3",
+            "Sudafrica 0-1 Canada: +0",
             "Passaggio girone: +5"
           ]
         },
