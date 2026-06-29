@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-29T06:56:17.747Z",
+  "updatedAt": "2026-06-29T14:39:02.501Z",
   "source": "football-data.org + storico fisso + storico locale",
   "matches": [
     {
@@ -4041,7 +4041,7 @@
       "matchday": 3,
       "stage": "GROUP_STAGE",
       "group": "GROUP_I",
-      "lastUpdated": "2026-06-29T05:20:12Z",
+      "lastUpdated": "2026-06-29T08:25:01Z",
       "homeTeam": {
         "id": 804,
         "name": "Senegal",
