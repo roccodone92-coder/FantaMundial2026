@@ -10,6 +10,10 @@ const config = JSON.parse(await fs.readFile('config.json', 'utf8'));
   PARTITE STORICHE FISSE
   Servono a impedire che la classifica perda partite già giocate se l'API,
   in qualche aggiornamento, non restituisce più vecchi risultati.
+
+  ATTENZIONE:
+  La deduplica sotto NON usa l'id, ma data + fase + squadre,
+  quindi queste partite non vengono raddoppiate se poi arrivano anche dall'API.
 */
 const fixedHistoricalMatches = [
   {
@@ -450,14 +454,13 @@ function canonical(name) {
 /*
   CHIAVE DI DEDUPLICA CORRETTA
   Non usa l'ID, perché le partite storiche fisse hanno ID fixed-...
-  mentre l'API usa ID numerici. Se usassimo l'ID, la stessa partita
-  verrebbe contata due volte.
+  mentre l'API usa ID numerici.
 */
 function matchKey(match) {
   const date = String(match?.utcDate || '').slice(0, 10);
   const home = canonical(match?.homeTeam?.name || '');
   const away = canonical(match?.awayTeam?.name || '');
-  const stage = String(match?.stage || 'GROUP_STAGE');
+  const stage = String(match?.stage || 'GROUP_STAGE').toUpperCase();
 
   return `${stage}:${date}:${norm(home)}:${norm(away)}`;
 }
@@ -655,15 +658,25 @@ function buildInternalStandings(teamStats) {
 
 function applyGroupBonuses(teamStats, standings) {
   for (const group of standings || []) {
-    for (const row of group.table || []) {
+    const table = group.table || [];
+
+    /*
+      Bonus girone SOLO quando tutto il girone è concluso.
+      Tutte le 4 squadre devono avere almeno 3 partite giocate.
+    */
+    const groupFinished =
+      table.length === 4 &&
+      table.every(row => {
+        const name = canonical(row.team?.name);
+        return (teamStats[name]?.played || 0) >= 3;
+      });
+
+    if (!groupFinished) continue;
+
+    for (const row of table) {
       const name = canonical(row.team?.name);
 
       if (!teamStats[name]) continue;
-
-      const playedGames = row.playedGames ?? teamStats[name].played ?? 0;
-
-      // Bonus girone solo quando la squadra ha giocato 3 partite.
-      if (playedGames < 3) continue;
 
       if (row.position <= 2) {
         teamStats[name].bonus += rules.groupQualificationBonus;
@@ -701,8 +714,10 @@ function getKnockoutWinner(match) {
   const homePenalties = match.score?.penalties?.home;
   const awayPenalties = match.score?.penalties?.away;
 
-  if (homePenalties > awayPenalties) return home;
-  if (homePenalties < awayPenalties) return away;
+  if (homePenalties != null && awayPenalties != null) {
+    if (homePenalties > awayPenalties) return home;
+    if (homePenalties < awayPenalties) return away;
+  }
 
   return null;
 }
@@ -711,13 +726,25 @@ function applyKnockoutBonuses(teamStats, matches) {
   for (const match of matches || []) {
     if (match.status !== 'FINISHED') continue;
 
-    const stage = String(match.stage || '');
+    const stage = String(match.stage || '').toUpperCase();
 
+    /*
+      Qui ora sono inclusi anche i sedicesimi:
+      ROUND_OF_32 / LAST_32 / ROUND OF 32.
+    */
     const isKnockout =
+      stage.includes('LAST_32') ||
+      stage.includes('ROUND_OF_32') ||
+      stage.includes('ROUND OF 32') ||
       stage.includes('LAST_16') ||
       stage.includes('ROUND_OF_16') ||
+      stage.includes('ROUND OF 16') ||
       stage.includes('QUARTER_FINAL') ||
+      stage.includes('QUARTERFINAL') ||
+      stage.includes('QUARTER-FINAL') ||
       stage.includes('SEMI_FINAL') ||
+      stage.includes('SEMIFINAL') ||
+      stage.includes('SEMI-FINAL') ||
       stage === 'FINAL';
 
     if (!isKnockout) continue;
