@@ -8,12 +8,9 @@ const config = JSON.parse(await fs.readFile('config.json', 'utf8'));
 
 /*
   PARTITE STORICHE FISSE
-  Servono a impedire che la classifica perda partite già giocate se l'API,
-  in qualche aggiornamento, non restituisce più vecchi risultati.
-
-  ATTENZIONE:
-  La deduplica sotto NON usa l'id, ma data + fase + squadre,
-  quindi queste partite non vengono raddoppiate se poi arrivano anche dall'API.
+  Servono a impedire che la classifica perda partite già giocate se l'API
+  non restituisce più vecchi risultati.
+  La deduplica NON usa l'id, quindi non vengono raddoppiate.
 */
 const fixedHistoricalMatches = [
   {
@@ -451,6 +448,26 @@ function canonical(name) {
   return name;
 }
 
+function isKnockoutStage(stageValue) {
+  const stage = String(stageValue || '').toUpperCase();
+
+  return (
+    stage.includes('LAST_32') ||
+    stage.includes('ROUND_OF_32') ||
+    stage.includes('ROUND OF 32') ||
+    stage.includes('LAST_16') ||
+    stage.includes('ROUND_OF_16') ||
+    stage.includes('ROUND OF 16') ||
+    stage.includes('QUARTER_FINAL') ||
+    stage.includes('QUARTERFINAL') ||
+    stage.includes('QUARTER-FINAL') ||
+    stage.includes('SEMI_FINAL') ||
+    stage.includes('SEMIFINAL') ||
+    stage.includes('SEMI-FINAL') ||
+    stage === 'FINAL'
+  );
+}
+
 /*
   CHIAVE DI DEDUPLICA CORRETTA
   Non usa l'ID, perché le partite storiche fisse hanno ID fixed-...
@@ -656,7 +673,19 @@ function buildInternalStandings(teamStats) {
     });
 }
 
-function applyGroupBonuses(teamStats, standings) {
+function applyGroupBonuses(teamStats, standings, matches) {
+  const knockoutTeams = new Set();
+
+  for (const match of matches || []) {
+    if (!isKnockoutStage(match.stage)) continue;
+
+    const home = canonical(match.homeTeam?.name);
+    const away = canonical(match.awayTeam?.name);
+
+    if (home) knockoutTeams.add(home);
+    if (away) knockoutTeams.add(away);
+  }
+
   for (const group of standings || []) {
     const table = group.table || [];
 
@@ -678,14 +707,21 @@ function applyGroupBonuses(teamStats, standings) {
 
       if (!teamStats[name]) continue;
 
+      const qualified = knockoutTeams.has(name);
+
       if (row.position <= 2) {
         teamStats[name].bonus += rules.groupQualificationBonus;
         teamStats[name].details.push(`Passaggio girone: +${rules.groupQualificationBonus}`);
       }
 
       if (row.position === 3) {
-        teamStats[name].bonus += rules.thirdPlaceBonus;
-        teamStats[name].details.push(`Terza classificata girone: +${rules.thirdPlaceBonus}`);
+        if (qualified) {
+          teamStats[name].bonus += rules.groupQualificationBonus;
+          teamStats[name].details.push(`Terza qualificata: +${rules.groupQualificationBonus}`);
+        } else {
+          teamStats[name].bonus += rules.thirdPlaceBonus;
+          teamStats[name].details.push(`Terza classificata eliminata: +${rules.thirdPlaceBonus}`);
+        }
       }
 
       const meta = (config.teams || []).find(team => team.name === name);
@@ -725,30 +761,9 @@ function getKnockoutWinner(match) {
 function applyKnockoutBonuses(teamStats, matches) {
   for (const match of matches || []) {
     if (match.status !== 'FINISHED') continue;
+    if (!isKnockoutStage(match.stage)) continue;
 
     const stage = String(match.stage || '').toUpperCase();
-
-    /*
-      Qui ora sono inclusi anche i sedicesimi:
-      ROUND_OF_32 / LAST_32 / ROUND OF 32.
-    */
-    const isKnockout =
-      stage.includes('LAST_32') ||
-      stage.includes('ROUND_OF_32') ||
-      stage.includes('ROUND OF 32') ||
-      stage.includes('LAST_16') ||
-      stage.includes('ROUND_OF_16') ||
-      stage.includes('ROUND OF 16') ||
-      stage.includes('QUARTER_FINAL') ||
-      stage.includes('QUARTERFINAL') ||
-      stage.includes('QUARTER-FINAL') ||
-      stage.includes('SEMI_FINAL') ||
-      stage.includes('SEMIFINAL') ||
-      stage.includes('SEMI-FINAL') ||
-      stage === 'FINAL';
-
-    if (!isKnockout) continue;
-
     const winner = getKnockoutWinner(match);
 
     if (!winner || !teamStats[winner]) continue;
@@ -854,7 +869,7 @@ try {
   const teamStats = scoreMatches(matches);
   const standings = buildInternalStandings(teamStats);
 
-  applyGroupBonuses(teamStats, standings);
+  applyGroupBonuses(teamStats, standings, matches);
   applyKnockoutBonuses(teamStats, matches);
   computeWeighted(teamStats);
 
