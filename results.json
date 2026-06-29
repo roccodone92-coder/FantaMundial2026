@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-29T20:20:48.406Z",
+  "updatedAt": "2026-06-29T20:58:51.282Z",
   "source": "football-data.org + storico fisso + storico locale",
   "matches": [
     {
@@ -5072,11 +5072,11 @@
       },
       "id": 537415,
       "utcDate": "2026-06-29T20:30:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "matchday": null,
       "stage": "LAST_32",
       "group": null,
-      "lastUpdated": "2026-06-29T05:20:12Z",
+      "lastUpdated": "2026-06-29T20:58:15Z",
       "homeTeam": {
         "id": 759,
         "name": "Germany",
@@ -5092,11 +5092,11 @@
         "crest": "https://crests.football-data.org/761.svg"
       },
       "score": {
-        "winner": null,
+        "winner": "DRAW",
         "duration": "REGULAR",
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "halfTime": {
           "home": null,
