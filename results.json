@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-29T14:39:02.501Z",
+  "updatedAt": "2026-06-29T19:09:09.502Z",
   "source": "football-data.org + storico fisso + storico locale",
   "matches": [
     {
@@ -4888,11 +4888,11 @@
       },
       "id": 537423,
       "utcDate": "2026-06-29T17:00:00Z",
-      "status": "TIMED",
+      "status": "FINISHED",
       "matchday": null,
       "stage": "LAST_32",
       "group": null,
-      "lastUpdated": "2026-06-29T05:20:12Z",
+      "lastUpdated": "2026-06-29T19:09:03Z",
       "homeTeam": {
         "id": 764,
         "name": "Brazil",
@@ -4908,21 +4908,28 @@
         "crest": "https://crests.football-data.org/766.svg"
       },
       "score": {
-        "winner": null,
+        "winner": "HOME_TEAM",
         "duration": "REGULAR",
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 2,
+          "away": 1
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 1
         }
       },
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": []
+      "referees": [
+        {
+          "id": 11043,
+          "name": "Maurizio Mariani",
+          "type": "REFEREE",
+          "nationality": "Italy"
+        }
+      ]
     },
     {
       "area": {
@@ -5099,7 +5106,14 @@
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": []
+      "referees": [
+        {
+          "id": 289426,
+          "name": "Jalal Jayed",
+          "type": "REFEREE",
+          "nationality": "Morocco"
+        }
+      ]
     },
     {
       "area": {
@@ -7438,14 +7452,14 @@
           "team": {
             "name": "Brasile"
           },
-          "playedGames": 3,
-          "won": 2,
+          "playedGames": 4,
+          "won": 3,
           "draw": 1,
           "lost": 0,
-          "goalsFor": 7,
-          "goalsAgainst": 1,
-          "goalDifference": 6,
-          "points": 7,
+          "goalsFor": 9,
+          "goalsAgainst": 2,
+          "goalDifference": 7,
+          "points": 10,
           "tier": 1,
           "credits": 5
         },
@@ -7667,13 +7681,13 @@
           "team": {
             "name": "Giappone"
           },
-          "playedGames": 3,
+          "playedGames": 4,
           "won": 1,
           "draw": 2,
-          "lost": 0,
-          "goalsFor": 7,
-          "goalsAgainst": 3,
-          "goalDifference": 4,
+          "lost": 1,
+          "goalsFor": 8,
+          "goalsAgainst": 5,
+          "goalDifference": 3,
           "points": 5,
           "tier": 2,
           "credits": 3
@@ -8286,21 +8300,23 @@
       ]
     },
     "Brasile": {
-      "base": 7,
-      "bonus": 5,
-      "weighted": 12,
-      "played": 3,
-      "w": 2,
+      "base": 10,
+      "bonus": 10,
+      "weighted": 20,
+      "played": 4,
+      "w": 3,
       "d": 1,
       "l": 0,
-      "goalsFor": 7,
-      "goalsAgainst": 1,
-      "goalDifference": 6,
+      "goalsFor": 9,
+      "goalsAgainst": 2,
+      "goalDifference": 7,
       "details": [
         "Brasile 1-1 Marocco: +1",
         "Brasile 3-0 Haiti: +3",
         "Scozia 0-3 Brasile: +3",
-        "Passaggio girone: +5"
+        "Brasile 2-1 Giappone: +3",
+        "Passaggio girone: +5",
+        "Passaggio turno successivo: +5"
       ]
     },
     "Marocco": {
@@ -8520,17 +8536,18 @@
       "base": 5,
       "bonus": 5,
       "weighted": 20,
-      "played": 3,
+      "played": 4,
       "w": 1,
       "d": 2,
-      "l": 0,
-      "goalsFor": 7,
-      "goalsAgainst": 3,
-      "goalDifference": 4,
+      "l": 1,
+      "goalsFor": 8,
+      "goalsAgainst": 5,
+      "goalDifference": 3,
       "details": [
         "Paesi Bassi 2-2 Giappone: +1",
         "Tunisia 0-4 Giappone: +3",
         "Giappone 1-1 Svezia: +1",
+        "Brasile 2-1 Giappone: +0",
         "Passaggio girone: +5"
       ]
     },
@@ -9001,7 +9018,7 @@
       "name": "Pippo",
       "total": 292,
       "credits": 29,
-      "played": 37,
+      "played": 38,
       "alive": 12,
       "teams": [
         {
@@ -9032,19 +9049,20 @@
           "group": "F",
           "tier": 2,
           "credits": 3,
-          "played": 3,
+          "played": 4,
           "base": 5,
           "bonus": 5,
           "multiplier": 2,
           "total": 20,
-          "record": "1-2-0",
-          "goalsFor": 7,
-          "goalsAgainst": 3,
-          "goalDifference": 4,
+          "record": "1-2-1",
+          "goalsFor": 8,
+          "goalsAgainst": 5,
+          "goalDifference": 3,
           "details": [
             "Paesi Bassi 2-2 Giappone: +1",
             "Tunisia 0-4 Giappone: +3",
             "Giappone 1-1 Svezia: +1",
+            "Brasile 2-1 Giappone: +0",
             "Passaggio girone: +5"
           ]
         },
@@ -10367,9 +10385,9 @@
     },
     {
       "name": "Elia",
-      "total": 232,
+      "total": 240,
       "credits": 29,
-      "played": 37,
+      "played": 38,
       "alive": 12,
       "teams": [
         {
@@ -10378,20 +10396,22 @@
           "group": "C",
           "tier": 1,
           "credits": 5,
-          "played": 3,
-          "base": 7,
-          "bonus": 5,
+          "played": 4,
+          "base": 10,
+          "bonus": 10,
           "multiplier": 1,
-          "total": 12,
-          "record": "2-1-0",
-          "goalsFor": 7,
-          "goalsAgainst": 1,
-          "goalDifference": 6,
+          "total": 20,
+          "record": "3-1-0",
+          "goalsFor": 9,
+          "goalsAgainst": 2,
+          "goalDifference": 7,
           "details": [
             "Brasile 1-1 Marocco: +1",
             "Brasile 3-0 Haiti: +3",
             "Scozia 0-3 Brasile: +3",
-            "Passaggio girone: +5"
+            "Brasile 2-1 Giappone: +3",
+            "Passaggio girone: +5",
+            "Passaggio turno successivo: +5"
           ]
         },
         {
@@ -11994,9 +12014,9 @@
     },
     {
       "name": "Beggio",
-      "total": 179,
+      "total": 187,
       "credits": 29,
-      "played": 37,
+      "played": 38,
       "alive": 12,
       "teams": [
         {
@@ -12005,20 +12025,22 @@
           "group": "C",
           "tier": 1,
           "credits": 5,
-          "played": 3,
-          "base": 7,
-          "bonus": 5,
+          "played": 4,
+          "base": 10,
+          "bonus": 10,
           "multiplier": 1,
-          "total": 12,
-          "record": "2-1-0",
-          "goalsFor": 7,
-          "goalsAgainst": 1,
-          "goalDifference": 6,
+          "total": 20,
+          "record": "3-1-0",
+          "goalsFor": 9,
+          "goalsAgainst": 2,
+          "goalDifference": 7,
           "details": [
             "Brasile 1-1 Marocco: +1",
             "Brasile 3-0 Haiti: +3",
             "Scozia 0-3 Brasile: +3",
-            "Passaggio girone: +5"
+            "Brasile 2-1 Giappone: +3",
+            "Passaggio girone: +5",
+            "Passaggio turno successivo: +5"
           ]
         },
         {
