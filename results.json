@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-30T08:46:17.142Z",
+  "updatedAt": "2026-06-30T16:37:32.725Z",
   "source": "football-data.org + storico fisso + storico locale",
   "matches": [
     {
@@ -5321,7 +5321,14 @@
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": []
+      "referees": [
+        {
+          "id": 28805,
+          "name": "Jesús Valenzuela",
+          "type": "REFEREE",
+          "nationality": "Venezuela"
+        }
+      ]
     },
     {
       "area": {
