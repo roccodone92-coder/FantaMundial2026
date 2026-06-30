@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-30T06:28:32.966Z",
+  "updatedAt": "2026-06-30T08:46:17.142Z",
   "source": "football-data.org + storico fisso + storico locale",
   "matches": [
     {
@@ -4892,7 +4892,7 @@
       "matchday": null,
       "stage": "LAST_32",
       "group": null,
-      "lastUpdated": "2026-06-29T21:04:03Z",
+      "lastUpdated": "2026-06-30T08:25:01Z",
       "homeTeam": {
         "id": 764,
         "name": "Brazil",
