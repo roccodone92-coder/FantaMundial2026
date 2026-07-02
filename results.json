@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-02T16:30:16.372Z",
+  "updatedAt": "2026-07-02T20:43:15.688Z",
   "source": "football-data.org + storico fisso + storico locale",
   "matches": [
     {
@@ -5927,11 +5927,11 @@
       },
       "id": 537420,
       "utcDate": "2026-07-02T19:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "matchday": null,
       "stage": "LAST_32",
       "group": null,
-      "lastUpdated": "2026-07-02T05:20:12Z",
+      "lastUpdated": "2026-07-02T20:43:09Z",
       "homeTeam": {
         "id": 760,
         "name": "Spain",
@@ -5947,21 +5947,28 @@
         "crest": "https://crests.football-data.org/816.svg"
       },
       "score": {
-        "winner": null,
+        "winner": "HOME_TEAM",
         "duration": "REGULAR",
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 2,
+          "away": 0
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 1,
+          "away": 0
         }
       },
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": []
+      "referees": [
+        {
+          "id": 30960,
+          "name": "Glenn Nyberg",
+          "type": "REFEREE",
+          "nationality": "Sweden"
+        }
+      ]
     },
     {
       "area": {
