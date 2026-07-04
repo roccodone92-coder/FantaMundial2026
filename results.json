@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-04T09:10:27.845Z",
+  "updatedAt": "2026-07-04T12:50:07.551Z",
   "source": "football-data.org + storico fisso + storico locale",
   "matches": [
     {
@@ -6502,7 +6502,7 @@
       "matchday": null,
       "stage": "LAST_32",
       "group": null,
-      "lastUpdated": "2026-07-04T08:25:01Z",
+      "lastUpdated": "2026-07-04T12:15:33Z",
       "homeTeam": {
         "id": 762,
         "name": "Argentina",
