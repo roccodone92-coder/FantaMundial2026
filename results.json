@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-04T19:04:51.873Z",
+  "updatedAt": "2026-07-04T19:05:21.273Z",
   "source": "football-data.org + storico fisso + storico locale",
   "matches": [
     {
@@ -6760,7 +6760,7 @@
       "matchday": null,
       "stage": "LAST_16",
       "group": null,
-      "lastUpdated": "2026-07-04T19:03:45Z",
+      "lastUpdated": "2026-07-04T19:04:57Z",
       "homeTeam": {
         "id": 828,
         "name": "Canada",
