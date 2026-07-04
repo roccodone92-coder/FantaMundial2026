@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-07-04T06:20:42.360Z",
-  "source": "fallback: 500 {\"message\":\"This is my fault. Feel free to file a complain to daniel@football-data.org\",\"error\":500}",
+  "updatedAt": "2026-07-04T09:10:27.845Z",
+  "source": "football-data.org + storico fisso + storico locale",
   "matches": [
     {
       "id": 537327,
@@ -6502,7 +6502,7 @@
       "matchday": null,
       "stage": "LAST_32",
       "group": null,
-      "lastUpdated": "2026-07-04T02:45:06Z",
+      "lastUpdated": "2026-07-04T08:25:01Z",
       "homeTeam": {
         "id": 762,
         "name": "Argentina",
@@ -6635,7 +6635,7 @@
       "matchday": null,
       "stage": "LAST_32",
       "group": null,
-      "lastUpdated": "2026-07-04T05:32:36Z",
+      "lastUpdated": "2026-07-04T08:25:02Z",
       "homeTeam": {
         "id": 818,
         "name": "Colombia",
