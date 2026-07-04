@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-03T23:29:22.339Z",
+  "updatedAt": "2026-07-04T00:16:27.282Z",
   "source": "football-data.org + storico fisso + storico locale",
   "matches": [
     {
@@ -6502,7 +6502,7 @@
       "matchday": null,
       "stage": "LAST_32",
       "group": null,
-      "lastUpdated": "2026-07-03T23:29:00Z",
+      "lastUpdated": "2026-07-04T00:15:46Z",
       "homeTeam": {
         "id": 762,
         "name": "Argentina",
@@ -6518,13 +6518,21 @@
         "crest": "https://crests.football-data.org/cape_verde.svg"
       },
       "score": {
-        "winner": "DRAW",
-        "duration": "REGULAR",
+        "winner": "HOME_TEAM",
+        "duration": "EXTRA_TIME",
         "fullTime": {
-          "home": 1,
+          "home": 2,
           "away": 1
         },
         "halfTime": {
+          "home": 1,
+          "away": 0
+        },
+        "regularTime": {
+          "home": null,
+          "away": null
+        },
+        "extraTime": {
           "home": 1,
           "away": 0
         }
@@ -6657,7 +6665,14 @@
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": []
+      "referees": [
+        {
+          "id": 9374,
+          "name": "Clément Turpin",
+          "type": "REFEREE",
+          "nationality": "France"
+        }
+      ]
     },
     {
       "area": {
