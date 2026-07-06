@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-06T12:31:43.155Z",
+  "updatedAt": "2026-07-06T19:18:56.032Z",
   "source": "football-data.org + storico fisso + storico locale",
   "matches": [
     {
@@ -7315,11 +7315,11 @@
       },
       "id": 537379,
       "utcDate": "2026-07-06T19:00:00Z",
-      "status": "TIMED",
+      "status": "LIVE",
       "matchday": null,
       "stage": "LAST_16",
       "group": null,
-      "lastUpdated": "2026-07-06T05:20:12Z",
+      "lastUpdated": "2026-07-06T19:18:18Z",
       "homeTeam": {
         "id": 765,
         "name": "Portugal",
@@ -7335,11 +7335,11 @@
         "crest": "https://crests.football-data.org/760.svg"
       },
       "score": {
-        "winner": null,
+        "winner": "DRAW",
         "duration": "REGULAR",
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "halfTime": {
           "home": null,
@@ -7349,7 +7349,14 @@
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": []
+      "referees": [
+        {
+          "id": 11580,
+          "name": "Anthony Taylor",
+          "type": "REFEREE",
+          "nationality": "England"
+        }
+      ]
     },
     {
       "area": {
