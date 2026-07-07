@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-07T18:39:40.683Z",
+  "updatedAt": "2026-07-07T22:37:05.456Z",
   "source": "football-data.org + storico fisso + storico locale",
   "matches": [
     {
@@ -7572,11 +7572,11 @@
       },
       "id": 537382,
       "utcDate": "2026-07-07T20:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "matchday": null,
       "stage": "LAST_16",
       "group": null,
-      "lastUpdated": "2026-07-07T05:20:11Z",
+      "lastUpdated": "2026-07-07T22:36:57Z",
       "homeTeam": {
         "id": 788,
         "name": "Switzerland",
@@ -7592,15 +7592,23 @@
         "crest": "https://crests.football-data.org/818.svg"
       },
       "score": {
-        "winner": null,
-        "duration": "REGULAR",
+        "winner": "DRAW",
+        "duration": "EXTRA_TIME",
         "fullTime": {
+          "home": 0,
+          "away": 0
+        },
+        "halfTime": {
+          "home": 0,
+          "away": 0
+        },
+        "regularTime": {
           "home": null,
           "away": null
         },
-        "halfTime": {
-          "home": null,
-          "away": null
+        "extraTime": {
+          "home": 0,
+          "away": 0
         }
       },
       "odds": {
