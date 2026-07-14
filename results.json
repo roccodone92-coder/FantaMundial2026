@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-14T19:53:21.525Z",
+  "updatedAt": "2026-07-14T20:48:30.718Z",
   "source": "football-data.org + storico fisso + storico locale",
   "matches": [
     {
@@ -8288,7 +8288,7 @@
       "matchday": null,
       "stage": "SEMI_FINALS",
       "group": null,
-      "lastUpdated": "2026-07-14T19:52:28Z",
+      "lastUpdated": "2026-07-14T20:48:28Z",
       "homeTeam": {
         "id": 773,
         "name": "France",
@@ -8308,11 +8308,11 @@
         "duration": "REGULAR",
         "fullTime": {
           "home": 0,
-          "away": 1
+          "away": 2
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 1
         }
       },
       "odds": {
