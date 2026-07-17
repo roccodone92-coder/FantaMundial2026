@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-17T06:30:32.030Z",
+  "updatedAt": "2026-07-17T08:37:10.733Z",
   "source": "football-data.org + storico fisso + storico locale",
   "matches": [
     {
@@ -7713,7 +7713,7 @@
       "matchday": null,
       "stage": "QUARTER_FINALS",
       "group": null,
-      "lastUpdated": "2026-07-17T05:20:06Z",
+      "lastUpdated": "2026-07-17T08:25:01Z",
       "homeTeam": {
         "id": 773,
         "name": "France",
