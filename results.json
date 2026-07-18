@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-18T21:27:47.298Z",
+  "updatedAt": "2026-07-18T22:23:25.654Z",
   "source": "football-data.org + storico fisso + storico locale",
   "matches": [
     {
@@ -8597,7 +8597,7 @@
       "matchday": null,
       "stage": "THIRD_PLACE",
       "group": null,
-      "lastUpdated": "2026-07-18T21:26:36Z",
+      "lastUpdated": "2026-07-18T22:23:00Z",
       "homeTeam": {
         "id": 773,
         "name": "France",
@@ -8616,12 +8616,12 @@
         "winner": "AWAY_TEAM",
         "duration": "REGULAR",
         "fullTime": {
-          "home": 0,
-          "away": 2
+          "home": 2,
+          "away": 4
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 4
         }
       },
       "odds": {
