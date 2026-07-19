@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-19T16:07:27.059Z",
+  "updatedAt": "2026-07-19T17:12:12.706Z",
   "source": "football-data.org + storico fisso + storico locale",
   "matches": [
     {
@@ -8811,7 +8811,14 @@
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": []
+      "referees": [
+        {
+          "id": 9351,
+          "name": "Slavko Vinčič",
+          "type": "REFEREE",
+          "nationality": "Slovenia"
+        }
+      ]
     }
   ],
   "standings": [
