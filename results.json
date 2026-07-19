@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-07-19T22:06:36.520Z",
+  "updatedAt": "2026-07-19T23:06:34.159Z",
   "source": "football-data.org + storico fisso + storico locale",
   "matches": [
     {
@@ -8777,11 +8777,11 @@
       },
       "id": 537390,
       "utcDate": "2026-07-19T19:00:00Z",
-      "status": "LIVE",
+      "status": "FINISHED",
       "matchday": null,
       "stage": "FINAL",
       "group": null,
-      "lastUpdated": "2026-07-19T22:06:24Z",
+      "lastUpdated": "2026-07-19T22:25:01Z",
       "homeTeam": {
         "id": 760,
         "name": "Spain",
@@ -8798,7 +8798,7 @@
       },
       "score": {
         "winner": "HOME_TEAM",
-        "duration": "REGULAR",
+        "duration": "EXTRA_TIME",
         "fullTime": {
           "home": 1,
           "away": 0
@@ -8812,7 +8812,7 @@
           "away": null
         },
         "extraTime": {
-          "home": 0,
+          "home": 1,
           "away": 0
         }
       },
@@ -9337,14 +9337,14 @@
           "team": {
             "name": "Spagna"
           },
-          "playedGames": 7,
-          "won": 6,
+          "playedGames": 8,
+          "won": 7,
           "draw": 1,
           "lost": 0,
-          "goalsFor": 13,
+          "goalsFor": 14,
           "goalsAgainst": 1,
-          "goalDifference": 12,
-          "points": 19,
+          "goalDifference": 13,
+          "points": 22,
           "tier": 1,
           "credits": 5
         },
@@ -9479,13 +9479,13 @@
           "team": {
             "name": "Argentina"
           },
-          "playedGames": 7,
+          "playedGames": 8,
           "won": 5,
           "draw": 2,
-          "lost": 0,
+          "lost": 1,
           "goalsFor": 15,
-          "goalsAgainst": 6,
-          "goalDifference": 9,
+          "goalsAgainst": 7,
+          "goalDifference": 8,
           "points": 17,
           "tier": 1,
           "credits": 5
@@ -10224,16 +10224,16 @@
       ]
     },
     "Spagna": {
-      "base": 19,
-      "bonus": 25,
-      "weighted": 44,
-      "played": 7,
-      "w": 6,
+      "base": 22,
+      "bonus": 35,
+      "weighted": 57,
+      "played": 8,
+      "w": 7,
       "d": 1,
       "l": 0,
-      "goalsFor": 13,
+      "goalsFor": 14,
       "goalsAgainst": 1,
-      "goalDifference": 12,
+      "goalDifference": 13,
       "details": [
         "Spagna 0-0 Capo Verde: +1",
         "Spagna 4-0 Arabia Saudita: +3",
@@ -10242,11 +10242,13 @@
         "Portogallo 0-1 Spagna: +3",
         "Spagna 2-1 Belgio: +3",
         "Francia 0-2 Spagna: +3",
+        "Spagna 1-0 Argentina: +3",
         "Passaggio girone: +5",
         "Passaggio turno successivo: +5",
         "Passaggio turno successivo: +5",
         "Passaggio turno successivo: +5",
-        "Passaggio turno successivo: +5"
+        "Passaggio turno successivo: +5",
+        "Vittoria finale: +10"
       ]
     },
     "Uruguay": {
@@ -10392,13 +10394,13 @@
       "base": 17,
       "bonus": 25,
       "weighted": 42,
-      "played": 7,
+      "played": 8,
       "w": 5,
       "d": 2,
-      "l": 0,
+      "l": 1,
       "goalsFor": 15,
-      "goalsAgainst": 6,
-      "goalDifference": 9,
+      "goalsAgainst": 7,
+      "goalDifference": 8,
       "details": [
         "Argentina 3-0 Algeria: +3",
         "Argentina 2-0 Austria: +3",
@@ -10407,6 +10409,7 @@
         "Argentina 3-2 Egitto: +3",
         "Argentina 1-1 Svizzera: +1",
         "Inghilterra 1-2 Argentina: +3",
+        "Spagna 1-0 Argentina: +0",
         "Passaggio girone: +5",
         "Passaggio turno successivo: +5",
         "Passaggio turno successivo: +5",
@@ -10632,9 +10635,9 @@
   "computed": [
     {
       "name": "Mic/Lor",
-      "total": 531,
+      "total": 544,
       "credits": 29,
-      "played": 61,
+      "played": 63,
       "alive": 12,
       "teams": [
         {
@@ -10643,15 +10646,15 @@
           "group": "J",
           "tier": 1,
           "credits": 5,
-          "played": 7,
+          "played": 8,
           "base": 17,
           "bonus": 25,
           "multiplier": 1,
           "total": 42,
-          "record": "5-2-0",
+          "record": "5-2-1",
           "goalsFor": 15,
-          "goalsAgainst": 6,
-          "goalDifference": 9,
+          "goalsAgainst": 7,
+          "goalDifference": 8,
           "details": [
             "Argentina 3-0 Algeria: +3",
             "Argentina 2-0 Austria: +3",
@@ -10660,6 +10663,7 @@
             "Argentina 3-2 Egitto: +3",
             "Argentina 1-1 Svizzera: +1",
             "Inghilterra 1-2 Argentina: +3",
+            "Spagna 1-0 Argentina: +0",
             "Passaggio girone: +5",
             "Passaggio turno successivo: +5",
             "Passaggio turno successivo: +5",
@@ -10673,15 +10677,15 @@
           "group": "H",
           "tier": 1,
           "credits": 5,
-          "played": 7,
-          "base": 19,
-          "bonus": 25,
+          "played": 8,
+          "base": 22,
+          "bonus": 35,
           "multiplier": 1,
-          "total": 44,
-          "record": "6-1-0",
-          "goalsFor": 13,
+          "total": 57,
+          "record": "7-1-0",
+          "goalsFor": 14,
           "goalsAgainst": 1,
-          "goalDifference": 12,
+          "goalDifference": 13,
           "details": [
             "Spagna 0-0 Capo Verde: +1",
             "Spagna 4-0 Arabia Saudita: +3",
@@ -10690,11 +10694,13 @@
             "Portogallo 0-1 Spagna: +3",
             "Spagna 2-1 Belgio: +3",
             "Francia 0-2 Spagna: +3",
+            "Spagna 1-0 Argentina: +3",
             "Passaggio girone: +5",
             "Passaggio turno successivo: +5",
             "Passaggio turno successivo: +5",
             "Passaggio turno successivo: +5",
-            "Passaggio turno successivo: +5"
+            "Passaggio turno successivo: +5",
+            "Vittoria finale: +10"
           ]
         },
         {
@@ -10945,9 +10951,9 @@
     },
     {
       "name": "Rocco",
-      "total": 506,
+      "total": 519,
       "credits": 29,
-      "played": 62,
+      "played": 63,
       "alive": 12,
       "teams": [
         {
@@ -10956,15 +10962,15 @@
           "group": "H",
           "tier": 1,
           "credits": 5,
-          "played": 7,
-          "base": 19,
-          "bonus": 25,
+          "played": 8,
+          "base": 22,
+          "bonus": 35,
           "multiplier": 1,
-          "total": 44,
-          "record": "6-1-0",
-          "goalsFor": 13,
+          "total": 57,
+          "record": "7-1-0",
+          "goalsFor": 14,
           "goalsAgainst": 1,
-          "goalDifference": 12,
+          "goalDifference": 13,
           "details": [
             "Spagna 0-0 Capo Verde: +1",
             "Spagna 4-0 Arabia Saudita: +3",
@@ -10973,11 +10979,13 @@
             "Portogallo 0-1 Spagna: +3",
             "Spagna 2-1 Belgio: +3",
             "Francia 0-2 Spagna: +3",
+            "Spagna 1-0 Argentina: +3",
             "Passaggio girone: +5",
             "Passaggio turno successivo: +5",
             "Passaggio turno successivo: +5",
             "Passaggio turno successivo: +5",
-            "Passaggio turno successivo: +5"
+            "Passaggio turno successivo: +5",
+            "Vittoria finale: +10"
           ]
         },
         {
@@ -11258,9 +11266,9 @@
     },
     {
       "name": "Pippo",
-      "total": 477,
+      "total": 490,
       "credits": 29,
-      "played": 57,
+      "played": 58,
       "alive": 12,
       "teams": [
         {
@@ -11269,15 +11277,15 @@
           "group": "H",
           "tier": 1,
           "credits": 5,
-          "played": 7,
-          "base": 19,
-          "bonus": 25,
+          "played": 8,
+          "base": 22,
+          "bonus": 35,
           "multiplier": 1,
-          "total": 44,
-          "record": "6-1-0",
-          "goalsFor": 13,
+          "total": 57,
+          "record": "7-1-0",
+          "goalsFor": 14,
           "goalsAgainst": 1,
-          "goalDifference": 12,
+          "goalDifference": 13,
           "details": [
             "Spagna 0-0 Capo Verde: +1",
             "Spagna 4-0 Arabia Saudita: +3",
@@ -11286,11 +11294,13 @@
             "Portogallo 0-1 Spagna: +3",
             "Spagna 2-1 Belgio: +3",
             "Francia 0-2 Spagna: +3",
+            "Spagna 1-0 Argentina: +3",
             "Passaggio girone: +5",
             "Passaggio turno successivo: +5",
             "Passaggio turno successivo: +5",
             "Passaggio turno successivo: +5",
-            "Passaggio turno successivo: +5"
+            "Passaggio turno successivo: +5",
+            "Vittoria finale: +10"
           ]
         },
         {
@@ -11871,9 +11881,9 @@
     },
     {
       "name": "Beppe",
-      "total": 440,
+      "total": 453,
       "credits": 29,
-      "played": 58,
+      "played": 59,
       "alive": 12,
       "teams": [
         {
@@ -11912,15 +11922,15 @@
           "group": "H",
           "tier": 1,
           "credits": 5,
-          "played": 7,
-          "base": 19,
-          "bonus": 25,
+          "played": 8,
+          "base": 22,
+          "bonus": 35,
           "multiplier": 1,
-          "total": 44,
-          "record": "6-1-0",
-          "goalsFor": 13,
+          "total": 57,
+          "record": "7-1-0",
+          "goalsFor": 14,
           "goalsAgainst": 1,
-          "goalDifference": 12,
+          "goalDifference": 13,
           "details": [
             "Spagna 0-0 Capo Verde: +1",
             "Spagna 4-0 Arabia Saudita: +3",
@@ -11929,11 +11939,13 @@
             "Portogallo 0-1 Spagna: +3",
             "Spagna 2-1 Belgio: +3",
             "Francia 0-2 Spagna: +3",
+            "Spagna 1-0 Argentina: +3",
             "Passaggio girone: +5",
             "Passaggio turno successivo: +5",
             "Passaggio turno successivo: +5",
             "Passaggio turno successivo: +5",
-            "Passaggio turno successivo: +5"
+            "Passaggio turno successivo: +5",
+            "Vittoria finale: +10"
           ]
         },
         {
@@ -12176,9 +12188,9 @@
     },
     {
       "name": "Tommy",
-      "total": 419,
+      "total": 432,
       "credits": 29,
-      "played": 57,
+      "played": 58,
       "alive": 12,
       "teams": [
         {
@@ -12217,15 +12229,15 @@
           "group": "H",
           "tier": 1,
           "credits": 5,
-          "played": 7,
-          "base": 19,
-          "bonus": 25,
+          "played": 8,
+          "base": 22,
+          "bonus": 35,
           "multiplier": 1,
-          "total": 44,
-          "record": "6-1-0",
-          "goalsFor": 13,
+          "total": 57,
+          "record": "7-1-0",
+          "goalsFor": 14,
           "goalsAgainst": 1,
-          "goalDifference": 12,
+          "goalDifference": 13,
           "details": [
             "Spagna 0-0 Capo Verde: +1",
             "Spagna 4-0 Arabia Saudita: +3",
@@ -12234,11 +12246,13 @@
             "Portogallo 0-1 Spagna: +3",
             "Spagna 2-1 Belgio: +3",
             "Francia 0-2 Spagna: +3",
+            "Spagna 1-0 Argentina: +3",
             "Passaggio girone: +5",
             "Passaggio turno successivo: +5",
             "Passaggio turno successivo: +5",
             "Passaggio turno successivo: +5",
-            "Passaggio turno successivo: +5"
+            "Passaggio turno successivo: +5",
+            "Vittoria finale: +10"
           ]
         },
         {
@@ -12479,9 +12493,9 @@
     },
     {
       "name": "Sim/Ric",
-      "total": 408,
+      "total": 421,
       "credits": 29,
-      "played": 55,
+      "played": 57,
       "alive": 12,
       "teams": [
         {
@@ -12490,15 +12504,15 @@
           "group": "J",
           "tier": 1,
           "credits": 5,
-          "played": 7,
+          "played": 8,
           "base": 17,
           "bonus": 25,
           "multiplier": 1,
           "total": 42,
-          "record": "5-2-0",
+          "record": "5-2-1",
           "goalsFor": 15,
-          "goalsAgainst": 6,
-          "goalDifference": 9,
+          "goalsAgainst": 7,
+          "goalDifference": 8,
           "details": [
             "Argentina 3-0 Algeria: +3",
             "Argentina 2-0 Austria: +3",
@@ -12507,6 +12521,7 @@
             "Argentina 3-2 Egitto: +3",
             "Argentina 1-1 Svizzera: +1",
             "Inghilterra 1-2 Argentina: +3",
+            "Spagna 1-0 Argentina: +0",
             "Passaggio girone: +5",
             "Passaggio turno successivo: +5",
             "Passaggio turno successivo: +5",
@@ -12545,15 +12560,15 @@
           "group": "H",
           "tier": 1,
           "credits": 5,
-          "played": 7,
-          "base": 19,
-          "bonus": 25,
+          "played": 8,
+          "base": 22,
+          "bonus": 35,
           "multiplier": 1,
-          "total": 44,
-          "record": "6-1-0",
-          "goalsFor": 13,
+          "total": 57,
+          "record": "7-1-0",
+          "goalsFor": 14,
           "goalsAgainst": 1,
-          "goalDifference": 12,
+          "goalDifference": 13,
           "details": [
             "Spagna 0-0 Capo Verde: +1",
             "Spagna 4-0 Arabia Saudita: +3",
@@ -12562,11 +12577,13 @@
             "Portogallo 0-1 Spagna: +3",
             "Spagna 2-1 Belgio: +3",
             "Francia 0-2 Spagna: +3",
+            "Spagna 1-0 Argentina: +3",
             "Passaggio girone: +5",
             "Passaggio turno successivo: +5",
             "Passaggio turno successivo: +5",
             "Passaggio turno successivo: +5",
-            "Passaggio turno successivo: +5"
+            "Passaggio turno successivo: +5",
+            "Vittoria finale: +10"
           ]
         },
         {
@@ -12781,9 +12798,9 @@
     },
     {
       "name": "Ste/Sven",
-      "total": 403,
+      "total": 416,
       "credits": 29,
-      "played": 59,
+      "played": 61,
       "alive": 12,
       "teams": [
         {
@@ -12792,15 +12809,15 @@
           "group": "H",
           "tier": 1,
           "credits": 5,
-          "played": 7,
-          "base": 19,
-          "bonus": 25,
+          "played": 8,
+          "base": 22,
+          "bonus": 35,
           "multiplier": 1,
-          "total": 44,
-          "record": "6-1-0",
-          "goalsFor": 13,
+          "total": 57,
+          "record": "7-1-0",
+          "goalsFor": 14,
           "goalsAgainst": 1,
-          "goalDifference": 12,
+          "goalDifference": 13,
           "details": [
             "Spagna 0-0 Capo Verde: +1",
             "Spagna 4-0 Arabia Saudita: +3",
@@ -12809,11 +12826,13 @@
             "Portogallo 0-1 Spagna: +3",
             "Spagna 2-1 Belgio: +3",
             "Francia 0-2 Spagna: +3",
+            "Spagna 1-0 Argentina: +3",
             "Passaggio girone: +5",
             "Passaggio turno successivo: +5",
             "Passaggio turno successivo: +5",
             "Passaggio turno successivo: +5",
-            "Passaggio turno successivo: +5"
+            "Passaggio turno successivo: +5",
+            "Vittoria finale: +10"
           ]
         },
         {
@@ -12852,15 +12871,15 @@
           "group": "J",
           "tier": 1,
           "credits": 5,
-          "played": 7,
+          "played": 8,
           "base": 17,
           "bonus": 25,
           "multiplier": 1,
           "total": 42,
-          "record": "5-2-0",
+          "record": "5-2-1",
           "goalsFor": 15,
-          "goalsAgainst": 6,
-          "goalDifference": 9,
+          "goalsAgainst": 7,
+          "goalDifference": 8,
           "details": [
             "Argentina 3-0 Algeria: +3",
             "Argentina 2-0 Austria: +3",
@@ -12869,6 +12888,7 @@
             "Argentina 3-2 Egitto: +3",
             "Argentina 1-1 Svizzera: +1",
             "Inghilterra 1-2 Argentina: +3",
+            "Spagna 1-0 Argentina: +0",
             "Passaggio girone: +5",
             "Passaggio turno successivo: +5",
             "Passaggio turno successivo: +5",
@@ -13089,9 +13109,9 @@
     },
     {
       "name": "Della",
-      "total": 380,
+      "total": 393,
       "credits": 29,
-      "played": 55,
+      "played": 56,
       "alive": 12,
       "teams": [
         {
@@ -13100,15 +13120,15 @@
           "group": "H",
           "tier": 1,
           "credits": 5,
-          "played": 7,
-          "base": 19,
-          "bonus": 25,
+          "played": 8,
+          "base": 22,
+          "bonus": 35,
           "multiplier": 1,
-          "total": 44,
-          "record": "6-1-0",
-          "goalsFor": 13,
+          "total": 57,
+          "record": "7-1-0",
+          "goalsFor": 14,
           "goalsAgainst": 1,
-          "goalDifference": 12,
+          "goalDifference": 13,
           "details": [
             "Spagna 0-0 Capo Verde: +1",
             "Spagna 4-0 Arabia Saudita: +3",
@@ -13117,11 +13137,13 @@
             "Portogallo 0-1 Spagna: +3",
             "Spagna 2-1 Belgio: +3",
             "Francia 0-2 Spagna: +3",
+            "Spagna 1-0 Argentina: +3",
             "Passaggio girone: +5",
             "Passaggio turno successivo: +5",
             "Passaggio turno successivo: +5",
             "Passaggio turno successivo: +5",
-            "Passaggio turno successivo: +5"
+            "Passaggio turno successivo: +5",
+            "Vittoria finale: +10"
           ]
         },
         {
@@ -13978,7 +14000,7 @@
       "name": "Beggio",
       "total": 283,
       "credits": 29,
-      "played": 50,
+      "played": 51,
       "alive": 12,
       "teams": [
         {
@@ -14012,15 +14034,15 @@
           "group": "J",
           "tier": 1,
           "credits": 5,
-          "played": 7,
+          "played": 8,
           "base": 17,
           "bonus": 25,
           "multiplier": 1,
           "total": 42,
-          "record": "5-2-0",
+          "record": "5-2-1",
           "goalsFor": 15,
-          "goalsAgainst": 6,
-          "goalDifference": 9,
+          "goalsAgainst": 7,
+          "goalDifference": 8,
           "details": [
             "Argentina 3-0 Algeria: +3",
             "Argentina 2-0 Austria: +3",
@@ -14029,6 +14051,7 @@
             "Argentina 3-2 Egitto: +3",
             "Argentina 1-1 Svizzera: +1",
             "Inghilterra 1-2 Argentina: +3",
+            "Spagna 1-0 Argentina: +0",
             "Passaggio girone: +5",
             "Passaggio turno successivo: +5",
             "Passaggio turno successivo: +5",
