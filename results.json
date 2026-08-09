@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-08-09T22:27:48.954Z",
-  "source": "football-data.org + storico fisso + storico locale",
+  "updatedAt": "2026-08-09T23:00:03.379Z",
+  "source": "fallback: fetch failed",
   "matches": [
     {
       "id": 537327,
